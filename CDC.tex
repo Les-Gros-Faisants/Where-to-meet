@@ -1,0 +1,91 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+\usepackage[pdftex]{graphicx}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+\textsc{\LARGE EPITECH}\\[1.5cm]
+\textsc{\Large PFA 2017}\\[0.5cm]
+\HRule \\[0.4cm]
+{\huge \bfseries WHERE TO MEET \\[0.4cm]}
+\HRule \\[1.5cm]
+
+\emph{Auteurs:}\\
+mendie\_j \\
+vuilla\_l \\
+
+\vfill
+{\large \today}
+
+\end{center}
+\end{titlepage}
+\section{Pr\'esentation du projet}
+\paragraph{•}
+Where to meet sera une application mobile (Android) visant \`a fournir \`a ses  utilisateurs un moyen de se rencontrer autour d’une activit\'e particuli\`ere à un moment T.
+Autrement dit, where to meet permettra de cr\'eer des liens sociaux entre des individus qui pratiquent la m\^eme activit\'e au m\^eme moment et souhaitent partager cette activit\'e avec d’autres. L id\'ee est de relier des gens qui ont quelque chose en commun, quelles que soient leurs hobbies ou leurs envies. 
+Pour faciliter les rencontres, les recherches s’effectuent gr\^ace à des “tags”\footnote{Les tags sont des mots-clefs permettant de r\'esumer les choses de manière concise.
+}.
+
+\paragraph{•}
+Voici un cas typique auquel where to meet propose une r\'eponse :
+Vous \^etes guitariste et vous aimeriez jammer, mais vos amis musiciens ne sont pas disponibles pour le moment. Vous lancez alors Where to meet pour rechercher une session de jam en cours. A dix minutes de chez vous, un groupe de percussionnistes s'installe et cherche d’autres musiciens. Eux aussi lancent where to meet et remplissent le formulaire d’ajout d'activit\'e. En un instant, le groupe est enregistr\'e et appara\^it sur votre recherche. Vous n’avez alors plus qu’à vous rendre sur place avec votre instrument pour rencontrer vos nouveaux amis.
+
+
+\section{Description Fonctionelle}
+\paragraph{•}
+L’utilisateur pourra se connecter en utilisant un compte qu il aura cr\'e\'e au pr\'ealable ou bien se connecter via les comptes qu il utilise habituellement sur les réseaux sociaux.
+Une fois connect\'e, l’utilisateur arrivera sur une page pr\'esentant le logo de l’application, un menu lat\'eral, une barre de recherche, une carte et un bouton d’ajout \'ev\`enement.
+
+\subsection{Le logo}
+\paragraph{•}
+Pr\'ef\'erant nous concentrer sur ce que nous faisons de mieux - la programmation - nous sous-traiterons la cr\'eation du logo à un designer pour un résultat professionnel, marquant et adapt\'e à l’esprit de where to meet. Nous nous en occuperons peut \^etre nous m\^eme si besoin est, mais à la fin du projet. 
+\newpage
+\subsection{Le menu lat\'eral}
+\paragraph{•}
+Il pr\'esentera plusieurs lien vers:
+\begin{itemize}
+ \item le profil de l utilisateur que ce dernier pourra personnaliser
+\item l historique des \'ev\'enements gr\^ace auquel il sera possible d \'evaluer les diff\'erents participants \`a chaque \'ev\'enement. La notation ne se fera pas en attribuant une note mais en renseignant un maximum de 5 tags sur la personne en question. Par exemple : ''Alcoolique'', ''\'egoiste'' ou alors ''gentil'' sont des tags valides. 
+\item Une bo\^ite \`a id\'ee pour proposer des am\'eliorations aux développeurs.
+\end{itemize}
+Il sera possible de masquer le menu latéral afin d'aérer l’application. 
+
+\subsection{La barre de recherche}
+\paragraph{•}
+C est ici que l utilisateur entre les tags qui l int\'eressent. Il sera possible d utiliser une liste de filtres afin d affiner la recherche : le rayon de la recherche, exclusion de certains tags associ\'es aux utilisateurs pr\'esents. Cette exclusion se fera par une liste déroulante.
+
+\subsection{La carte}
+\paragraph{•}
+D\`es la connexion de l utilisateur \`a l application, la carte affichera les \'ev\`enements en cours \`a proximit\'e. Mais apr\`es une recherche, elle n affichera plus que les r\'esultats pertinents, c’est-à-dire ceux qui int\'eressent l utilisateur. Il sera alors possible de cliquer sur un \'ev\`enement particulier pour en afficher les d\'etails. 
+
+\subsection{Le bouton d ajout d \'ev\`enement}
+\paragraph{•}
+Il fera appara\^itre un formulaire comportant quelques champs essentiels à la description de l activit\'e que l utilisateur souhaite lancer. En plus d une description textuelle du lieu de rassemblement et des ses objectifs, l utilisateur devra rajouter une liste de tags afin de fournir une description plus succincte.
+Par exemple : une partie de foot. Nous recherchons deux joueurs pour rendre le jeu plus int\'eressant. tags: ''zinedine\_zidane'' ''ballon'' ''goal''
+
+\newpage
+\section{Description Technique}
+\paragraph{•}
+Concernant les technologies utilis\'ees, nous allons d\'evelopper l application en java. Nous avons d\'ecid\'e de d\'evelopper en natif afin d assurer les meilleures performances à nos utilisateurs.
+Nous aurons un serveur pour h\'eberger la base de donn\'ees et d\'evelopperons un web service afin d abstraire la communication avec cette dernierre. Ce web service sera \'ecrit en perl gr\^ace au framework MVC\footnote{ Le patron MVC est un mod\`ele destin\'e \`a r\'epondre aux besoins des applications interactives en s\'eparant les probl\'ematiques li\'ees aux diff\'erents composants au sein de leur architecture respective.} (Model View Controller) Mojolicious. Nous avons choisi d utiliser perl parce qu il est simple, mall\'eable et permet de développer tr\`es rapidement, ce qui nous permettra d’entrer sur le march\'e prestement et efficacement. 
+Quant au framework Mojolicious, le mod\`ele MVC nous permettra de faciliter la mise en place du web service.
+
+\subsection{Contraintes}
+\paragraph{•}
+Nous ferons sans doute face \`a quelques probl\`emes, comme la d\'ecouverte d un nouveaux langages, le Java. Cependant, nous ne pensons pas rencontrer de probl\`emes pouvant provoquer un bloquage du projet.
+
+\section{D\'eroulement du projet}
+equipe:
+\begin{itemize}
+\item Vuilla\_l: Application mobile / Site vitrine
+\item Mendie\_j: Web-Service / Application / Site Vitrine
+\end{itemize}
+
+\subsection{Planning}
+\paragraph{•}
+Nous attribuerons les t\^aches en fonction des besoins qui \'emergeront lors du d\'eveloppement. Ceci dit, nous nous sommes mis d’accord pour suivre le plan d’action suivant : 
+L application et le web service seront d\'evelopp\'es en m\^eme temps dans le souci d’une avanc\'ee concomitante et efficace sur le projet. D\`es que le web-service sera terminé\'e, Mr.Mendiela rejoindra Mr.Vuillaume sur le d\'eveloppement de l application mobile. La pr\'esence d’un troisi\`eme membre qui servirait d'\'electron libre est souhait\'ee.
+
+\end{document}

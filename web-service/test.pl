@@ -3,6 +3,10 @@ use Mojo::UserAgent;
 
 my $ua = Mojo::UserAgent->new;
 
-get '/' => { text => 'i <3 Mojolicious' };
+get '/:foo' => sub {
+  my $self = shift;
+  my $foo = $self->param( 'foo' );
+  $self->render( text => "hello from $foo" );
+};
 
 app->start;

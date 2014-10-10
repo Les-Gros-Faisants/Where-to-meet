@@ -32,11 +32,35 @@ get '/#hash1/#json2/#timestamp3' => sub { # fetch info and returns json
         $self->param( 'timestamp3' )
     );
 
-    for my $key ( keys %$json ) {
-      $self->app->log->debug( $key );
-      
+    my $ret = '';
+    my $key;
+    my $val;
+    my $key_sort;
+    my $sort_order;
+    my $limit;
+    for my $prim_key ( keys %$json ) { # get first key, ie: name of the hash
+      $self->app->log->debug( $prim_key );
+      for my $key ( keys $json->{ $prim_key } ) {
+	if ( $key =~ /(query[0-9]{1, 2}|query)/ ) { 
+	  $self->app->log->debug( Dumper $json->{ $prim_key }->{ $key } );
+	  if ( exists $json->{ $prim_key }->{ $key }->{ search_key } ) {
+	    $key = $json->{ $prim_key }->{ $key }->{ search_key }[0];
+	    $val = $json->{ $prim_key }->{ $key }->{ search_key }[1];
+	    $self->app->log->debug( 'key/value = ' . $key . '/' . $val );
+	  }
+	  if ( exists $json->{ $prim_key }->{ $key }->{ sort } ) {
+	    $key_sort = $json->{ $prim_key }->{ $key }->{ sort }[0];
+	    $sort_order = $json->{ $prim_key }->{ $key }->{ sort }[1];
+	    $self->app->log->debug( 'sort = ' . $key_sort . '/' . $sort_order );
+	  }
+	  if (  exists $json->{ $prim_key }->{ $key }->{ limit } ) {
+	    $limit = $json->{ $prim_key }->{ $key }->{ limit };
+	    $self->app->log->debug( 'limit = ' . $limit );
+	  }
+	}
+      }
     }
-    return $self->render( 'debug', ret => Dumper $json );
+    return $self->render( text => Dumper $json );
 };
 
 put '/:req' => sub { # add stuff to database; gets json, parses it and add it to bd
@@ -57,4 +81,4 @@ __DATA__
 
 @@ debug.html.ep
   %= t h1 => 'debug !!'
-    helper resturns = <%= $ret %>
+    helper returns = <%= $ret %>

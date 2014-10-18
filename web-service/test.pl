@@ -12,10 +12,6 @@ my $pass = '';
 my $dbh =  DBI->connect( $dsn, $user, $pass, { RaiseError => 1} )
   || die "Couldn't connect to database: " . DBI->errstr;
 
-sub startup {
-
-}
-
 get '/' => sub {
   my ( $self ) = @_;
 

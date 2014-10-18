@@ -1,26 +1,21 @@
+use strict;
+use warnings;
 use Mojolicious::Lite;
 use Mojo::JSON qw( decode_json encode_json );
 #use Mojo::Redis;
-use DBI;
+use WebService::Schema;
 use Data::Dumper;
 
 #my $redis = Mojo::Redis->new( server => '127.0.0.1:6379' );
 
-my $dsn = 'DBI:mysql:database=wtm;host=127.0.0.1;port=3306';
-my $user = 'root';
-my $pass = '';
-my $dbh =  DBI->connect( $dsn, $user, $pass, { RaiseError => 1} )
-  || die "Couldn't connect to database: " . DBI->errstr;
+my $schema = WebService::Schema->connect('DBI:mysql:database=wtm;host=127.0.0.1;port=3306', 'root', 'lol');
+
 
 get '/' => sub {
   my ( $self ) = @_;
 
-  my $sth = $dbh->prepare( 'SELECT pseudo_user FROM users' );
-  $sth->execute;
-
-  my $tmp = $sth->fetchrow_arrayref;
-  my $user_pseudo = @$tmp[0];
-  return $self->render( text => $user_pseudo );
+  my @user = $schema->resultset( 'User' )->all;
+  return $self->render( text => $user[0]->pseudo_user );
 };
 
 get '/#hash1/#json2/#timestamp3' => sub { # fetch info and returns json

@@ -53,6 +53,12 @@ __PACKAGE__->table("tags");
   is_foreign_key: 1
   is_nullable: 1
 
+=head2 tag_name
+
+  data_type: 'varchar'
+  is_nullable: 1
+  size: 30
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -62,6 +68,8 @@ __PACKAGE__->add_columns(
   { data_type => "integer", is_foreign_key => 1, is_nullable => 1 },
   "id_victim",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 1 },
+  "tag_name",
+  { data_type => "varchar", is_nullable => 1, size => 30 },
 );
 
 =head1 PRIMARY KEY
@@ -134,8 +142,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-10-18 23:45:03
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:0tJOtMIsLL/s/VW6IItLUQ
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-10-22 15:05:47
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:4YUzWp3ke04N6603D4DORg
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

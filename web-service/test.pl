@@ -10,7 +10,6 @@ use Data::Dumper;
 
 my $schema = WebService::Schema->connect('DBI:mysql:database=wtm;host=127.0.0.1;port=3306', 'root', 'lol');
 
-
 get '/' => sub {
   my ( $self ) = @_;
 
@@ -24,24 +23,39 @@ get '/users' => sub { # fetch info and returns json
   my @user = $schema->resultset( 'User' )->all;
   my %ret;
   foreach my $tmp ( @user ) {
-    $ret{ $tmp->pseudo_user } = {
+    $ret{ $tmp->id_user } = {
+	'user_pseudo'  => $tmp->pseudo_user,
         'passwd_user' => $tmp->passwd_user,
-        'id_user'  => $tmp->id_user,
     };
   }
   return $self->render( text => encode_json( \%ret ) );
 };
 
-put '/:req' => sub { # add stuff to database; gets json, parses it and add it to bd
-    my ( $self ) = @_;
+get '/users/:id' => sub {
+  my ( $self ) = @_;
 
-    return $self->render( text => 'put' );
+  my $id = $self->param( 'id' );
+  my $user = $schema->resultset( 'User' )->find( { id_user => $id } );
+  my %ret;
+  $ret{ 'user_pseudo' } = $user->pseudo_user;
+  $ret{ 'passwd_user' } = $user->pseudo_user;
+  return $self->render( text => encode_json( \%ret ) );
+};
+
+get '/users/:id/tags' => sub {
+
+};
+
+put '/:req' => sub { # add stuff to database; gets json, parses it and add it to bd
+  my ( $self ) = @_;
+
+  return $self->render( text => 'put' );
 };
 
 del '/:req' => sub { # delete :req in db
-    my ( $self ) = @_;
+  my ( $self ) = @_;
 
-    return $self->render( text => 'post' );
+  return $self->render( text => 'post' );
 };
 
 app->startup;

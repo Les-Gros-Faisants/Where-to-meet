@@ -43,7 +43,19 @@ get '/users/:id' => sub {
 };
 
 get '/users/:id/tags' => sub {
+  my ( $self ) = @_;
 
+  my $id = $self->param( 'id' );
+  my %ret;
+  my @tags = $schema->resultset( 'Tag' )->search( { id_victim => $id } )->all;
+  foreach my $tag ( @tags ) {
+    $self->app->log->debug( Dumper( $tag->id_aggressor->id_user ) );
+    $ret{ $tag->id_tag } = {
+ 	'tag_name'  => $tag->tag_name,
+        'aggressor' => $tag->id_aggressor->id_user,
+    };
+  }
+  return $self->render( text => encode_json( \%ret ) );
 };
 
 put '/:req' => sub { # add stuff to database; gets json, parses it and add it to bd

@@ -74,6 +74,36 @@ get '/users/:id/events' => sub {
   return $self->render( text => encode_json( \%ret ) );
 };
 
+get '/tags' => sub {
+  my ( $self ) = @_;
+
+  my @tags = $schema->resultset( 'Tag' )->all;
+  my %ret;
+  foreach my $tmp ( @tags ) {
+    $ret{ $tmp->id_tag } = {
+	'tag_name'  => $tmp->tag_name,
+        'id_victim' => $tmp->id_victim->id_user,
+        'id_aggressor' => $tmp->id_aggressor->id_user,
+    };
+  }
+  return $self->render( text => encode_json( \%ret ) );
+};
+
+get '/events' => sub {
+  my ( $self ) = @_;
+
+  my @events = $schema->resultset( 'PastEvent' )->all;
+  my %ret;
+  foreach my $tmp ( @events ) {
+    $ret{ $tmp->id_event } = {
+	'id_organizer'  => $tmp->id_organizer->id_user,
+        'geolocation' => $tmp->geolocation,
+        'desc' => $tmp->description_event,
+    };
+  }  
+  return $self->render( text => encode_json( \%ret ) );
+};
+
 put '/:req' => sub { # add stuff to database; gets json, parses it and add it to bd
   my ( $self ) = @_;
 

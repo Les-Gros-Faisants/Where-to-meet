@@ -49,10 +49,26 @@ get '/users/:id/tags' => sub {
   my %ret;
   my @tags = $schema->resultset( 'Tag' )->search( { id_victim => $id } )->all;
   foreach my $tag ( @tags ) {
-    $self->app->log->debug( Dumper( $tag->id_aggressor->id_user ) );
+  #  $self->app->log->debug( Dumper( $tag->id_aggressor->id_user ) );
     $ret{ $tag->id_tag } = {
  	'tag_name'  => $tag->tag_name,
         'aggressor' => $tag->id_aggressor->id_user,
+    };
+  }
+  return $self->render( text => encode_json( \%ret ) );
+};
+
+get '/users/:id/events' => sub {
+  my ( $self ) = @_;
+
+  my $id = $self->param( 'id' );
+  my %ret;
+  my @events = $schema->resultset( 'JunctionUserEvent' )->search( { id_user => $id } )->all;
+  foreach my $event ( @events ) {
+    $ret{ $event->id_event->id_event } = {
+        'organizer' => $event->id_event->id_organizer->id_user,
+        'geolocation' => $event->id_event->geolocation,
+        'desc' => $event->id_event->description_event,
     };
   }
   return $self->render( text => encode_json( \%ret ) );

@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 use Mojolicious::Lite;
-use Mojo::JSON qw( encode_json );
+use Mojo::JSON qw( decode_json encode_json );
 use Mojo::Redis;
 use WebService::Schema;
 use Data::Dumper;
@@ -130,23 +130,19 @@ get '/events/:id/tags' => sub {
   return $self->render( text => encode_json( \%ret ) );
 };
 
-put '/:req' => sub { # add stuff to database; gets json, parses it and add it to bd
+put '/insert/' => sub { # add stuff to database; gets json, parses it and add it to bd
   my ( $self ) = @_;
 
-  return $self->render( text => 'put' );
+  my $json = decode_json( $self->req->body );
+  
+  return $self->render( text => Dumper( $json ) );
 };
 
 del '/:req' => sub { # delete :req in db
   my ( $self ) = @_;
 
-  return $self->render( text => 'post' );
+  return $self->render( text => 'del' );
 };
 
 app->startup;
 app->start;
-
-__DATA__
-
-@@ debug.html.ep
-  %= t h1 => 'debug !!'
-    helper returns = <%= $ret %>

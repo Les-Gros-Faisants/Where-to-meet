@@ -130,12 +130,56 @@ get '/events/:id/tags' => sub {
   return $self->render( text => encode_json( \%ret ) );
 };
 
-put '/insert/' => sub { # add stuff to database; gets json, parses it and add it to bd
+get '/events/:id/users' => sub {
+  my ( $self ) = @_;
+
+  my $id = $self->param( 'id' );
+  my @users = $schema->resultset( 'JunctionUserEvent' )->search( { id_event =>  $id } )->all;
+  my %ret;
+  foreach my $tmp ( @users ) {
+    $ret{ $tmp->id_user->id_user } = {
+       'user_name' => $tmp->id_user->pseudo_user,
+    };
+  }
+  return $self->render( text => encode_json( \%ret ) );
+};
+
+put '/insert/users' => sub { # add stuff to database; gets json, parses it and add it to bd
   my ( $self ) = @_;
 
   my $json = decode_json( $self->req->body );
-  
-  return $self->render( text => Dumper( $json ) );
+  my $users = $schema->resultset( 'User' );
+  my $ret = $users->update_or_create( { 
+	passwd_user => $json->{ passwd },
+        pseudo_user => $json->{ username },
+  });
+  $self->app->log->debug( $ret->id_user );
+  return $self->render( text => $ret->id_user );
+};
+
+put '/insert/users/:id' => sub {
+  my ( $self ) = @_;
+
+  my $id = $self->param( 'id' );
+  my $json = decode_json( $self->req->body );
+  my $user = $schema->resultset( 'User' );
+  my $ret = $user->update_or_create( { 
+	id_user => $id,
+	passwd_user => $json->{ passwd },
+        pseudo_user => $json->{ username },
+  });
+  return $self->render( text => 'coucou' );
+};
+
+put '/insert/users/:id/passwd' => sub {
+  my ( $self ) = @_;
+
+  my $id = $self->param( 'id' );
+  my $json = decode_json( $self->req->body );
+  my $user = $schema->resultset( 'User' );#->find( { id_user => $id } );
+  my $ret = $user->update_or_create( {
+      passwd_user => $json->{ passwd }
+  });
 };
 
 del '/:req' => sub { # delete :req in db

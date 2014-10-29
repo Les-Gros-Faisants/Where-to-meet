@@ -176,10 +176,11 @@ put '/insert/users/:id/passwd' => sub {
 
   my $id = $self->param( 'id' );
   my $json = decode_json( $self->req->body );
-  my $user = $schema->resultset( 'User' );#->find( { id_user => $id } );
-  my $ret = $user->update_or_create( {
+  my $user = $schema->resultset( 'User' )->find( { id_user => $id } );
+  my $ret = $user->update( {
       passwd_user => $json->{ passwd }
   });
+  return $self->render( text => 'coucou' );
 };
 
 del '/:req' => sub { # delete :req in db

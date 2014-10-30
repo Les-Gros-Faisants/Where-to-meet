@@ -1,0 +1,1794 @@
+[Thu Oct 30 15:55:34 2014] [info] Listening at "http://*:3000".
+[Thu Oct 30 15:55:38 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 15:55:38 2014] [debug] GET "/".
+[Thu Oct 30 15:55:38 2014] [debug] Routing to controller "WebService::Controller::Example" and action "welcome".
+[Thu Oct 30 15:55:38 2014] [debug] Rendering template "example/welcome.html.ep".
+[Thu Oct 30 15:55:38 2014] [debug] Rendering template "layouts/default.html.ep".
+[Thu Oct 30 15:55:38 2014] [debug] 200 OK (0.005642s, 177.242/s).
+[Thu Oct 30 15:55:45 2014] [debug] GET "/".
+[Thu Oct 30 15:55:45 2014] [debug] Routing to controller "WebService::Controller::Example" and action "welcome".
+[Thu Oct 30 15:55:45 2014] [debug] Rendering cached template "example/welcome.html.ep".
+[Thu Oct 30 15:55:45 2014] [debug] Rendering cached template "layouts/default.html.ep".
+[Thu Oct 30 15:55:45 2014] [debug] 200 OK (0.001133s, 882.613/s).
+[Thu Oct 30 15:55:47 2014] [debug] GET "/index.html".
+[Thu Oct 30 15:55:47 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 15:55:47 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 15:55:47 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 15:55:47 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 15:55:47 2014] [debug] 404 Not Found (0.025157s, 39.750/s).
+[Thu Oct 30 15:59:32 2014] [debug] GET "/test/me".
+[Thu Oct 30 15:59:32 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 15:59:32 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 15:59:32 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 15:59:32 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 15:59:32 2014] [debug] 404 Not Found (0.007122s, 140.410/s).
+[Thu Oct 30 16:02:28 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:02:28 2014] [debug] GET "/test/me".
+[Thu Oct 30 16:02:28 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:02:28 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:02:28 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:02:28 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:02:28 2014] [debug] 404 Not Found (0.058276s, 17.160/s).
+[Thu Oct 30 16:02:29 2014] [debug] GET "/test/me".
+[Thu Oct 30 16:02:29 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:02:29 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:02:29 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:02:29 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:02:29 2014] [debug] 404 Not Found (0.010628s, 94.091/s).
+[Thu Oct 30 16:02:30 2014] [debug] GET "/test/me".
+[Thu Oct 30 16:02:30 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:02:30 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:02:30 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:02:30 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:02:30 2014] [debug] 404 Not Found (0.013555s, 73.774/s).
+[Thu Oct 30 16:02:30 2014] [debug] GET "/test/me".
+[Thu Oct 30 16:02:30 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:02:30 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:02:30 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:02:30 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:02:30 2014] [debug] 404 Not Found (0.021340s, 46.860/s).
+[Thu Oct 30 16:02:31 2014] [debug] GET "/test/me".
+[Thu Oct 30 16:02:31 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:02:31 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:02:31 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:02:31 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:02:31 2014] [debug] 404 Not Found (0.027579s, 36.259/s).
+[Thu Oct 30 16:02:31 2014] [debug] GET "/test/me".
+[Thu Oct 30 16:02:31 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:02:31 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:02:31 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:02:31 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:02:31 2014] [debug] 404 Not Found (0.022902s, 43.664/s).
+[Thu Oct 30 16:02:35 2014] [debug] GET "/test/me".
+[Thu Oct 30 16:02:35 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:02:35 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:02:35 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:02:35 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:02:35 2014] [debug] 404 Not Found (0.020345s, 49.152/s).
+[Thu Oct 30 16:02:36 2014] [debug] GET "/test/me".
+[Thu Oct 30 16:02:36 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:02:36 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:02:36 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:02:36 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:02:36 2014] [debug] 404 Not Found (0.010613s, 94.224/s).
+[Thu Oct 30 16:02:36 2014] [debug] GET "/test/me".
+[Thu Oct 30 16:02:36 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:02:36 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:02:36 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:02:36 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:02:36 2014] [debug] 404 Not Found (0.020040s, 49.900/s).
+[Thu Oct 30 16:02:37 2014] [debug] GET "/test/me".
+[Thu Oct 30 16:02:37 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:02:37 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:02:37 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:02:37 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:02:37 2014] [debug] 404 Not Found (0.006397s, 156.323/s).
+[Thu Oct 30 16:02:38 2014] [debug] GET "/test/me".
+[Thu Oct 30 16:02:38 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:02:38 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:02:38 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:02:38 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:02:38 2014] [debug] 404 Not Found (0.014812s, 67.513/s).
+[Thu Oct 30 16:17:45 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:17:45 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:17:45 2014] [debug] Class "WebService::Controller::Fetch" is not a controller.
+[Thu Oct 30 16:17:45 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:17:45 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:17:45 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:17:45 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:17:45 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:17:45 2014] [debug] 404 Not Found (0.031344s, 31.904/s).
+[Thu Oct 30 16:17:54 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:17:54 2014] [debug] Class "WebService::Controller::Fetch" is not a controller.
+[Thu Oct 30 16:17:54 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:17:54 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:17:54 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:17:54 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:17:54 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:17:54 2014] [debug] 404 Not Found (0.007834s, 127.649/s).
+[Thu Oct 30 16:17:59 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:17:59 2014] [debug] Class "WebService::Controller::Fetch" is not a controller.
+[Thu Oct 30 16:17:59 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:17:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:17:59 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:17:59 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:17:59 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:17:59 2014] [debug] 404 Not Found (0.029669s, 33.705/s).
+[Thu Oct 30 16:18:25 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:25 2014] [debug] Class "WebService::Controller::Fetch" is not a controller.
+[Thu Oct 30 16:18:25 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:25 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:25 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:25 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:25 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:25 2014] [debug] 404 Not Found (0.020709s, 48.288/s).
+[Thu Oct 30 16:18:26 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:26 2014] [debug] Class "WebService::Controller::Fetch" is not a controller.
+[Thu Oct 30 16:18:26 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:26 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:26 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:26 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:26 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:26 2014] [debug] 404 Not Found (0.014399s, 69.449/s).
+[Thu Oct 30 16:18:26 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:18:26 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:26 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:26 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:26 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:26 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:26 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:26 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:26 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:26 2014] [debug] 404 Not Found (0.023289s, 42.939/s).
+[Thu Oct 30 16:18:27 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:27 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:27 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:27 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:27 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:27 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:27 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:27 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:27 2014] [debug] 404 Not Found (0.028591s, 34.976/s).
+[Thu Oct 30 16:18:27 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:27 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:27 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:27 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:27 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:27 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:27 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:27 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:27 2014] [debug] 404 Not Found (0.021078s, 47.443/s).
+[Thu Oct 30 16:18:28 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:28 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:28 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:28 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:28 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:28 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:28 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:28 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:28 2014] [debug] 404 Not Found (0.023095s, 43.299/s).
+[Thu Oct 30 16:18:28 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:28 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:28 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:28 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:28 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:28 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:28 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:28 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:28 2014] [debug] 404 Not Found (0.020539s, 48.688/s).
+[Thu Oct 30 16:18:31 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:31 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:31 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:31 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:31 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:31 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:31 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:31 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:31 2014] [debug] 404 Not Found (0.027136s, 36.851/s).
+[Thu Oct 30 16:18:31 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:31 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:31 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:31 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:31 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:31 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:31 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:31 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:31 2014] [debug] 404 Not Found (0.023738s, 42.127/s).
+[Thu Oct 30 16:18:32 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:32 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:32 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:32 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:32 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:32 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:32 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:32 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:32 2014] [debug] 404 Not Found (0.012818s, 78.015/s).
+[Thu Oct 30 16:18:32 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:32 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:32 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:32 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:32 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:32 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:32 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:32 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:32 2014] [debug] 404 Not Found (0.024667s, 40.540/s).
+[Thu Oct 30 16:18:34 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:34 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:34 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:34 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:34 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:34 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:34 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:34 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:34 2014] [debug] 404 Not Found (0.014187s, 70.487/s).
+[Thu Oct 30 16:18:34 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:34 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:34 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:34 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:34 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:34 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:34 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:34 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:34 2014] [debug] 404 Not Found (0.010097s, 99.039/s).
+[Thu Oct 30 16:18:35 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:35 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:35 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:35 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:35 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:35 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:35 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:35 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:35 2014] [debug] 404 Not Found (0.013762s, 72.664/s).
+[Thu Oct 30 16:18:35 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:18:35 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:18:35 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:18:35 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:18:35 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:18:35 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:18:35 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:18:35 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:18:35 2014] [debug] 404 Not Found (0.016009s, 62.465/s).
+[Thu Oct 30 16:19:14 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:19:14 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:19:14 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:19:14 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:19:14 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:19:14 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:19:14 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:19:14 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:19:14 2014] [debug] 404 Not Found (0.029767s, 33.594/s).
+[Thu Oct 30 16:19:15 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:19:15 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:19:15 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:19:15 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:19:15 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:19:15 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:19:15 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:19:15 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:19:15 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:19:15 2014] [debug] 404 Not Found (0.044842s, 22.301/s).
+[Thu Oct 30 16:19:42 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:19:42 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:19:42 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:19:42 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:19:42 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:19:42 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:19:42 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:19:42 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:19:42 2014] [debug] 404 Not Found (0.018663s, 53.582/s).
+[Thu Oct 30 16:19:43 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:19:43 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_users".
+[Thu Oct 30 16:19:43 2014] [debug] Action not found in controller.
+[Thu Oct 30 16:19:43 2014] [debug] Template "fetch/get_all_users.html.ep" not found.
+[Thu Oct 30 16:19:43 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 16:19:43 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 16:19:43 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:19:43 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:19:43 2014] [debug] 404 Not Found (0.024775s, 40.363/s).
+[Thu Oct 30 16:19:43 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:19:44 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:19:44 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:19:44 2014] [debug] 200 OK (0.002686s, 372.301/s).
+[Thu Oct 30 16:20:00 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:20:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:20:00 2014] [debug] 200 OK (0.001677s, 596.303/s).
+[Thu Oct 30 16:20:00 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:20:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:20:00 2014] [debug] 200 OK (0.001099s, 909.918/s).
+[Thu Oct 30 16:20:01 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:20:01 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:20:01 2014] [debug] 200 OK (0.000801s, 1248.439/s).
+[Thu Oct 30 16:20:01 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:20:01 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:20:01 2014] [debug] 200 OK (0.000663s, 1508.296/s).
+[Thu Oct 30 16:20:03 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:20:03 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:20:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:20:03 2014] [debug] 200 OK (0.001177s, 849.618/s).
+[Thu Oct 30 16:20:03 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:20:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:20:03 2014] [debug] 200 OK (0.001084s, 922.509/s).
+[Thu Oct 30 16:20:04 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:20:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:20:04 2014] [debug] 200 OK (0.001078s, 927.644/s).
+[Thu Oct 30 16:20:04 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:20:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:20:04 2014] [debug] 200 OK (0.001550s, 645.161/s).
+[Thu Oct 30 16:20:04 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:20:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:20:04 2014] [debug] 200 OK (0.000345s, 2898.551/s).
+[Thu Oct 30 16:20:05 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:20:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:20:05 2014] [debug] 200 OK (0.000702s, 1424.501/s).
+[Thu Oct 30 16:21:25 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:21:25 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:21:25 2014] [debug] 200 OK (0.000743s, 1345.895/s).
+[Thu Oct 30 16:21:25 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:21:25 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:21:25 2014] [debug] 200 OK (0.001257s, 795.545/s).
+[Thu Oct 30 16:22:01 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:22:01 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:22:01 2014] [debug] 200 OK (0.001198s, 834.725/s).
+[Thu Oct 30 16:22:02 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:22:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:22:02 2014] [debug] 200 OK (0.001248s, 801.282/s).
+[Thu Oct 30 16:22:02 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:22:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:22:02 2014] [debug] 200 OK (0.001086s, 920.810/s).
+[Thu Oct 30 16:22:03 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:22:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:22:03 2014] [debug] 200 OK (0.003801s, 263.089/s).
+[Thu Oct 30 16:22:03 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:22:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:22:03 2014] [debug] 200 OK (0.001156s, 865.052/s).
+[Thu Oct 30 16:22:47 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:22:47 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:22:47 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:22:47 2014] [debug] 200 OK (0.001240s, 806.452/s).
+[Thu Oct 30 16:22:47 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:22:47 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:22:47 2014] [debug] 200 OK (0.000328s, 3048.780/s).
+[Thu Oct 30 16:22:47 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:22:47 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:22:47 2014] [debug] 200 OK (0.000225s, 4444.444/s).
+[Thu Oct 30 16:22:47 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:22:47 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:22:47 2014] [debug] 200 OK (0.000216s, 4629.630/s).
+[Thu Oct 30 16:22:48 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:22:48 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:22:48 2014] [debug] 200 OK (0.001096s, 912.409/s).
+[Thu Oct 30 16:22:49 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:22:49 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:22:49 2014] [debug] 200 OK (0.001849s, 540.833/s).
+[Thu Oct 30 16:31:36 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:31:36 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:31:36 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:31:36 2014] [debug] 200 OK (0.001225s, 816.327/s).
+[Thu Oct 30 16:32:27 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:32:27 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:32:27 2014] [debug] 200 OK (0.001303s, 767.460/s).
+[Thu Oct 30 16:32:28 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:32:28 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:32:28 2014] [debug] 200 OK (0.000479s, 2087.683/s).
+[Thu Oct 30 16:32:28 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:32:28 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:32:28 2014] [debug] 200 OK (0.001231s, 812.348/s).
+[Thu Oct 30 16:32:28 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:32:28 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:32:28 2014] [debug] 200 OK (0.001084s, 922.509/s).
+[Thu Oct 30 16:32:29 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:32:29 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:32:29 2014] [debug] 200 OK (0.000582s, 1718.213/s).
+[Thu Oct 30 16:32:29 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:32:29 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:32:29 2014] [debug] 200 OK (0.000659s, 1517.451/s).
+[Thu Oct 30 16:37:15 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:37:15 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:37:15 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:15 2014] [info] Listening at "http://*:3000".
+[Thu Oct 30 16:52:22 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:52:22 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:22 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:22 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:22 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:22 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:22 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:22 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:22 2014] [debug] 500 Internal Server Error (0.052231s, 19.146/s).
+[Thu Oct 30 16:52:43 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:43 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:43 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:43 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:43 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:43 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:43 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:43 2014] [debug] 500 Internal Server Error (0.028090s, 35.600/s).
+[Thu Oct 30 16:52:44 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:44 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:44 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:44 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:44 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:44 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:44 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:44 2014] [debug] 500 Internal Server Error (0.012154s, 82.277/s).
+[Thu Oct 30 16:52:45 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:45 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:45 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:45 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:45 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:45 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:45 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:45 2014] [debug] 500 Internal Server Error (0.015587s, 64.156/s).
+[Thu Oct 30 16:52:48 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:48 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:48 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:48 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:48 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:48 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:48 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:48 2014] [debug] 500 Internal Server Error (0.032463s, 30.804/s).
+[Thu Oct 30 16:52:48 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:48 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:48 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:48 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:48 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:48 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:48 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:48 2014] [debug] 500 Internal Server Error (0.033827s, 29.562/s).
+[Thu Oct 30 16:52:49 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:49 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:49 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:49 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:49 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:49 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:49 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:49 2014] [debug] 500 Internal Server Error (0.014311s, 69.876/s).
+[Thu Oct 30 16:52:50 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:50 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:50 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:50 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:50 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:50 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:50 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:50 2014] [debug] 500 Internal Server Error (0.028365s, 35.255/s).
+[Thu Oct 30 16:52:50 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:50 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:50 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:50 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:50 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:50 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:50 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:50 2014] [debug] 500 Internal Server Error (0.027436s, 36.448/s).
+[Thu Oct 30 16:52:51 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:51 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:51 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:51 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:51 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:51 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:51 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:51 2014] [debug] 500 Internal Server Error (0.026480s, 37.764/s).
+[Thu Oct 30 16:52:52 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:52 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:52 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:52 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:52 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:52 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:52 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:52 2014] [debug] 500 Internal Server Error (0.013097s, 76.353/s).
+[Thu Oct 30 16:52:52 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:52 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:52 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:52 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:52 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:52 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:52 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:52 2014] [debug] 500 Internal Server Error (0.043289s, 23.101/s).
+[Thu Oct 30 16:52:53 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:53 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:53 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:53 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:53 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:53 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:53 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:53 2014] [debug] 500 Internal Server Error (0.025849s, 38.686/s).
+[Thu Oct 30 16:52:53 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:53 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:53 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:53 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:53 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:53 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:53 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:53 2014] [debug] 500 Internal Server Error (0.028393s, 35.220/s).
+[Thu Oct 30 16:52:54 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:54 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:54 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:54 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:54 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:54 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:54 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:54 2014] [debug] 500 Internal Server Error (0.028347s, 35.277/s).
+[Thu Oct 30 16:52:54 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:54 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:54 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:54 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:54 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:54 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:54 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:54 2014] [debug] 500 Internal Server Error (0.013840s, 72.254/s).
+[Thu Oct 30 16:52:55 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:55 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:55 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:55 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:55 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:55 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:55 2014] [debug] 500 Internal Server Error (0.028826s, 34.691/s).
+[Thu Oct 30 16:52:55 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:55 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:55 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:55 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:55 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:55 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:55 2014] [debug] 500 Internal Server Error (0.038835s, 25.750/s).
+[Thu Oct 30 16:52:56 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:56 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:56 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:56 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:56 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:56 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:56 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:56 2014] [debug] 500 Internal Server Error (0.029067s, 34.403/s).
+[Thu Oct 30 16:52:56 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:56 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:56 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:56 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:56 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:56 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:56 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:56 2014] [debug] 500 Internal Server Error (0.025852s, 38.682/s).
+[Thu Oct 30 16:52:57 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:57 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:57 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:57 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:57 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:57 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:57 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:57 2014] [debug] 500 Internal Server Error (0.031582s, 31.664/s).
+[Thu Oct 30 16:52:57 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:57 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:57 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:57 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:57 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:57 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:57 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:57 2014] [debug] 500 Internal Server Error (0.010874s, 91.962/s).
+[Thu Oct 30 16:52:59 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:52:59 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:52:59 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:52:59 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:52:59 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:52:59 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:52:59 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:52:59 2014] [debug] 500 Internal Server Error (0.013218s, 75.654/s).
+[Thu Oct 30 16:53:00 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:00 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:00 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:00 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:00 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:00 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:00 2014] [debug] 500 Internal Server Error (0.030663s, 32.613/s).
+[Thu Oct 30 16:53:00 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:00 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:00 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:00 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:00 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:00 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:00 2014] [debug] 500 Internal Server Error (0.029418s, 33.993/s).
+[Thu Oct 30 16:53:01 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:01 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:01 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:01 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:01 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:01 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:01 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:01 2014] [debug] 500 Internal Server Error (0.020527s, 48.716/s).
+[Thu Oct 30 16:53:02 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:02 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:02 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:02 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:02 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:02 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:02 2014] [debug] 500 Internal Server Error (0.014101s, 70.917/s).
+[Thu Oct 30 16:53:02 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:02 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:02 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:02 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:02 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:02 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:02 2014] [debug] 500 Internal Server Error (0.021750s, 45.977/s).
+[Thu Oct 30 16:53:03 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:03 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:03 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:03 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:03 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:03 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:03 2014] [debug] 500 Internal Server Error (0.032033s, 31.218/s).
+[Thu Oct 30 16:53:03 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:03 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:03 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:03 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:03 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:03 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:03 2014] [debug] 500 Internal Server Error (0.025944s, 38.545/s).
+[Thu Oct 30 16:53:04 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:04 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:04 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:04 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:04 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:04 2014] [debug] 500 Internal Server Error (0.033070s, 30.239/s).
+[Thu Oct 30 16:53:05 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:05 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:05 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:05 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:05 2014] [debug] 500 Internal Server Error (0.036775s, 27.192/s).
+[Thu Oct 30 16:53:05 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:05 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:05 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:05 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:05 2014] [debug] 500 Internal Server Error (0.018098s, 55.255/s).
+[Thu Oct 30 16:53:06 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:06 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:06 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:06 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:06 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:06 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:06 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:06 2014] [debug] 500 Internal Server Error (0.031284s, 31.965/s).
+[Thu Oct 30 16:53:06 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:06 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:06 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:06 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:06 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:06 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:06 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:06 2014] [debug] 500 Internal Server Error (0.030875s, 32.389/s).
+[Thu Oct 30 16:53:07 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:07 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:07 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:07 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:07 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:07 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:07 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:07 2014] [debug] 500 Internal Server Error (0.020846s, 47.971/s).
+[Thu Oct 30 16:53:07 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:07 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:07 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:07 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:07 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:07 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:07 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:07 2014] [debug] 500 Internal Server Error (0.029542s, 33.850/s).
+[Thu Oct 30 16:53:08 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:53:08 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:53:08 2014] [error] Can't locate object method "connect" via package "Schema" (perhaps you forgot to load "Schema"?) at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService.pm line 6.
+
+[Thu Oct 30 16:53:08 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 16:53:08 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 16:53:08 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 16:53:08 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 16:53:08 2014] [debug] 500 Internal Server Error (0.016237s, 61.588/s).
+[Thu Oct 30 16:55:27 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:55:27 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:55:27 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:55:28 2014] [debug] 200 OK (0.434161s, 2.303/s).
+[Thu Oct 30 16:55:33 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 16:55:33 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:55:33 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:55:33 2014] [debug] 200 OK (0.149839s, 6.674/s).
+[Thu Oct 30 16:57:41 2014] [debug] GET "/api/users".
+[Thu Oct 30 16:57:41 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 16:57:41 2014] [debug] 200 OK (0.007140s, 140.056/s).
+[Thu Oct 30 17:00:39 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:00:39 2014] [debug] GET "/api/users/1".
+[Thu Oct 30 17:00:39 2014] [error] Global symbol "$schema" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 23.
+Compilation failed in require at (eval 357) line 1.
+
+[Thu Oct 30 17:00:39 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:00:39 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:00:39 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:00:39 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:00:39 2014] [debug] 500 Internal Server Error (0.029100s, 34.364/s).
+[Thu Oct 30 17:01:00 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:01:00 2014] [debug] GET "/api/users/1".
+[Thu Oct 30 17:01:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user".
+[Thu Oct 30 17:01:00 2014] [debug] 200 OK (0.169188s, 5.911/s).
+[Thu Oct 30 17:01:26 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:01:26 2014] [debug] GET "/api/users/1".
+[Thu Oct 30 17:01:26 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user".
+[Thu Oct 30 17:01:26 2014] [error] Can't locate object method "pawwd_user" via package "Schema::Result::User" at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 26.
+
+[Thu Oct 30 17:01:26 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:01:26 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:01:26 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:01:26 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:01:26 2014] [debug] 500 Internal Server Error (0.166809s, 5.995/s).
+[Thu Oct 30 17:01:28 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:01:28 2014] [debug] GET "/api/users/1".
+[Thu Oct 30 17:01:28 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user".
+[Thu Oct 30 17:01:28 2014] [error] Can't locate object method "pawwd_user" via package "Schema::Result::User" at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 26.
+
+[Thu Oct 30 17:01:28 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:01:28 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:01:28 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:01:28 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:01:28 2014] [debug] 500 Internal Server Error (0.175992s, 5.682/s).
+[Thu Oct 30 17:01:49 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:01:49 2014] [debug] GET "/api/users/1".
+[Thu Oct 30 17:01:49 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user".
+[Thu Oct 30 17:01:49 2014] [debug] 200 OK (0.150772s, 6.633/s).
+[Thu Oct 30 17:06:27 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:06:27 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:27 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:27 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:27 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:27 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:27 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:27 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:27 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:27 2014] [debug] 404 Not Found (0.031075s, 32.180/s).
+[Thu Oct 30 17:06:42 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:06:42 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:42 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:42 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:42 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:42 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:42 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:42 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:42 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:42 2014] [debug] 404 Not Found (0.054902s, 18.214/s).
+[Thu Oct 30 17:06:42 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:42 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:42 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:42 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:42 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:42 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:42 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:42 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:42 2014] [debug] 404 Not Found (0.023622s, 42.333/s).
+[Thu Oct 30 17:06:43 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:43 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:43 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:43 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:43 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:43 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:43 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:43 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:43 2014] [debug] 404 Not Found (0.024811s, 40.305/s).
+[Thu Oct 30 17:06:44 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:44 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:44 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:44 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:44 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:44 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:44 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:44 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:44 2014] [debug] 404 Not Found (0.022571s, 44.305/s).
+[Thu Oct 30 17:06:44 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:44 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:44 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:44 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:44 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:44 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:44 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:44 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:44 2014] [debug] 404 Not Found (0.028861s, 34.649/s).
+[Thu Oct 30 17:06:51 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:51 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:51 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:51 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:51 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:51 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:51 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:51 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:51 2014] [debug] 404 Not Found (0.027761s, 36.022/s).
+[Thu Oct 30 17:06:52 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:52 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:52 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:52 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:52 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:52 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:52 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:52 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:52 2014] [debug] 404 Not Found (0.020029s, 49.928/s).
+[Thu Oct 30 17:06:54 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:54 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:54 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:54 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:54 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:54 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:54 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:54 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:54 2014] [debug] 404 Not Found (0.030576s, 32.705/s).
+[Thu Oct 30 17:06:54 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:54 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:54 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:54 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:54 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:54 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:54 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:54 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:54 2014] [debug] 404 Not Found (0.026684s, 37.476/s).
+[Thu Oct 30 17:06:55 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:55 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:55 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:55 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:55 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:55 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:55 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:55 2014] [debug] 404 Not Found (0.033069s, 30.240/s).
+[Thu Oct 30 17:06:55 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:55 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:55 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:55 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:55 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:55 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:55 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:55 2014] [debug] 404 Not Found (0.018847s, 53.059/s).
+[Thu Oct 30 17:06:56 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:56 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:56 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:56 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:56 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:56 2014] [debug] 404 Not Found (0.022260s, 44.924/s).
+[Thu Oct 30 17:06:56 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:56 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:56 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:56 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:56 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:56 2014] [debug] 404 Not Found (0.007326s, 136.500/s).
+[Thu Oct 30 17:06:56 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:56 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:56 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:56 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:56 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:56 2014] [debug] 404 Not Found (0.008589s, 116.428/s).
+[Thu Oct 30 17:06:56 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:56 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:56 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:56 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:56 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:56 2014] [debug] 404 Not Found (0.007687s, 130.090/s).
+[Thu Oct 30 17:06:56 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:06:56 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:06:56 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:06:56 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:06:56 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:06:56 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:06:56 2014] [debug] 404 Not Found (0.006444s, 155.183/s).
+[Thu Oct 30 17:07:10 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:07:10 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:07:10 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:07:10 2014] [debug] Template "fetch/get_user_tags.html.ep" not found.
+[Thu Oct 30 17:07:10 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:07:10 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:07:10 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:07:10 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:07:10 2014] [debug] 404 Not Found (0.030933s, 32.328/s).
+[Thu Oct 30 17:07:11 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:07:11 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:07:11 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:07:11 2014] [debug] 200 OK (0.170024s, 5.882/s).
+[Thu Oct 30 17:07:19 2014] [debug] GET "/api/users/2/tags".
+[Thu Oct 30 17:07:19 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:07:19 2014] [error] DBIx::Class::Schema::source(): Can't find source for WebService::Schema::Result::User at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 37
+
+[Thu Oct 30 17:07:19 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:07:19 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:07:19 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:07:19 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:07:19 2014] [debug] 500 Internal Server Error (0.031018s, 32.239/s).
+[Thu Oct 30 17:07:55 2014] [debug] GET "/api/users/2/tags".
+[Thu Oct 30 17:07:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:07:55 2014] [error] DBIx::Class::Schema::source(): Can't find source for WebService::Schema::Result::User at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 37
+
+[Thu Oct 30 17:07:55 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:07:55 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:07:55 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:07:55 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:07:55 2014] [debug] 500 Internal Server Error (0.039182s, 25.522/s).
+[Thu Oct 30 17:08:00 2014] [debug] GET "/api/users/1/tags".
+[Thu Oct 30 17:08:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:08:00 2014] [debug] 200 OK (0.002821s, 354.484/s).
+[Thu Oct 30 17:08:04 2014] [debug] GET "/api/users/2/tags".
+[Thu Oct 30 17:08:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:08:04 2014] [error] DBIx::Class::Schema::source(): Can't find source for WebService::Schema::Result::User at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 37
+
+[Thu Oct 30 17:08:04 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:08:04 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:08:04 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:08:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:08:04 2014] [debug] 500 Internal Server Error (0.013860s, 72.150/s).
+[Thu Oct 30 17:08:07 2014] [debug] GET "/api/users/3/tags".
+[Thu Oct 30 17:08:07 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:08:07 2014] [debug] 200 OK (0.002765s, 361.664/s).
+[Thu Oct 30 17:08:11 2014] [debug] GET "/api/users/2/tags".
+[Thu Oct 30 17:08:11 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:08:11 2014] [error] DBIx::Class::Schema::source(): Can't find source for WebService::Schema::Result::User at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 37
+
+[Thu Oct 30 17:08:11 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:08:11 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:08:11 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:08:11 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:08:11 2014] [debug] 500 Internal Server Error (0.011810s, 84.674/s).
+[Thu Oct 30 17:08:59 2014] [debug] GET "/api/users/2/tags".
+[Thu Oct 30 17:08:59 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:08:59 2014] [error] DBIx::Class::Schema::source(): Can't find source for WebService::Schema::Result::User at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 37
+
+[Thu Oct 30 17:08:59 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:08:59 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:08:59 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:08:59 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:08:59 2014] [debug] 500 Internal Server Error (0.030071s, 33.255/s).
+[Thu Oct 30 17:13:17 2014] [debug] GET "/api/users/2/tags".
+[Thu Oct 30 17:13:17 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:13:17 2014] [error] DBIx::Class::Schema::source(): Can't find source for WebService::Schema::Result::User at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 37
+
+[Thu Oct 30 17:13:17 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:13:17 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:13:17 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:13:17 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:13:17 2014] [debug] 500 Internal Server Error (0.037549s, 26.632/s).
+[Thu Oct 30 17:13:18 2014] [debug] GET "/api/users/2/tags".
+[Thu Oct 30 17:13:18 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:13:18 2014] [error] DBIx::Class::Schema::source(): Can't find source for WebService::Schema::Result::User at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 37
+
+[Thu Oct 30 17:13:18 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:13:18 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:13:18 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:13:18 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:13:18 2014] [debug] 500 Internal Server Error (0.037848s, 26.421/s).
+[Thu Oct 30 17:13:19 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:13:20 2014] [debug] GET "/api/users/2/tags".
+[Thu Oct 30 17:13:20 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Thu Oct 30 17:13:20 2014] [debug] 200 OK (0.362444s, 2.759/s).
+[Thu Oct 30 17:19:23 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:19:23 2014] [debug] GET "/api/users/2/events".
+[Thu Oct 30 17:19:23 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_events".
+[Thu Oct 30 17:19:23 2014] [debug] 200 OK (0.190816s, 5.241/s).
+[Thu Oct 30 17:19:31 2014] [debug] GET "/api/users/1/events".
+[Thu Oct 30 17:19:31 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_events".
+[Thu Oct 30 17:19:31 2014] [debug] 200 OK (0.014812s, 67.513/s).
+[Thu Oct 30 17:22:38 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:22:38 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:22:38 2014] [error] Global symbol "$schema" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 64.
+Compilation failed in require at (eval 357) line 1.
+
+[Thu Oct 30 17:22:38 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:22:38 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:22:38 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:22:38 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:22:38 2014] [debug] 500 Internal Server Error (0.028806s, 34.715/s).
+[Thu Oct 30 17:22:48 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:22:48 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:22:48 2014] [debug] Action not found in controller.
+[Thu Oct 30 17:22:48 2014] [debug] Template "fetch/get_tags.html.ep" not found.
+[Thu Oct 30 17:22:48 2014] [debug] Template "not_found.development.html.ep" not found.
+[Thu Oct 30 17:22:48 2014] [debug] Template "not_found.html.ep" not found.
+[Thu Oct 30 17:22:48 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:22:48 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:22:48 2014] [debug] 404 Not Found (0.030297s, 33.007/s).
+[Thu Oct 30 17:22:49 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:22:49 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:22:49 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:22:49 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:22:49 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:22:49 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:22:49 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:22:49 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:22:49 2014] [debug] 500 Internal Server Error (0.188606s, 5.302/s).
+[Thu Oct 30 17:23:59 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:23:59 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:23:59 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:23:59 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:23:59 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:23:59 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:23:59 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:23:59 2014] [debug] 500 Internal Server Error (0.047185s, 21.193/s).
+[Thu Oct 30 17:24:00 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:24:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:24:00 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:24:00 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:24:00 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:24:00 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:24:00 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:24:00 2014] [debug] 500 Internal Server Error (0.049880s, 20.048/s).
+[Thu Oct 30 17:24:00 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:24:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:24:00 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:24:00 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:24:00 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:24:00 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:24:00 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:24:00 2014] [debug] 500 Internal Server Error (0.039171s, 25.529/s).
+[Thu Oct 30 17:27:15 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:27:15 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:27:15 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:27:15 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:27:15 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:27:15 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:27:15 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:27:15 2014] [debug] 500 Internal Server Error (0.051643s, 19.364/s).
+[Thu Oct 30 17:27:17 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:27:17 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:27:17 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:27:17 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:27:17 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:27:17 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:27:17 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:27:17 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:27:17 2014] [debug] 500 Internal Server Error (0.185976s, 5.377/s).
+[Thu Oct 30 17:27:18 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:27:18 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:27:18 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:27:18 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:27:18 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:27:18 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:27:18 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:27:18 2014] [debug] 500 Internal Server Error (0.059704s, 16.749/s).
+[Thu Oct 30 17:27:19 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:27:19 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:27:19 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:27:19 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:27:19 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:27:19 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:27:19 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:27:19 2014] [debug] 500 Internal Server Error (0.053061s, 18.846/s).
+[Thu Oct 30 17:27:20 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:27:20 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:27:20 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:27:20 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:27:20 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:27:20 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:27:20 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:27:20 2014] [debug] 500 Internal Server Error (0.049096s, 20.368/s).
+[Thu Oct 30 17:27:21 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:27:21 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:27:21 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:27:21 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:27:21 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:27:21 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:27:21 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:27:21 2014] [debug] 500 Internal Server Error (0.030819s, 32.448/s).
+[Thu Oct 30 17:27:21 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:27:21 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:27:22 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:27:22 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:27:22 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:27:22 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:27:22 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:27:22 2014] [debug] 500 Internal Server Error (0.034640s, 28.868/s).
+[Thu Oct 30 17:27:22 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:27:22 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:27:22 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:27:22 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:27:22 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:27:22 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:27:22 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:27:22 2014] [debug] 500 Internal Server Error (0.047361s, 21.114/s).
+[Thu Oct 30 17:27:31 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:27:31 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:27:31 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:27:31 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:27:31 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:27:31 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:27:31 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:27:31 2014] [debug] 500 Internal Server Error (0.045602s, 21.929/s).
+[Thu Oct 30 17:27:32 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:27:32 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:27:32 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:27:32 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:27:32 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:27:32 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:27:32 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:27:32 2014] [debug] 500 Internal Server Error (0.054528s, 18.339/s).
+[Thu Oct 30 17:27:33 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:27:34 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:27:34 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:27:34 2014] [debug] 200 OK (0.172618s, 5.793/s).
+[Thu Oct 30 17:28:02 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:28:02 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:02 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:28:02 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:28:02 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:28:02 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:28:02 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:28:02 2014] [debug] 500 Internal Server Error (0.213070s, 4.693/s).
+[Thu Oct 30 17:28:04 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:28:04 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:04 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:28:04 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:28:04 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:28:04 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:28:04 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:28:04 2014] [debug] 500 Internal Server Error (0.184240s, 5.428/s).
+[Thu Oct 30 17:28:05 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:05 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:28:05 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:28:05 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:28:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:28:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:28:05 2014] [debug] 500 Internal Server Error (0.043794s, 22.834/s).
+[Thu Oct 30 17:28:05 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:05 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:28:05 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:28:05 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:28:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:28:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:28:06 2014] [debug] 500 Internal Server Error (0.041121s, 24.318/s).
+[Thu Oct 30 17:28:12 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:12 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:12 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:28:12 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:28:12 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:28:12 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:28:12 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:28:12 2014] [debug] 500 Internal Server Error (0.047504s, 21.051/s).
+[Thu Oct 30 17:28:14 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:28:14 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:14 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:14 2014] [debug] 200 OK (0.162185s, 6.166/s).
+[Thu Oct 30 17:28:38 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:38 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:38 2014] [debug] 200 OK (0.036915s, 27.089/s).
+[Thu Oct 30 17:28:39 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:28:39 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:39 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:39 2014] [debug] [Thu Oct 30 17:28:39 2014] [debug] 200 OK (0.168416s, 5.938/s).
+[Thu Oct 30 17:28:41 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:41 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:41 2014] [debug] [Thu Oct 30 17:28:41 2014] [debug] 200 OK (0.045178s, 22.135/s).
+[Thu Oct 30 17:28:43 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:43 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:43 2014] [debug] [Thu Oct 30 17:28:43 2014] [debug] 200 OK (0.033442s, 29.903/s).
+[Thu Oct 30 17:28:43 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:43 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:43 2014] [debug] [Thu Oct 30 17:28:44 2014] [debug] 200 OK (0.042992s, 23.260/s).
+[Thu Oct 30 17:28:44 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:44 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:44 2014] [debug] [Thu Oct 30 17:28:44 2014] [debug] 200 OK (0.015395s, 64.956/s).
+[Thu Oct 30 17:28:44 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:44 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:44 2014] [debug] [Thu Oct 30 17:28:44 2014] [debug] 200 OK (0.014733s, 67.875/s).
+[Thu Oct 30 17:28:53 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:53 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:53 2014] [debug] [Thu Oct 30 17:28:53 2014] [debug] 200 OK (0.044018s, 22.718/s).
+[Thu Oct 30 17:28:53 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:53 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:53 2014] [debug] [Thu Oct 30 17:28:53 2014] [debug] 200 OK (0.029898s, 33.447/s).
+[Thu Oct 30 17:28:54 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:54 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:54 2014] [debug] [Thu Oct 30 17:28:54 2014] [debug] 200 OK (0.039718s, 25.178/s).
+[Thu Oct 30 17:28:55 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:28:55 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:55 2014] [debug] coucou0
+[Thu Oct 30 17:28:55 2014] [debug] 200 OK (0.162155s, 6.167/s).
+[Thu Oct 30 17:28:55 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:55 2014] [debug] coucou0
+[Thu Oct 30 17:28:55 2014] [debug] 200 OK (0.011903s, 84.012/s).
+[Thu Oct 30 17:28:55 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:55 2014] [debug] coucou0
+[Thu Oct 30 17:28:55 2014] [debug] 200 OK (0.011123s, 89.904/s).
+[Thu Oct 30 17:28:55 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:55 2014] [debug] coucou0
+[Thu Oct 30 17:28:55 2014] [debug] 200 OK (0.010538s, 94.895/s).
+[Thu Oct 30 17:28:55 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:55 2014] [debug] coucou0
+[Thu Oct 30 17:28:55 2014] [debug] 200 OK (0.011896s, 84.062/s).
+[Thu Oct 30 17:28:57 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:57 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:57 2014] [debug] coucou0
+[Thu Oct 30 17:28:57 2014] [debug] 200 OK (0.020055s, 49.863/s).
+[Thu Oct 30 17:28:59 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:28:59 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:28:59 2014] [debug] coucou0
+[Thu Oct 30 17:28:59 2014] [debug] 200 OK (0.034930s, 28.629/s).
+[Thu Oct 30 17:29:00 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:29:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:29:00 2014] [debug] coucou0
+[Thu Oct 30 17:29:00 2014] [debug] 200 OK (0.034311s, 29.145/s).
+[Thu Oct 30 17:36:43 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:36:43 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:36:43 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:36:44 2014] [debug] 200 OK (0.192868s, 5.185/s).
+[Thu Oct 30 17:36:44 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:36:44 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:36:44 2014] [debug] 200 OK (0.029308s, 34.120/s).
+[Thu Oct 30 17:36:45 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:36:45 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:36:45 2014] [debug] 200 OK (0.042168s, 23.715/s).
+[Thu Oct 30 17:36:55 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:36:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:36:55 2014] [debug] 200 OK (0.038962s, 25.666/s).
+[Thu Oct 30 17:36:55 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:36:55 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:36:55 2014] [debug] 200 OK (0.016873s, 59.266/s).
+[Thu Oct 30 17:36:57 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:36:57 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:36:57 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:36:57 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:36:57 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:36:57 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:36:57 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:36:57 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:36:57 2014] [debug] 500 Internal Server Error (0.188295s, 5.311/s).
+[Thu Oct 30 17:41:56 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:41:56 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:41:56 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:41:56 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:41:56 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:41:56 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:41:56 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:41:56 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:41:56 2014] [debug] 500 Internal Server Error (0.210259s, 4.756/s).
+[Thu Oct 30 17:41:57 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:41:57 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:41:57 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:41:57 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:41:57 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:41:57 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:41:57 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:41:57 2014] [debug] 500 Internal Server Error (0.039829s, 25.107/s).
+[Thu Oct 30 17:41:58 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:41:58 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:41:58 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:41:58 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:41:58 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:41:58 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:41:58 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:41:58 2014] [debug] 500 Internal Server Error (0.045716s, 21.874/s).
+[Thu Oct 30 17:41:58 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:41:58 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:41:58 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:41:58 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:41:58 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:41:58 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:41:58 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:41:58 2014] [debug] 500 Internal Server Error (0.038675s, 25.856/s).
+[Thu Oct 30 17:41:59 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:41:59 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:41:59 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:41:59 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:41:59 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:41:59 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:41:59 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:41:59 2014] [debug] 500 Internal Server Error (0.047944s, 20.858/s).
+[Thu Oct 30 17:42:00 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:00 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:00 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:00 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:00 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:00 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:00 2014] [debug] 500 Internal Server Error (0.038150s, 26.212/s).
+[Thu Oct 30 17:42:00 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:00 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:00 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:00 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:00 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:00 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:00 2014] [debug] 500 Internal Server Error (0.051755s, 19.322/s).
+[Thu Oct 30 17:42:01 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:01 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:01 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:01 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:01 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:01 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:01 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:01 2014] [debug] 500 Internal Server Error (0.050176s, 19.930/s).
+[Thu Oct 30 17:42:01 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:01 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:01 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:01 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:01 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:01 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:01 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:01 2014] [debug] 500 Internal Server Error (0.052995s, 18.870/s).
+[Thu Oct 30 17:42:02 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:02 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:02 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:02 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:02 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:02 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:02 2014] [debug] 500 Internal Server Error (0.031708s, 31.538/s).
+[Thu Oct 30 17:42:02 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:02 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:02 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:02 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:02 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:02 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:02 2014] [debug] 500 Internal Server Error (0.049780s, 20.088/s).
+[Thu Oct 30 17:42:02 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:02 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:02 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:02 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:02 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:02 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:02 2014] [debug] 500 Internal Server Error (0.043576s, 22.948/s).
+[Thu Oct 30 17:42:03 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:03 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:03 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:03 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:03 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:03 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:03 2014] [debug] 500 Internal Server Error (0.021247s, 47.065/s).
+[Thu Oct 30 17:42:03 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:03 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:03 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:03 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:03 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:03 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:03 2014] [debug] 500 Internal Server Error (0.026984s, 37.059/s).
+[Thu Oct 30 17:42:03 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:03 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:03 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:03 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:03 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:03 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:03 2014] [debug] 500 Internal Server Error (0.030520s, 32.765/s).
+[Thu Oct 30 17:42:03 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:03 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:03 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:03 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:03 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:04 2014] [debug] 500 Internal Server Error (0.019215s, 52.043/s).
+[Thu Oct 30 17:42:04 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:04 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:04 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:04 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:04 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:04 2014] [debug] 500 Internal Server Error (0.052073s, 19.204/s).
+[Thu Oct 30 17:42:04 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:04 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:04 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:04 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:04 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:04 2014] [debug] 500 Internal Server Error (0.025792s, 38.772/s).
+[Thu Oct 30 17:42:04 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:04 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:04 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:04 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:04 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:04 2014] [debug] 500 Internal Server Error (0.029855s, 33.495/s).
+[Thu Oct 30 17:42:05 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:05 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:05 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:05 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:05 2014] [debug] 500 Internal Server Error (0.024884s, 40.186/s).
+[Thu Oct 30 17:42:05 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:05 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:05 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:05 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:05 2014] [debug] 500 Internal Server Error (0.023719s, 42.160/s).
+[Thu Oct 30 17:42:05 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:05 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:05 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:05 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:05 2014] [debug] 500 Internal Server Error (0.024339s, 41.086/s).
+[Thu Oct 30 17:42:05 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:05 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:05 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:05 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:05 2014] [debug] 500 Internal Server Error (0.026982s, 37.062/s).
+[Thu Oct 30 17:42:51 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:42:51 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:42:51 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:42:51 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:42:51 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:42:51 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:42:51 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:42:51 2014] [debug] 500 Internal Server Error (0.039102s, 25.574/s).
+[Thu Oct 30 17:43:55 2014] [info] Listening at "http://*:3000".
+[Thu Oct 30 17:44:01 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:44:01 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:44:01 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:44:01 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:44:01 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:44:01 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:44:01 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:44:01 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:44:01 2014] [debug] 500 Internal Server Error (0.221578s, 4.513/s).
+[Thu Oct 30 17:44:02 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:44:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:44:02 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:44:02 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:44:02 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:44:02 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:44:02 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:44:02 2014] [debug] 500 Internal Server Error (0.050042s, 19.983/s).
+[Thu Oct 30 17:44:03 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:44:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:44:03 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:44:03 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:44:03 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:44:03 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:44:03 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:44:03 2014] [debug] 500 Internal Server Error (0.045619s, 21.921/s).
+[Thu Oct 30 17:44:04 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:44:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:44:04 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:44:04 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:44:04 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:44:04 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:44:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:44:04 2014] [debug] 500 Internal Server Error (0.040120s, 24.925/s).
+[Thu Oct 30 17:44:09 2014] [debug] GET "/api/users/".
+[Thu Oct 30 17:44:09 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Thu Oct 30 17:44:09 2014] [debug] 200 OK (0.003972s, 251.762/s).
+[Thu Oct 30 17:44:13 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:44:13 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:44:13 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:44:13 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:44:13 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:44:13 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:44:13 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:44:13 2014] [debug] 500 Internal Server Error (0.026364s, 37.931/s).
+[Thu Oct 30 17:44:54 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:44:54 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:44:54 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 67.
+
+[Thu Oct 30 17:44:54 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:44:54 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:44:54 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:44:54 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:44:54 2014] [debug] 500 Internal Server Error (0.037663s, 26.551/s).
+[Thu Oct 30 17:44:56 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:44:56 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:44:56 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:44:56 2014] [debug] [Thu Oct 30 17:44:56 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 68.
+
+[Thu Oct 30 17:44:56 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:44:56 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:44:56 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:44:56 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:44:56 2014] [debug] 500 Internal Server Error (0.212810s, 4.699/s).
+[Thu Oct 30 17:45:00 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:45:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:45:00 2014] [debug] [Thu Oct 30 17:45:00 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 68.
+
+[Thu Oct 30 17:45:00 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:45:00 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:45:00 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:45:00 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:45:00 2014] [debug] 500 Internal Server Error (0.062565s, 15.983/s).
+[Thu Oct 30 17:45:01 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:45:01 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:45:01 2014] [debug] [Thu Oct 30 17:45:01 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 68.
+
+[Thu Oct 30 17:45:01 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:45:01 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:45:01 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:45:01 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:45:01 2014] [debug] 500 Internal Server Error (0.064378s, 15.533/s).
+[Thu Oct 30 17:45:01 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:45:01 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:45:01 2014] [debug] [Thu Oct 30 17:45:02 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 68.
+
+[Thu Oct 30 17:45:02 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:45:02 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:45:02 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:45:02 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:45:02 2014] [debug] 500 Internal Server Error (0.025942s, 38.548/s).
+[Thu Oct 30 17:45:03 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:45:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:45:03 2014] [debug] [Thu Oct 30 17:45:03 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 68.
+
+[Thu Oct 30 17:45:03 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:45:03 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:45:03 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:45:03 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:45:03 2014] [debug] 500 Internal Server Error (0.048546s, 20.599/s).
+[Thu Oct 30 17:45:04 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:45:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:45:04 2014] [debug] [Thu Oct 30 17:45:04 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 68.
+
+[Thu Oct 30 17:45:04 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:45:04 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:45:04 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:45:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:45:04 2014] [debug] 500 Internal Server Error (0.046691s, 21.417/s).
+[Thu Oct 30 17:45:22 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:45:22 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:45:22 2014] [debug] [Thu Oct 30 17:45:22 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 68.
+
+[Thu Oct 30 17:45:22 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:45:22 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:45:22 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:45:22 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:45:22 2014] [debug] 500 Internal Server Error (0.040113s, 24.930/s).
+[Thu Oct 30 17:45:23 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:45:23 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:45:23 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:45:23 2014] [debug] coucou0
+[Thu Oct 30 17:45:23 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 68.
+
+[Thu Oct 30 17:45:23 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:45:23 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:45:23 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:45:23 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:45:23 2014] [debug] 500 Internal Server Error (0.182754s, 5.472/s).
+[Thu Oct 30 17:45:23 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:45:23 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:45:23 2014] [debug] coucou0
+[Thu Oct 30 17:45:23 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 68.
+
+[Thu Oct 30 17:45:23 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:45:23 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:45:23 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:45:23 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:45:23 2014] [debug] 500 Internal Server Error (0.021947s, 45.564/s).
+[Thu Oct 30 17:45:25 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:45:25 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:45:25 2014] [debug] coucou0
+[Thu Oct 30 17:45:25 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 68.
+
+[Thu Oct 30 17:45:25 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:45:25 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:45:25 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:45:25 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:45:25 2014] [debug] 500 Internal Server Error (0.031312s, 31.937/s).
+[Thu Oct 30 17:45:26 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:45:26 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:45:26 2014] [debug] coucou0
+[Thu Oct 30 17:45:26 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 68.
+
+[Thu Oct 30 17:45:26 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:45:26 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:45:26 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:45:26 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:45:26 2014] [debug] 500 Internal Server Error (0.040957s, 24.416/s).
+[Thu Oct 30 17:46:48 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:46:48 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:46:48 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:46:48 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 71.
+
+[Thu Oct 30 17:46:48 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:46:48 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:46:48 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:46:48 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:46:48 2014] [debug] 500 Internal Server Error (0.228362s, 4.379/s).
+[Thu Oct 30 17:47:03 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:47:03 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:47:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:47:03 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 71.
+
+[Thu Oct 30 17:47:03 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:47:03 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:47:03 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:47:03 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:47:03 2014] [debug] 500 Internal Server Error (0.203425s, 4.916/s).
+[Thu Oct 30 17:47:47 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:47:47 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:47:47 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:47:47 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 71.
+
+[Thu Oct 30 17:47:47 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:47:47 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:47:47 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:47:47 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:47:47 2014] [debug] 500 Internal Server Error (0.212406s, 4.708/s).
+[Thu Oct 30 17:48:03 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:48:03 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:48:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:48:03 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 71.
+
+[Thu Oct 30 17:48:03 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:48:03 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:48:03 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:48:03 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:48:03 2014] [debug] 500 Internal Server Error (0.208170s, 4.804/s).
+[Thu Oct 30 17:48:08 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:48:08 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:48:08 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:48:08 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 71.
+
+[Thu Oct 30 17:48:08 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:48:08 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:48:08 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:48:08 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:48:08 2014] [debug] 500 Internal Server Error (0.227510s, 4.395/s).
+[Thu Oct 30 17:48:25 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:48:25 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:48:25 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 71.
+
+[Thu Oct 30 17:48:25 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:48:25 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:48:25 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:48:25 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:48:25 2014] [debug] 500 Internal Server Error (0.060753s, 16.460/s).
+[Thu Oct 30 17:51:37 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:51:37 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:51:37 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:51:37 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 73.
+
+[Thu Oct 30 17:51:37 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:51:37 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:51:37 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:51:37 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:51:37 2014] [debug] 500 Internal Server Error (0.463473s, 2.158/s).
+[Thu Oct 30 17:52:01 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:52:01 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:52:01 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:52:01 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 73.
+
+[Thu Oct 30 17:52:01 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:52:01 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:52:01 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:52:01 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:52:01 2014] [debug] 500 Internal Server Error (0.400487s, 2.497/s).
+[Thu Oct 30 17:52:04 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 17:52:04 2014] [debug] GET "/api/tags".
+[Thu Oct 30 17:52:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 17:52:05 2014] [error] Can't call method "id_user" on an undefined value at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 73.
+
+[Thu Oct 30 17:52:05 2014] [debug] Template "exception.development.html.ep" not found.
+[Thu Oct 30 17:52:05 2014] [debug] Template "exception.html.ep" not found.
+[Thu Oct 30 17:52:05 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Thu Oct 30 17:52:05 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Thu Oct 30 17:52:05 2014] [debug] 500 Internal Server Error (0.414580s, 2.412/s).
+[Thu Oct 30 18:07:00 2014] [debug] Your secret passphrase needs to be changed!!!
+[Thu Oct 30 18:07:00 2014] [debug] GET "/api/tags".
+[Thu Oct 30 18:07:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
+[Thu Oct 30 18:07:00 2014] [debug] 200 OK (0.506209s, 1.975/s).

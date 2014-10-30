@@ -183,6 +183,18 @@ put '/insert/users/:id/passwd' => sub {
   return $self->render( text => 'coucou' );
 };
 
+put '/insert/users/:id/username' => sub {
+  my ( $self ) = @_;
+
+  my $id = $self->param( 'id' );
+  my $json = decode_json( $self->req->body );
+  my $user = $schema->resultset( 'User' )->find( { id_user => $id } );
+  my $ret = $user->update( {
+      pseudo_user => $json->{ username }
+  });
+  return $self->render( text => 'coucou' );
+};
+
 del '/:req' => sub { # delete :req in db
   my ( $self ) = @_;
 

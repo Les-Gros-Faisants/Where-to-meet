@@ -40,8 +40,8 @@ sub get_user_tags {
   my @tags = $self->db->resultset( 'Tag' )->search( { id_victim => $id } )->all;
   foreach my $tag ( @tags ) {
     $ret{ $tag->id_tag } = {
-	 'tag_name' => $tag->tag_name,
-	 'aggressor' => $tag->id_aggressor->id_user,
+      'tag_name' => $tag->tag_name,
+	    'aggressor' => $tag->id_aggressor->id_user,
     };
   }
   return $self->render( text => encode_json( \%ret ) );
@@ -52,12 +52,14 @@ sub get_user_events {
 
   my $id = $self->param( 'id' );
   my %ret;
-  my @events = $self->db->resultset( 'JunctionUserEvent' )->search( { id_user => $id } )->all;
+  my @events = $self->db->resultset( 'JunctionUserEvent' )->search(
+    { id_user => $id }
+  )->all;
   foreach my $event ( @events ) {
     $ret{ $event->id_event->id_event } = {
-	'organizer' => $event->id_event->id_organizer->id_user,
-        'geolocation' => $event->id_event->geolocation,
-	'desc' => $event->id_event->description_event,
+      'organizer' => $event->id_event->id_organizer->id_user,
+      'geolocation' => $event->id_event->geolocation,
+	    'desc' => $event->id_event->description_event,
     };
   }
   return $self->render( text => encode_json( \%ret ) );
@@ -80,7 +82,46 @@ sub get_all_tags {
 }
 
 sub get_all_events {
-  
+  my $self = shift;
+
+  my @events = $self->db->resultset( 'PastEvent' )->all;
+  my %ret;
+  foreach my $tmp ( @events ) {
+      $ret{ $tmp->id_event } = {
+        'id_organizer' => $tmp->id_organizer->id_user,
+        'geolocation' => $tmp->geolocation,
+        'desc' => $tmp->description_event,
+      };
+  }
+  return $self->render( text => encode_json( \%ret ) );
+}
+
+sub get_event {
+  my $self = shift;
+
+  my $id = $self->param( 'id' );
+  my $event = $self->db->resultset( 'PastEvent' )->find( { id_event => $id } );
+  my %ret;
+  $ret{ 'id_organizer'} = $event->id_organizer->id_user;
+  $ret{ 'geolocation' } = $event->geolocation;
+  $ret{ 'desciption' } = $event->description_event;
+  return $self->render( text => encode_json( \%ret ) );
+}
+
+sub get_event_tags {
+  my $self = shift;
+
+  my $id = $self->param( 'id' );
+  my @tags = $self->db->resultset( 'JunctionEventTag' )->search(
+    { id_event => $id }
+  )->all;
+  my $ret;
+  foreach my $tmp ( @tags ) {
+    $ret{ $tmp->id_tag->id_tag } = {
+      'tag_name' => $tmp->id_tag->tag_name,
+    };
+  }
+  return $self->render( text => encode_json ( \%ret ) );
 }
 
 1;

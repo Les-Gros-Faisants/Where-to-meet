@@ -1792,3 +1792,823 @@ Compilation failed in require at (eval 357) line 1.
 [Thu Oct 30 18:07:00 2014] [debug] GET "/api/tags".
 [Thu Oct 30 18:07:00 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_tags".
 [Thu Oct 30 18:07:00 2014] [debug] 200 OK (0.506209s, 1.975/s).
+[Mon Nov  3 15:42:10 2014] [info] Listening at "http://*:3000".
+[Mon Nov  3 15:43:30 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 15:43:30 2014] [debug] GET "/".
+[Mon Nov  3 15:43:30 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 15:43:30 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 15:43:30 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 15:43:30 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 15:43:30 2014] [debug] 404 Not Found (0.031723s, 31.523/s).
+[Mon Nov  3 15:43:53 2014] [debug] GET "/users".
+[Mon Nov  3 15:43:53 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 15:43:53 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 15:43:53 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 15:43:53 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 15:43:53 2014] [debug] 404 Not Found (0.008864s, 112.816/s).
+[Mon Nov  3 15:44:02 2014] [debug] GET "/api/users/1/tags".
+[Mon Nov  3 15:44:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Mon Nov  3 15:44:03 2014] [debug] 200 OK (1.203725s, 0.831/s).
+[Mon Nov  3 15:44:09 2014] [debug] GET "/api/users/2/tags".
+[Mon Nov  3 15:44:09 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user_tags".
+[Mon Nov  3 15:44:10 2014] [debug] 200 OK (0.465098s, 2.150/s).
+[Mon Nov  3 15:44:12 2014] [debug] GET "/api/users".
+[Mon Nov  3 15:44:12 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Mon Nov  3 15:44:12 2014] [debug] 200 OK (0.001797s, 556.483/s).
+[Mon Nov  3 15:44:22 2014] [debug] GET "/".
+[Mon Nov  3 15:44:22 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 15:44:22 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 15:44:22 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 15:44:22 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 15:44:22 2014] [debug] 404 Not Found (0.009675s, 103.359/s).
+[Mon Nov  3 15:44:31 2014] [debug] GET "/api/users".
+[Mon Nov  3 15:44:31 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_user".
+[Mon Nov  3 15:44:31 2014] [debug] 200 OK (0.002541s, 393.546/s).
+[Mon Nov  3 16:03:04 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:03:04 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:03:04 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 105.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Compilation failed in require at (eval 357) line 1.
+
+[Mon Nov  3 16:03:04 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:03:04 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:03:04 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:03:04 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:03:04 2014] [debug] 500 Internal Server Error (0.031165s, 32.087/s).
+[Mon Nov  3 16:03:04 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:03:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:03:04 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:03:04 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:03:04 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:03:04 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:03:04 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:03:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:03:04 2014] [debug] 404 Not Found (0.007464s, 133.976/s).
+[Mon Nov  3 16:03:47 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:03:47 2014] [debug] GET "/api/events/".
+[Mon Nov  3 16:03:47 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 105.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Compilation failed in require at (eval 357) line 1.
+
+[Mon Nov  3 16:03:47 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:03:47 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:03:47 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:03:47 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:03:47 2014] [debug] 500 Internal Server Error (0.029553s, 33.838/s).
+[Mon Nov  3 16:03:49 2014] [debug] GET "/api/events/".
+[Mon Nov  3 16:03:49 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_events".
+[Mon Nov  3 16:03:49 2014] [error] Can't locate object method "description_eventn" via package "Schema::Result::PastEvent" at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 90.
+
+[Mon Nov  3 16:03:49 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:03:49 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:03:49 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:03:49 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:03:49 2014] [debug] 500 Internal Server Error (0.214191s, 4.669/s).
+[Mon Nov  3 16:03:49 2014] [debug] GET "/api/events/".
+[Mon Nov  3 16:03:49 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_events".
+[Mon Nov  3 16:03:49 2014] [error] Can't locate object method "description_eventn" via package "Schema::Result::PastEvent" at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 90.
+
+[Mon Nov  3 16:03:49 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:03:49 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:03:49 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:03:49 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:03:49 2014] [debug] 500 Internal Server Error (0.013111s, 76.272/s).
+[Mon Nov  3 16:03:50 2014] [debug] GET "/api/events/".
+[Mon Nov  3 16:03:50 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_events".
+[Mon Nov  3 16:03:50 2014] [error] Can't locate object method "description_eventn" via package "Schema::Result::PastEvent" at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 90.
+
+[Mon Nov  3 16:03:50 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:03:50 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:03:50 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:03:50 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:03:50 2014] [debug] 500 Internal Server Error (0.015411s, 64.889/s).
+[Mon Nov  3 16:03:51 2014] [debug] GET "/api/events/".
+[Mon Nov  3 16:03:51 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_events".
+[Mon Nov  3 16:03:51 2014] [error] Can't locate object method "description_eventn" via package "Schema::Result::PastEvent" at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 90.
+
+[Mon Nov  3 16:03:51 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:03:51 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:03:51 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:03:51 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:03:51 2014] [debug] 500 Internal Server Error (0.012884s, 77.616/s).
+[Mon Nov  3 16:03:51 2014] [debug] GET "/api/events/".
+[Mon Nov  3 16:03:51 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_events".
+[Mon Nov  3 16:03:51 2014] [error] Can't locate object method "description_eventn" via package "Schema::Result::PastEvent" at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 90.
+
+[Mon Nov  3 16:03:51 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:03:51 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:03:51 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:03:51 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:03:51 2014] [debug] 500 Internal Server Error (0.017642s, 56.683/s).
+[Mon Nov  3 16:04:11 2014] [debug] GET "/api/events/".
+[Mon Nov  3 16:04:11 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_events".
+[Mon Nov  3 16:04:11 2014] [error] Can't locate object method "description_eventn" via package "Schema::Result::PastEvent" at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 90.
+
+[Mon Nov  3 16:04:11 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:04:11 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:04:11 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:04:11 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:04:11 2014] [debug] 500 Internal Server Error (0.015216s, 65.720/s).
+[Mon Nov  3 16:04:15 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:04:15 2014] [debug] GET "/api/events/".
+[Mon Nov  3 16:04:15 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 105.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Compilation failed in require at (eval 357) line 1.
+
+[Mon Nov  3 16:04:15 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:04:15 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:04:15 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:04:15 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:04:15 2014] [debug] 500 Internal Server Error (0.035086s, 28.501/s).
+[Mon Nov  3 16:04:16 2014] [debug] GET "/api/events/".
+[Mon Nov  3 16:04:16 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_events".
+[Mon Nov  3 16:04:16 2014] [debug] 200 OK (0.160991s, 6.212/s).
+[Mon Nov  3 16:04:25 2014] [debug] GET "/api/events/2".
+[Mon Nov  3 16:04:25 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:04:25 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:04:25 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:04:25 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:04:25 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:04:25 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:04:25 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:04:25 2014] [debug] 404 Not Found (0.029582s, 33.804/s).
+[Mon Nov  3 16:04:50 2014] [debug] GET "/api/events/2".
+[Mon Nov  3 16:04:50 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:04:50 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:04:50 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:04:50 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:04:50 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:04:50 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:04:50 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:04:50 2014] [debug] 404 Not Found (0.011437s, 87.436/s).
+[Mon Nov  3 16:04:54 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:04:54 2014] [debug] GET "/api/events/2".
+[Mon Nov  3 16:04:54 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 105.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Compilation failed in require at (eval 357) line 1.
+
+[Mon Nov  3 16:04:54 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:04:54 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:04:54 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:04:54 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:04:54 2014] [debug] 500 Internal Server Error (0.038322s, 26.095/s).
+[Mon Nov  3 16:04:59 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:04:59 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:04:59 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:04:59 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:04:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:04:59 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:04:59 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:04:59 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:04:59 2014] [debug] 404 Not Found (0.015352s, 65.138/s).
+[Mon Nov  3 16:04:59 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:04:59 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:04:59 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:04:59 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:04:59 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:04:59 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:04:59 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:04:59 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:04:59 2014] [debug] 404 Not Found (0.007440s, 134.409/s).
+[Mon Nov  3 16:05:02 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:05:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:05:02 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:05:02 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:05:02 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:05:02 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:05:02 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:05:02 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:05:02 2014] [debug] 404 Not Found (0.008101s, 123.442/s).
+[Mon Nov  3 16:05:02 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:05:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:05:02 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:05:02 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:05:02 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:05:02 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:05:02 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:05:02 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:05:02 2014] [debug] 404 Not Found (0.007068s, 141.483/s).
+[Mon Nov  3 16:05:03 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:05:03 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:05:03 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:05:03 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:05:03 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:05:03 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:05:03 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:05:03 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:05:03 2014] [debug] 404 Not Found (0.021660s, 46.168/s).
+[Mon Nov  3 16:05:04 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:05:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:05:04 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:05:04 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:05:04 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:05:04 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:05:04 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:05:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:05:04 2014] [debug] 404 Not Found (0.009611s, 104.047/s).
+[Mon Nov  3 16:05:04 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:05:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:05:04 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:05:04 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:05:04 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:05:04 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:05:04 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:05:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:05:04 2014] [debug] 404 Not Found (0.008217s, 121.699/s).
+[Mon Nov  3 16:05:13 2014] [debug] GET "/api/events".
+[Mon Nov  3 16:05:13 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_events".
+[Mon Nov  3 16:05:14 2014] [debug] 200 OK (0.201943s, 4.952/s).
+[Mon Nov  3 16:05:18 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:05:18 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:05:18 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:05:18 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:05:18 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:05:18 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:05:18 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:05:18 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:05:18 2014] [debug] 404 Not Found (0.010607s, 94.277/s).
+[Mon Nov  3 16:06:42 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:06:42 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:42 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 105.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Compilation failed in require at (eval 357) line 1.
+
+[Mon Nov  3 16:06:42 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:06:42 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:06:42 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:42 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:42 2014] [debug] 500 Internal Server Error (0.030336s, 32.964/s).
+[Mon Nov  3 16:06:44 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:44 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:44 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:44 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:44 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:44 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:44 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:44 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:44 2014] [debug] 404 Not Found (0.006547s, 152.742/s).
+[Mon Nov  3 16:06:45 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:45 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:45 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:45 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:45 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:45 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:45 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:45 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:45 2014] [debug] 404 Not Found (0.006835s, 146.306/s).
+[Mon Nov  3 16:06:45 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:45 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:45 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:45 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:45 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:45 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:45 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:45 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:45 2014] [debug] 404 Not Found (0.007036s, 142.126/s).
+[Mon Nov  3 16:06:46 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:46 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:46 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:46 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:46 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:46 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:46 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:46 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:46 2014] [debug] 404 Not Found (0.007773s, 128.650/s).
+[Mon Nov  3 16:06:47 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:47 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:47 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:47 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:47 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:47 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:47 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:47 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:47 2014] [debug] 404 Not Found (0.013520s, 73.964/s).
+[Mon Nov  3 16:06:47 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:47 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:47 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:47 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:47 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:47 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:47 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:47 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:47 2014] [debug] 404 Not Found (0.008207s, 121.847/s).
+[Mon Nov  3 16:06:48 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:48 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:48 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:48 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:48 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:48 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:48 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:48 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:48 2014] [debug] 404 Not Found (0.009205s, 108.637/s).
+[Mon Nov  3 16:06:48 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:48 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:48 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:48 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:48 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:48 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:48 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:48 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:48 2014] [debug] 404 Not Found (0.008984s, 111.309/s).
+[Mon Nov  3 16:06:49 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:49 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:49 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:49 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:49 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:49 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:49 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:49 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:49 2014] [debug] 404 Not Found (0.008046s, 124.285/s).
+[Mon Nov  3 16:06:49 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:49 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:49 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:49 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:49 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:49 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:49 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:49 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:49 2014] [debug] 404 Not Found (0.009527s, 104.965/s).
+[Mon Nov  3 16:06:50 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:50 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:50 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:50 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:50 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:50 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:50 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:50 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:50 2014] [debug] 404 Not Found (0.008778s, 113.921/s).
+[Mon Nov  3 16:06:51 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:06:51 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:06:51 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:06:51 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:06:51 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:06:51 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:06:51 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:06:51 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:06:51 2014] [debug] 404 Not Found (0.009600s, 104.167/s).
+[Mon Nov  3 16:07:04 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:04 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:04 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:04 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:04 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:04 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:04 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:04 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:04 2014] [debug] 404 Not Found (0.016760s, 59.666/s).
+[Mon Nov  3 16:07:05 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:05 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:05 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:05 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:05 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:05 2014] [debug] 404 Not Found (0.014411s, 69.391/s).
+[Mon Nov  3 16:07:06 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:06 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:06 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:06 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:06 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:06 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:06 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:06 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:06 2014] [debug] 404 Not Found (0.015442s, 64.758/s).
+[Mon Nov  3 16:07:07 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:07 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:07 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:07 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:07 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:07 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:07 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:07 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:07 2014] [debug] 404 Not Found (0.026903s, 37.171/s).
+[Mon Nov  3 16:07:08 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:08 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:08 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:08 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:08 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:08 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:08 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:08 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:08 2014] [debug] 404 Not Found (0.027358s, 36.552/s).
+[Mon Nov  3 16:07:08 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:08 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:08 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:08 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:08 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:08 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:08 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:08 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:08 2014] [debug] 404 Not Found (0.014007s, 71.393/s).
+[Mon Nov  3 16:07:09 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:09 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:09 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:09 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:09 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:09 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:09 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:09 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:09 2014] [debug] 404 Not Found (0.023670s, 42.248/s).
+[Mon Nov  3 16:07:10 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:10 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:10 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:10 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:10 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:10 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:10 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:10 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:10 2014] [debug] 404 Not Found (0.030984s, 32.275/s).
+[Mon Nov  3 16:07:10 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:10 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:10 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:10 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:10 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:10 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:10 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:10 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:10 2014] [debug] 404 Not Found (0.016265s, 61.482/s).
+[Mon Nov  3 16:07:11 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:11 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:11 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:11 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:11 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:11 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:11 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:11 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:11 2014] [debug] 404 Not Found (0.021268s, 47.019/s).
+[Mon Nov  3 16:07:11 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:11 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:11 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:11 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:11 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:12 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:12 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:12 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:12 2014] [debug] 404 Not Found (0.018587s, 53.801/s).
+[Mon Nov  3 16:07:12 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:12 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:12 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:12 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:12 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:12 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:12 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:12 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:12 2014] [debug] 404 Not Found (0.026611s, 37.578/s).
+[Mon Nov  3 16:07:12 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:12 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:12 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:12 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:12 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:12 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:12 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:12 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:12 2014] [debug] 404 Not Found (0.032350s, 30.912/s).
+[Mon Nov  3 16:07:13 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:13 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:13 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:13 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:13 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:13 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:13 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:13 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:13 2014] [debug] 404 Not Found (0.006146s, 162.707/s).
+[Mon Nov  3 16:07:13 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:13 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:13 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:13 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:13 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:13 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:13 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:13 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:13 2014] [debug] 404 Not Found (0.017191s, 58.170/s).
+[Mon Nov  3 16:07:13 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:13 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:13 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:13 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:13 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:13 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:13 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:13 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:13 2014] [debug] 404 Not Found (0.006325s, 158.103/s).
+[Mon Nov  3 16:07:14 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:14 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:14 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:14 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:14 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:14 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:14 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:14 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:14 2014] [debug] 404 Not Found (0.028952s, 34.540/s).
+[Mon Nov  3 16:07:14 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:14 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:14 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:14 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:14 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:14 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:14 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:14 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:14 2014] [debug] 404 Not Found (0.006895s, 145.033/s).
+[Mon Nov  3 16:07:35 2014] [debug] GET "/api/users/1".
+[Mon Nov  3 16:07:35 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_user".
+[Mon Nov  3 16:07:35 2014] [debug] 200 OK (0.182681s, 5.474/s).
+[Mon Nov  3 16:07:40 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:40 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:40 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:40 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:40 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:40 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:40 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:40 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:40 2014] [debug] 404 Not Found (0.009798s, 102.062/s).
+[Mon Nov  3 16:07:45 2014] [debug] GET "/api/events".
+[Mon Nov  3 16:07:45 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_all_events".
+[Mon Nov  3 16:07:45 2014] [debug] 200 OK (0.028766s, 34.763/s).
+[Mon Nov  3 16:07:49 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:07:49 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:07:49 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:07:49 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:07:49 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:07:49 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:07:49 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:07:49 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:07:49 2014] [debug] 404 Not Found (0.007942s, 125.913/s).
+[Mon Nov  3 16:08:10 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:08:10 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:08:10 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 105.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Compilation failed in require at (eval 357) line 1.
+
+[Mon Nov  3 16:08:10 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:08:10 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:08:10 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:08:10 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:08:10 2014] [debug] 500 Internal Server Error (0.031685s, 31.561/s).
+[Mon Nov  3 16:09:05 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:09:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:09:05 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:09:05 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:09:05 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:09:05 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:09:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:09:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:09:05 2014] [debug] 404 Not Found (0.007176s, 139.353/s).
+[Mon Nov  3 16:09:07 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:09:07 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:09:07 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:09:07 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:09:07 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:09:07 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:09:07 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:09:07 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:09:07 2014] [debug] 404 Not Found (0.007211s, 138.677/s).
+[Mon Nov  3 16:13:56 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:13:56 2014] [debug] GET "/api/events/2".
+[Mon Nov  3 16:13:56 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 105.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Compilation failed in require at (eval 357) line 1.
+
+[Mon Nov  3 16:13:56 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:13:56 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:13:56 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:13:56 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:13:56 2014] [debug] 500 Internal Server Error (0.031894s, 31.354/s).
+[Mon Nov  3 16:14:11 2014] [debug] GET "/api/events/2".
+[Mon Nov  3 16:14:11 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:14:11 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:14:11 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:14:11 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:14:11 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:14:11 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:14:11 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:14:11 2014] [debug] 404 Not Found (0.014769s, 67.709/s).
+[Mon Nov  3 16:14:13 2014] [debug] GET "/api/events/2".
+[Mon Nov  3 16:14:13 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:14:13 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:14:13 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:14:13 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:14:13 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:14:13 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:14:13 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:14:13 2014] [debug] 404 Not Found (0.019239s, 51.978/s).
+[Mon Nov  3 16:14:13 2014] [debug] GET "/api/events/2".
+[Mon Nov  3 16:14:13 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:14:13 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:14:13 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:14:13 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:14:13 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:14:13 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:14:13 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:14:14 2014] [debug] 404 Not Found (0.017099s, 58.483/s).
+[Mon Nov  3 16:14:14 2014] [debug] GET "/api/events/2".
+[Mon Nov  3 16:14:14 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:14:14 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:14:14 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:14:14 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:14:14 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:14:14 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:14:14 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:14:14 2014] [debug] 404 Not Found (0.017300s, 57.803/s).
+[Mon Nov  3 16:14:26 2014] [debug] GET "/api/events/2".
+[Mon Nov  3 16:14:26 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:14:26 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:14:26 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:14:26 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:14:26 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:14:26 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:14:26 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:14:26 2014] [debug] 404 Not Found (0.009871s, 101.307/s).
+[Mon Nov  3 16:14:41 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:14:41 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:14:41 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:14:41 2014] [debug] Template "fetch/get_event.html.ep" not found.
+[Mon Nov  3 16:14:41 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:14:41 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:14:41 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:14:41 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:14:41 2014] [debug] 404 Not Found (0.006656s, 150.240/s).
+[Mon Nov  3 16:22:02 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:22:02 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:22:02 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 105.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Compilation failed in require at (eval 357) line 1.
+
+[Mon Nov  3 16:22:02 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:22:02 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:22:02 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:22:02 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:22:02 2014] [debug] 500 Internal Server Error (0.038830s, 25.753/s).
+[Mon Nov  3 16:22:04 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:22:04 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:22:04 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 105.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Compilation failed in require at (eval 357) line 1.
+
+[Mon Nov  3 16:22:04 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:22:04 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:22:04 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:22:04 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:22:04 2014] [debug] 500 Internal Server Error (0.028275s, 35.367/s).
+[Mon Nov  3 16:22:05 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:22:05 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event_".
+[Mon Nov  3 16:22:05 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:22:05 2014] [debug] Template "fetch/get_event_.html.ep" not found.
+[Mon Nov  3 16:22:05 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:22:05 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:22:05 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:22:05 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:22:05 2014] [debug] 404 Not Found (0.029472s, 33.931/s).
+[Mon Nov  3 16:22:06 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:22:06 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event_".
+[Mon Nov  3 16:22:06 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:22:06 2014] [debug] Template "fetch/get_event_.html.ep" not found.
+[Mon Nov  3 16:22:06 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:22:06 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:22:06 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:22:06 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:22:06 2014] [debug] 404 Not Found (0.024842s, 40.254/s).
+[Mon Nov  3 16:22:07 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:22:07 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event_".
+[Mon Nov  3 16:22:07 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:22:07 2014] [debug] Template "fetch/get_event_.html.ep" not found.
+[Mon Nov  3 16:22:07 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:22:07 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:22:07 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:22:07 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:22:07 2014] [debug] 404 Not Found (0.028942s, 34.552/s).
+[Mon Nov  3 16:22:08 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:22:08 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event_".
+[Mon Nov  3 16:22:08 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:22:08 2014] [debug] Template "fetch/get_event_.html.ep" not found.
+[Mon Nov  3 16:22:08 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:22:08 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:22:08 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:22:08 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:22:08 2014] [debug] 404 Not Found (0.022899s, 43.670/s).
+[Mon Nov  3 16:22:08 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:22:08 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event_".
+[Mon Nov  3 16:22:08 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:22:08 2014] [debug] Template "fetch/get_event_.html.ep" not found.
+[Mon Nov  3 16:22:08 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:22:08 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:22:08 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:22:09 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:22:09 2014] [debug] 404 Not Found (0.031572s, 31.674/s).
+[Mon Nov  3 16:22:09 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:22:09 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event_".
+[Mon Nov  3 16:22:09 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:22:09 2014] [debug] Template "fetch/get_event_.html.ep" not found.
+[Mon Nov  3 16:22:09 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:22:09 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:22:09 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:22:09 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:22:09 2014] [debug] 404 Not Found (0.021947s, 45.564/s).
+[Mon Nov  3 16:23:56 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:23:56 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:23:56 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 109.
+Compilation failed in require at (eval 357) line 1.
+
+[Mon Nov  3 16:23:56 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:23:56 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:23:56 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:23:56 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:23:56 2014] [debug] 500 Internal Server Error (0.058513s, 17.090/s).
+[Mon Nov  3 16:23:57 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:23:57 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:23:57 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 109.
+Compilation failed in require at (eval 357) line 1.
+
+[Mon Nov  3 16:23:57 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:23:57 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:23:57 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:23:57 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:23:57 2014] [debug] 500 Internal Server Error (0.060968s, 16.402/s).
+[Mon Nov  3 16:24:01 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:24:01 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event_".
+[Mon Nov  3 16:24:01 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:24:01 2014] [debug] Template "fetch/get_event_.html.ep" not found.
+[Mon Nov  3 16:24:01 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:24:01 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:24:01 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:24:01 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:24:01 2014] [debug] 404 Not Found (0.028666s, 34.885/s).
+[Mon Nov  3 16:24:02 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:24:02 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event_".
+[Mon Nov  3 16:24:02 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:24:02 2014] [debug] Template "fetch/get_event_.html.ep" not found.
+[Mon Nov  3 16:24:02 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:24:02 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:24:02 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:24:02 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:24:02 2014] [debug] 404 Not Found (0.023443s, 42.657/s).
+[Mon Nov  3 16:24:07 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:24:07 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event_".
+[Mon Nov  3 16:24:07 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:24:07 2014] [debug] Template "fetch/get_event_.html.ep" not found.
+[Mon Nov  3 16:24:07 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:24:07 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:24:07 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:24:07 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:24:07 2014] [debug] 404 Not Found (0.021965s, 45.527/s).
+[Mon Nov  3 16:24:08 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:24:08 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event_".
+[Mon Nov  3 16:24:08 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:24:08 2014] [debug] Template "fetch/get_event_.html.ep" not found.
+[Mon Nov  3 16:24:08 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:24:08 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:24:08 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:24:08 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:24:08 2014] [debug] 404 Not Found (0.013120s, 76.220/s).
+[Mon Nov  3 16:24:37 2014] [debug] GET "/api/events/2".
+[Mon Nov  3 16:24:37 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event_".
+[Mon Nov  3 16:24:37 2014] [debug] Action not found in controller.
+[Mon Nov  3 16:24:37 2014] [debug] Template "fetch/get_event_.html.ep" not found.
+[Mon Nov  3 16:24:37 2014] [debug] Template "not_found.development.html.ep" not found.
+[Mon Nov  3 16:24:37 2014] [debug] Template "not_found.html.ep" not found.
+[Mon Nov  3 16:24:37 2014] [debug] Rendering cached inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:24:37 2014] [debug] Rendering cached inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:24:37 2014] [debug] 404 Not Found (0.010092s, 99.088/s).
+[Mon Nov  3 16:26:27 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:26:27 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:26:27 2014] [error] Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 106.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 107.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 108.
+Global symbol "%ret" requires explicit package name at C:/Users/Jérôme/Code/Where-to-meet/web_service/script/../lib/WebService/Controller/Fetch.pm line 109.
+Compilation failed in require at (eval 358) line 1.
+
+[Mon Nov  3 16:26:27 2014] [debug] Template "exception.development.html.ep" not found.
+[Mon Nov  3 16:26:27 2014] [debug] Template "exception.html.ep" not found.
+[Mon Nov  3 16:26:27 2014] [debug] Rendering inline template "3e3201ab0667c1fc7f39089209f0435c".
+[Mon Nov  3 16:26:27 2014] [debug] Rendering inline template "b2d451b47e2053ce583cbfdf7bcc6006".
+[Mon Nov  3 16:26:27 2014] [debug] 500 Internal Server Error (0.026330s, 37.979/s).
+[Mon Nov  3 16:27:17 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:27:17 2014] [debug] GET "/api/events/2".
+[Mon Nov  3 16:27:17 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:27:17 2014] [debug] 200 OK (0.158790s, 6.298/s).
+[Mon Nov  3 16:27:20 2014] [debug] Your secret passphrase needs to be changed!!!
+[Mon Nov  3 16:27:20 2014] [debug] GET "/api/events/1".
+[Mon Nov  3 16:27:20 2014] [debug] Routing to controller "WebService::Controller::Fetch" and action "get_event".
+[Mon Nov  3 16:27:20 2014] [debug] 200 OK (0.163957s, 6.099/s).

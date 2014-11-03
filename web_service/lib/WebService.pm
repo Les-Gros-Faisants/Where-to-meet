@@ -31,6 +31,7 @@ sub startup {
 
   # Put Routes
   $r->put( '/api/insert/users' )     ->to( 'insert#add_user' );
+  $r->put( '/api/insert/users/:id' ) ->to( 'insert#update_user');
 }
 
 1;

@@ -18,6 +18,7 @@ sub startup {
   $self->helper( 'db' => sub { shift->app->schema } );
 
   my $r = $self->routes;
+  # Get Routes
   $r->get( '/api/users' )		         ->to( 'fetch#get_all_user' );
   $r->get( '/api/users/:id' )		     ->to( 'fetch#get_user' );
   $r->get( '/api/users/:id/tags' )	 ->to( 'fetch#get_user_tags' );
@@ -25,7 +26,11 @@ sub startup {
   $r->get( '/api/tags' )		         ->to( 'fetch#get_all_tags' );
   $r->get( '/api/events' )		       ->to( 'fetch#get_all_events' );
   $r->get( '/api/events/:id' )       ->to( 'fetch#get_event' );
-  $r->get( '/api/events/:id/tags')   ->to( 'fetch#get_event_tags')
+  $r->get( '/api/events/:id/tags')   ->to( 'fetch#get_event_tags' );
+  $r->get( '/api/events/:id/users')  ->to( 'fetch#get_event_users' );
+
+  # Put Routes
+  $r->put( '/api/insert/users' )     ->to( 'insert#add_user' );
 }
 
 1;

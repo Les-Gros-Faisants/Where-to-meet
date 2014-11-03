@@ -3,8 +3,6 @@ use Mojo::Base 'Mojolicious::Controller';
 use Mojo::JSON qw( encode_json );
 use Mojo::Log;
 
-use Data::Dumper;
-
 my $log = Mojo::Log->new;
 
 sub get_all_user {
@@ -111,14 +109,31 @@ sub get_event {
 sub get_event_tags {
   my $self = shift;
 
+  $log->debug( 'coucou' );
   my $id = $self->param( 'id' );
   my @tags = $self->db->resultset( 'JunctionEventTag' )->search(
     { id_event => $id }
   )->all;
-  my $ret;
+  my %ret;
   foreach my $tmp ( @tags ) {
     $ret{ $tmp->id_tag->id_tag } = {
       'tag_name' => $tmp->id_tag->tag_name,
+    };
+  }
+  return $self->render( text => encode_json ( \%ret ) );
+}
+
+sub get_event_users {
+  my $self = shift;
+
+  my $id = $self->param( 'id' );
+  my @users = $self->db->resultset( 'JunctionUserEvent' )->search(
+    { id_event => $id }
+  )->all;
+  my %ret;
+  foreach my $tmp ( @users ) {
+    $ret{ $tmp->id_user->id_user } = {
+      'user_name' => $tmp->id_user->pseudo_user,
     };
   }
   return $self->render( text => encode_json ( \%ret ) );

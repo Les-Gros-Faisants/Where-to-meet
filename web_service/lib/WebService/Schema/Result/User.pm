@@ -1,12 +1,12 @@
 use utf8;
-package Schema::Result::User;
+package WebService::Schema::Result::User;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
 =head1 NAME
 
-Schema::Result::User
+WebService::Schema::Result::User
 
 =cut
 
@@ -82,13 +82,13 @@ __PACKAGE__->set_primary_key("id_user");
 
 Type: has_many
 
-Related object: L<Schema::Result::JunctionUserEvent>
+Related object: L<WebService::Schema::Result::JunctionUserEvent>
 
 =cut
 
 __PACKAGE__->has_many(
   "junction_user_events",
-  "Schema::Result::JunctionUserEvent",
+  "WebService::Schema::Result::JunctionUserEvent",
   { "foreign.id_user" => "self.id_user" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
@@ -97,13 +97,13 @@ __PACKAGE__->has_many(
 
 Type: has_many
 
-Related object: L<Schema::Result::PastEvent>
+Related object: L<WebService::Schema::Result::PastEvent>
 
 =cut
 
 __PACKAGE__->has_many(
   "past_events",
-  "Schema::Result::PastEvent",
+  "WebService::Schema::Result::PastEvent",
   { "foreign.id_organizer" => "self.id_user" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
@@ -112,13 +112,13 @@ __PACKAGE__->has_many(
 
 Type: has_many
 
-Related object: L<Schema::Result::Tag>
+Related object: L<WebService::Schema::Result::Tag>
 
 =cut
 
 __PACKAGE__->has_many(
   "tags_id_aggressors",
-  "Schema::Result::Tag",
+  "WebService::Schema::Result::Tag",
   { "foreign.id_aggressor" => "self.id_user" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
@@ -127,20 +127,20 @@ __PACKAGE__->has_many(
 
 Type: has_many
 
-Related object: L<Schema::Result::Tag>
+Related object: L<WebService::Schema::Result::Tag>
 
 =cut
 
 __PACKAGE__->has_many(
   "tags_id_victims",
-  "Schema::Result::Tag",
+  "WebService::Schema::Result::Tag",
   { "foreign.id_victim" => "self.id_user" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-06 14:17:00
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:baIwhYCt8U8yCcP4TiC2Xg
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-06 14:16:12
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:++SoTt+SDVXnCnZFoersIA
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

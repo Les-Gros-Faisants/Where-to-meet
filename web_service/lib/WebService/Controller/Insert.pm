@@ -78,6 +78,7 @@ sub add_event {
 
   my $json = decode_json( $self->req->body );
   my $event = $self->db->resultset( 'PastEvent' );
+  
 }
 
 1;

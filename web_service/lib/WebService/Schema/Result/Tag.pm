@@ -1,12 +1,12 @@
 use utf8;
-package Schema::Result::Tag;
+package WebService::Schema::Result::Tag;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
 =head1 NAME
 
-Schema::Result::Tag
+WebService::Schema::Result::Tag
 
 =cut
 
@@ -90,13 +90,13 @@ __PACKAGE__->set_primary_key("id_tag");
 
 Type: belongs_to
 
-Related object: L<Schema::Result::User>
+Related object: L<WebService::Schema::Result::User>
 
 =cut
 
 __PACKAGE__->belongs_to(
   "id_aggressor",
-  "Schema::Result::User",
+  "WebService::Schema::Result::User",
   { id_user => "id_aggressor" },
   {
     is_deferrable => 1,
@@ -110,13 +110,13 @@ __PACKAGE__->belongs_to(
 
 Type: belongs_to
 
-Related object: L<Schema::Result::User>
+Related object: L<WebService::Schema::Result::User>
 
 =cut
 
 __PACKAGE__->belongs_to(
   "id_victim",
-  "Schema::Result::User",
+  "WebService::Schema::Result::User",
   { id_user => "id_victim" },
   {
     is_deferrable => 1,
@@ -130,20 +130,20 @@ __PACKAGE__->belongs_to(
 
 Type: has_many
 
-Related object: L<Schema::Result::JunctionEventTag>
+Related object: L<WebService::Schema::Result::JunctionEventTag>
 
 =cut
 
 __PACKAGE__->has_many(
   "junction_event_tags",
-  "Schema::Result::JunctionEventTag",
+  "WebService::Schema::Result::JunctionEventTag",
   { "foreign.id_tag" => "self.id_tag" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-06 14:17:00
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:tWehgVmikX0nmNUK2ARtew
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-06 14:16:12
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:riKsSzJ3CUCTgbbhf19SVA
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

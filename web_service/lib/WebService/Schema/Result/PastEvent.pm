@@ -1,12 +1,12 @@
 use utf8;
-package Schema::Result::PastEvent;
+package WebService::Schema::Result::PastEvent;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
 =head1 NAME
 
-Schema::Result::PastEvent
+WebService::Schema::Result::PastEvent
 
 =cut
 
@@ -98,13 +98,13 @@ __PACKAGE__->set_primary_key("id_event");
 
 Type: belongs_to
 
-Related object: L<Schema::Result::User>
+Related object: L<WebService::Schema::Result::User>
 
 =cut
 
 __PACKAGE__->belongs_to(
   "id_organizer",
-  "Schema::Result::User",
+  "WebService::Schema::Result::User",
   { id_user => "id_organizer" },
   {
     is_deferrable => 1,
@@ -118,13 +118,13 @@ __PACKAGE__->belongs_to(
 
 Type: has_many
 
-Related object: L<Schema::Result::JunctionEventTag>
+Related object: L<WebService::Schema::Result::JunctionEventTag>
 
 =cut
 
 __PACKAGE__->has_many(
   "junction_event_tags",
-  "Schema::Result::JunctionEventTag",
+  "WebService::Schema::Result::JunctionEventTag",
   { "foreign.id_event" => "self.id_event" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
@@ -133,20 +133,20 @@ __PACKAGE__->has_many(
 
 Type: has_many
 
-Related object: L<Schema::Result::JunctionUserEvent>
+Related object: L<WebService::Schema::Result::JunctionUserEvent>
 
 =cut
 
 __PACKAGE__->has_many(
   "junction_user_events",
-  "Schema::Result::JunctionUserEvent",
+  "WebService::Schema::Result::JunctionUserEvent",
   { "foreign.id_event" => "self.id_event" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-06 14:17:00
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Z8swDB0S5tvSG5UsMWk1mQ
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-06 14:16:12
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:rs/q7NFmyWPV9Gg6Wf4Dyg
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

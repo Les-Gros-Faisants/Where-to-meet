@@ -1,12 +1,12 @@
 use utf8;
-package Schema::Result::JunctionUserEvent;
+package WebService::Schema::Result::JunctionUserEvent;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
 =head1 NAME
 
-Schema::Result::JunctionUserEvent
+WebService::Schema::Result::JunctionUserEvent
 
 =cut
 
@@ -62,13 +62,13 @@ __PACKAGE__->add_columns(
 
 Type: belongs_to
 
-Related object: L<Schema::Result::PastEvent>
+Related object: L<WebService::Schema::Result::PastEvent>
 
 =cut
 
 __PACKAGE__->belongs_to(
   "id_event",
-  "Schema::Result::PastEvent",
+  "WebService::Schema::Result::PastEvent",
   { id_event => "id_event" },
   {
     is_deferrable => 1,
@@ -82,13 +82,13 @@ __PACKAGE__->belongs_to(
 
 Type: belongs_to
 
-Related object: L<Schema::Result::User>
+Related object: L<WebService::Schema::Result::User>
 
 =cut
 
 __PACKAGE__->belongs_to(
   "id_user",
-  "Schema::Result::User",
+  "WebService::Schema::Result::User",
   { id_user => "id_user" },
   {
     is_deferrable => 1,
@@ -99,8 +99,8 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-06 14:17:00
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:+hjzUi63vAuwFX5uty+ggg
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-06 14:16:12
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:cHg2CVxcNSzgpxa06BednA
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

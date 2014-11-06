@@ -78,7 +78,13 @@ sub add_event {
 
   my $json = decode_json( $self->req->body );
   my $event = $self->db->resultset( 'PastEvent' );
-  
+  my $ret = $event->create( {
+    event_name => $json->{ event_name },
+    decription_event => $json->{ desc },
+    id_organizer => $json->{ id_organize },
+    geolocation => $json->{ geolocation },
+  });
+  return $self->render( text => 'ok' );
 }
 
 1;

@@ -86,6 +86,7 @@ sub get_all_events {
   my %ret;
   foreach my $tmp ( @events ) {
       $ret{ $tmp->id_event } = {
+        'event_name' => $tmp->event_name,
         'id_organizer' => $tmp->id_organizer->id_user,
         'geolocation' => $tmp->geolocation,
         'desc' => $tmp->description_event,
@@ -100,6 +101,7 @@ sub get_event {
   my $id = $self->param( 'id' );
   my $event = $self->db->resultset( 'PastEvent' )->find( { id_event => $id } );
   my %ret;
+  $ret{ 'event_name' } = $event->event_name;
   $ret{ 'id_organizer'} = $event->id_organizer->id_user;
   $ret{ 'geolocation' } = $event->geolocation;
   $ret{ 'desciption' } = $event->description_event;

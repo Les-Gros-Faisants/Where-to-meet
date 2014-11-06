@@ -87,4 +87,11 @@ sub add_event {
   return $self->render( text => 'ok' );
 }
 
+sub add_tmp_event {
+  my $self = shift;
+
+  my $json = decode_json( $self->req->body );
+  
+}
+
 1;

@@ -36,6 +36,7 @@ sub startup {
   $r->put( '/api/users/:id/username' )->to( 'insert#update_user_pseudo' );
   $r->put( '/api/tags' )              ->to( 'insert#add_tag' );
   $r->put( '/api/events' )            ->to( 'insert#add_event' );
+  $r->put( '/api/events/:id/user' )   ->to( 'insert#add_event_user' );
 
   # Delete Routes
   $r->delete( '/api/users/:id' )      ->to( 'del#remove_user' );

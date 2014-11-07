@@ -80,11 +80,29 @@ sub add_event {
   my $event = $self->db->resultset( 'PastEvent' );
   my $ret = $event->create( {
     event_name => $json->{ event_name },
-    decription_event => $json->{ desc },
-    id_organizer => $json->{ id_organize },
+    description_event => $json->{ desc },
+    id_organizer => $json->{ id_organizer },
     geolocation => $json->{ geolocation },
-    date => $json->{ date },
+    date_event => $json->{ date },
   });
+  my $jnevent = $self->db->resultset( 'JunctionUserEvent' );
+  $ret = $jnevent->update_or_create({
+    id_event => $event->get_column( 'id_event' )->max,
+    id_user => $json->{ id_organizer },
+  });
+  return $self->render( text => 'ok' );
+}
+
+sub add_event_user {
+  my $self = shift;
+
+  my $json = decode_json( $self->req->body );
+  my $id = $self->param( 'id' );
+  my $event = $self->db->resultset( 'JunctionUserEvent' );
+  my $ret = $event->create( {
+    id_event => $id,
+    id_user => $json->{ id_user },
+  } );
   return $self->render( text => 'ok' );
 }
 

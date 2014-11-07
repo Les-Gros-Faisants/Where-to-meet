@@ -3,6 +3,8 @@ use Mojo::Base 'Mojolicious::Controller';
 use Mojo::JSON qw( decode_json );
 use Mojo::Log;
 
+use Data::Dumper;
+
 my $log = Mojo::Log->new;
 
 sub add_user {
@@ -103,6 +105,28 @@ sub add_event_user {
     id_event => $id,
     id_user => $json->{ id_user },
   } );
+  return $self->render( text => 'ok' );
+}
+
+sub add_event_tags {
+  my $self = shift;
+
+  my $json = decode_json( $self->req->body );
+  my $id = $self->param( 'id' );
+  $log->debug( Dumper( $json ) );
+  for my $i ( 0 .. 15 )  {
+    if ( $json->{ tags }[$i] ne '__stop__') {
+      my $tag = $self->db->resultset( 'Tag' )->find( {
+        tag_name => { like => $json->{ tags }[$i] }
+      } );
+      $log->debug( $tag );
+      my $eventag = $self->db->resultset( 'JunctionEventTag' )->update_or_create( {
+        id_tag => $tag->id_tag,
+        id_event => $id,
+      } );
+    }
+    last if ( $json->{ tags }[$i] eq '__stop__' );
+  }
   return $self->render( text => 'ok' );
 }
 

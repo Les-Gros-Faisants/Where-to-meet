@@ -37,6 +37,7 @@ sub startup {
   $r->put( '/api/tags' )              ->to( 'insert#add_tag' );
   $r->put( '/api/events' )            ->to( 'insert#add_event' );
   $r->put( '/api/events/:id/user' )   ->to( 'insert#add_event_user' );
+  $r->put( '/api/events/:id/tags' )   ->to( 'insert#add_event_tags' ); 
 
   # Delete Routes
   $r->delete( '/api/users/:id' )      ->to( 'del#remove_user' );

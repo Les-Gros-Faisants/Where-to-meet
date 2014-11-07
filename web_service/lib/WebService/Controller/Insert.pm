@@ -83,15 +83,9 @@ sub add_event {
     decription_event => $json->{ desc },
     id_organizer => $json->{ id_organize },
     geolocation => $json->{ geolocation },
+    date => $json->{ date },
   });
   return $self->render( text => 'ok' );
-}
-
-sub add_tmp_event {
-  my $self = shift;
-
-  my $json = decode_json( $self->req->body );
-  
 }
 
 1;

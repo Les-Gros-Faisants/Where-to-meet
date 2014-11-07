@@ -65,6 +65,12 @@ __PACKAGE__->table("past_events");
   is_nullable: 1
   size: 50
 
+=head2 date_event
+
+  data_type: 'date'
+  datetime_undef_if_invalid: 1
+  is_nullable: 1
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -78,6 +84,8 @@ __PACKAGE__->add_columns(
   { data_type => "varchar", is_nullable => 1, size => 300 },
   "event_name",
   { data_type => "varchar", is_nullable => 1, size => 50 },
+  "date_event",
+  { data_type => "date", datetime_undef_if_invalid => 1, is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -145,8 +153,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-06 14:17:00
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Z8swDB0S5tvSG5UsMWk1mQ
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-07 12:11:30
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Ym+liE0LVGnq7gpmHBt+wg
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

@@ -1,7 +1,6 @@
 package WebService;
 use Mojo::Base 'Mojolicious';
 use Schema;
-use Mojo::Redis2;
 
 has schema => sub {
   return Schema->connect(
@@ -11,18 +10,12 @@ has schema => sub {
   );
 };
 
-has redis => sub {
-    return Mojo::Redis2->new( url => 'redis://localhost:6379' );
-};
-
-
 # This method will run once at server start
 sub startup {
   my $self = shift;
 
   $self->plugin( 'PODRenderer' );
   $self->helper( 'db' => sub { shift->app->schema } );
-  $self->helper( 'redis' => sub { shift->app->redis } );
 
   my $r = $self->routes;
   # Get Routes
@@ -43,7 +36,6 @@ sub startup {
   $r->put( '/api/users/:id/username' )->to( 'insert#update_user_pseudo' );
   $r->put( '/api/tags' )              ->to( 'insert#add_tag' );
   $r->put( '/api/events' )            ->to( 'insert#add_event' );
-  $r->put( '/api/tmpevent' )          ->to( 'insert#add_tmp_event' );
 
   # Delete Routes
   $r->delete( '/api/users/:id' )      ->to( 'del#remove_user' );

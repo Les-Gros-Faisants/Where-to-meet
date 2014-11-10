@@ -1,12 +1,16 @@
 package WebService;
 use Mojo::Base 'Mojolicious';
+use Crypt::OpenSSL::Random;
+use Crypt::OpenSSL::RSA;
 use Schema;
+use AuthDB;
 
 has schema => sub {
+  my %auth = AuthDB::get_auth;
   return Schema->connect(
       'DBI:mysql:database=wtm;host=127.0.0.1;port=3306',
-      'root',
-      'lol'
+      $auth{ username },
+      $auth{ passwd },
   );
 };
 
@@ -14,10 +18,15 @@ has schema => sub {
 sub startup {
   my $self = shift;
 
-  $self->plugin( 'PODRenderer' );
   $self->helper( 'db' => sub { shift->app->schema } );
 
   my $r = $self->routes;
+  my $auth = $r->under( '/api/:pwd' => sub {
+    my $self = shift;
+    my $pwd = $self->param( 'pwd' );
+
+  });
+
   # Get Routes
   $r->get( '/api/users' )		          ->to( 'fetch#get_all_user' );
   $r->get( '/api/users/:id' )		      ->to( 'fetch#get_user' );
@@ -37,7 +46,7 @@ sub startup {
   $r->put( '/api/tags' )              ->to( 'insert#add_tag' );
   $r->put( '/api/events' )            ->to( 'insert#add_event' );
   $r->put( '/api/events/:id/user' )   ->to( 'insert#add_event_user' );
-  $r->put( '/api/events/:id/tags' )   ->to( 'insert#add_event_tags' ); 
+  $r->put( '/api/events/:id/tags' )   ->to( 'insert#add_event_tags' );
 
   # Delete Routes
   $r->delete( '/api/users/:id' )      ->to( 'del#remove_user' );

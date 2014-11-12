@@ -51,7 +51,7 @@ __PACKAGE__->table("users");
 
   data_type: 'varchar'
   is_nullable: 1
-  size: 30
+  size: 100
 
 =cut
 
@@ -61,7 +61,7 @@ __PACKAGE__->add_columns(
   "pseudo_user",
   { data_type => "varchar", is_nullable => 1, size => 20 },
   "passwd_user",
-  { data_type => "varchar", is_nullable => 1, size => 30 },
+  { data_type => "varchar", is_nullable => 1, size => 100 },
 );
 
 =head1 PRIMARY KEY
@@ -139,8 +139,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-07 12:11:30
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:dUsp3ISfMO4OncQFhZFb+w
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-10 14:45:35
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:8tjwKY9T60KpWAApcyN15g
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

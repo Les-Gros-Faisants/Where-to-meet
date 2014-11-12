@@ -1,12 +1,11 @@
 package WebService;
 use Mojo::Base 'Mojolicious';
-use Crypt::OpenSSL::Random;
 use Crypt::OpenSSL::RSA;
 use Schema;
 use AuthDB;
 
 has schema => sub {
-  my %auth = AuthDB::get_auth;
+  my %auth = AuthDB::get_auth();
   return Schema->connect(
       'DBI:mysql:database=wtm;host=127.0.0.1;port=3306',
       $auth{ username },
@@ -21,35 +20,40 @@ sub startup {
   $self->helper( 'db' => sub { shift->app->schema } );
 
   my $r = $self->routes;
-  my $auth = $r->under( '/api/:pwd' => sub {
+  my $auth = $r->under( '/api' => sub {
     my $self = shift;
-    my $pwd = $self->param( 'pwd' );
-
+    my $passwd = qx( echo "$self->req->body" | openssl base64 -d | openssl rsautl -decrypt -inkey private.key );
+    my $serv_hash = $self->db->resultset( 'ApiUser' )->find( { id_user => 1 } );
+    $serv_hash->passwd_user =~ /(?<=\$[1-6]\$)(?<salt>.+?)(?=\$)/s;
+    my $client_hash = qx( openssl passwd -1 -salt $+{salt} $passwd);
+    return 1 if $client_hash eq $serv_hash;
+    $self->render( text => 'you suck' );
+    return undef;
   });
 
   # Get Routes
-  $r->get( '/api/users' )		          ->to( 'fetch#get_all_user' );
-  $r->get( '/api/users/:id' )		      ->to( 'fetch#get_user' );
-  $r->get( '/api/users/:id/tags' )	  ->to( 'fetch#get_user_tags' );
-  $r->get( '/api/users/:id/events' )  ->to( 'fetch#get_user_events' );
-  $r->get( '/api/tags' )		          ->to( 'fetch#get_all_tags' );
-  $r->get( '/api/events' )		        ->to( 'fetch#get_all_events' );
-  $r->get( '/api/events/:id' )        ->to( 'fetch#get_event' );
-  $r->get( '/api/events/:id/tags')    ->to( 'fetch#get_event_tags' );
-  $r->get( '/api/events/:id/users')   ->to( 'fetch#get_event_users' );
+  $auth->get( '/users' )		          ->to( 'fetch#get_all_user' );
+  $auth->get( '/users/:id' )		      ->to( 'fetch#get_user' );
+  $auth->get( '/users/:id/tags' )	    ->to( 'fetch#get_user_tags' );
+  $auth->get( '/users/:id/events' )   ->to( 'fetch#get_user_events' );
+  $auth->get( '/tags' )		            ->to( 'fetch#get_all_tags' );
+  $auth->get( '/events' )		          ->to( 'fetch#get_all_events' );
+  $auth->get( '/events/:id' )         ->to( 'fetch#get_event' );
+  $auth->get( '/events/:id/tags')     ->to( 'fetch#get_event_tags' );
+  $auth->get( '/events/:id/users')    ->to( 'fetch#get_event_users' );
 
   # Put Routes
-  $r->put( '/api/users' )             ->to( 'insert#add_user' );
-  $r->put( '/api/users/:id' )         ->to( 'insert#update_user' );
-  $r->put( '/api/users/:id/passwd' )  ->to( 'insert#update_user_passwd' );
-  $r->put( '/api/users/:id/username' )->to( 'insert#update_user_pseudo' );
-  $r->put( '/api/tags' )              ->to( 'insert#add_tag' );
-  $r->put( '/api/events' )            ->to( 'insert#add_event' );
-  $r->put( '/api/events/:id/user' )   ->to( 'insert#add_event_user' );
-  $r->put( '/api/events/:id/tags' )   ->to( 'insert#add_event_tags' );
+  $auth->put( '/users' )              ->to( 'insert#add_user' );
+  $auth->put( '/users/:id' )          ->to( 'insert#update_user' );
+  $auth->put( '/users/:id/passwd' )   ->to( 'insert#update_user_passwd' );
+  $auth->put( '/users/:id/username' ) ->to( 'insert#update_user_pseudo' );
+  $auth->put( '/tags' )               ->to( 'insert#add_tag' );
+  $auth->put( '/events' )             ->to( 'insert#add_event' );
+  $auth->put( '/events/:id/user' )    ->to( 'insert#add_event_user' );
+  $auth->put( '/events/:id/tags' )    ->to( 'insert#add_event_tags' );
 
   # Delete Routes
-  $r->delete( '/api/users/:id' )      ->to( 'del#remove_user' );
+  $auth->delete( '/users/:id' )       ->to( 'del#remove_user' );
 }
 
 1;

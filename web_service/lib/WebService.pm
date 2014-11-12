@@ -4,6 +4,11 @@ use Crypt::OpenSSL::RSA;
 use Schema;
 use AuthDB;
 
+use Data::Dumper;
+use Mojo::Log;
+
+my $log = Mojo::Log->new;
+
 has schema => sub {
   my %auth = AuthDB::get_auth();
   return Schema->connect(
@@ -22,6 +27,8 @@ sub startup {
   my $r = $self->routes;
   my $auth = $r->under( '/api' => sub {
     my $self = shift;
+
+    $log->debug( "body = " . Dumper( $self->req->body ) );
     my $passwd = qx( echo "$self->req->body" | openssl base64 -d | openssl rsautl -decrypt -inkey private.key );
     my $serv_hash = $self->db->resultset( 'ApiUser' )->find( { id_user => 1 } );
     $serv_hash->passwd_user =~ /(?<=\$[1-6]\$)(?<salt>.+?)(?=\$)/s;

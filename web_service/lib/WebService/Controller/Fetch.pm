@@ -13,7 +13,6 @@ sub get_all_user {
   foreach my $tmp ( @users ) {
     $ret{ $tmp->id_user } = {
        'user_pseudo' => $tmp->pseudo_user,
-       'passwd_user' => $tmp->passwd_user,
     };
   }
   return $self->render( text => encode_json( \%ret ) );
@@ -26,7 +25,6 @@ sub get_user {
   my $user = $self->db->resultset( 'User' )->find( { id_user => $id } );
   my %ret;
   $ret{ 'user_pseudo' } = $user->pseudo_user;
-  $ret{ 'passwd_user' } = $user->passwd_user;
   return $self->render( text => encode_json( \%ret ) );
 }
 

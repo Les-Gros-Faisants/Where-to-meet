@@ -1,6 +1,5 @@
 package WebService;
 use Mojo::Base 'Mojolicious';
-use Crypt::OpenSSL::RSA;
 use Schema;
 use AuthDB;
 
@@ -27,6 +26,8 @@ sub startup {
   my $r = $self->routes;
 
   # Get Routes
+
+  $r->get( '/' )                       ->to( 'index#intro' );
 
   $r->get( '/api/connect/:id/:passwd' )->to( 'fetch#auth_user' );
 

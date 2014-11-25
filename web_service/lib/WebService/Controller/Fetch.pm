@@ -5,6 +5,16 @@ use Mojo::Log;
 
 my $log = Mojo::Log->new;
 
+sub auth_user {
+  my $self = shift;
+
+  my $passwd = self->param( 'passwd' );
+  my $id = $self->param( 'id' );
+  my $user = $self->db->resultset( 'User' )->find( { id_user => id } );
+  return $self->render( text => 'OK' ) if $passwd eq $user->passwd_user;
+  return $self->render( text => "KO" );
+}
+
 sub get_all_user {
   my $self = shift;
 
@@ -67,7 +77,6 @@ sub get_all_tags {
   my @tags = $self->db->resultset( 'Tag' )->all;
   my %ret;
   foreach my $tmp ( @tags ) {
-    $log->debug( Dumper( $tmp ) );
     $ret{ $tmp->id_tag } = {
         'tag_name' => $tmp->tag_name,
         'id_victim' => $tmp->id_victim->id_user,

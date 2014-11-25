@@ -27,6 +27,9 @@ sub startup {
   my $r = $self->routes;
 
   # Get Routes
+
+  $r->get( '/api/connect/:id/:passwd' )->to( 'fetch#auth_user' );
+
   $r->get( '/api/users' )		           ->to( 'fetch#get_all_user' );
   $r->get( '/api/users/:id' )		       ->to( 'fetch#get_user' );
   $r->get( '/api/users/:id/tags' )	   ->to( 'fetch#get_user_tags' );

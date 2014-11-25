@@ -15,6 +15,4 @@ sub remove_user {
   return $self->render( text => 'ok' );
 }
 
-
-
 1;

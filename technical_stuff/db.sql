@@ -2,6 +2,7 @@ CREATE TABLE `users` (
   `id_user` INT NOT NULL AUTO_INCREMENT,
   `pseudo_user` VARCHAR(20),
   `passwd_user` VARCHAR(30),
+  `mail_user`   VARCHAR(40),
   PRIMARY KEY  (`id_user`)
 );
 
@@ -9,6 +10,7 @@ CREATE TABLE `tags` (
   `id_tag` INT NOT NULL AUTO_INCREMENT,
   `id_aggressor` INT,
   `id_victim` INT,
+  `tag_name` VARCHAR(30),
   PRIMARY KEY  (`id_tag`)
 );
 
@@ -17,6 +19,8 @@ CREATE TABLE `past_events` (
   `id_organizer` INT,
   `geolocation` VARCHAR(50),
   `description_event` VARCHAR(300),
+  `event_name` VARCHAR(60),
+  `date_event` DATE,
   PRIMARY KEY  (`id_event`)
 );
 
@@ -30,6 +34,8 @@ CREATE TABLE `junction_event_tag` (
   `id_tag` INT
 );
 
+INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('EVENT', NULL, NULL);
+INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('leo', 'mdplol', 'leo@gmail.com');
 
 ALTER TABLE `tags` ADD CONSTRAINT `tags_fk1` FOREIGN KEY (`id_aggressor`) REFERENCES users(`id_user`);
 ALTER TABLE `tags` ADD CONSTRAINT `tags_fk2` FOREIGN KEY (`id_victim`) REFERENCES users(`id_user`);

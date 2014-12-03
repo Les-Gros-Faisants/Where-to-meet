@@ -4,7 +4,7 @@ use Mojo::Base 'Mojolicious::Controller';
 sub intro {
   my $self = shift;
   
-  return $self->render( text => coucou );
+  return $self->render( text => 'coucou' );
 }
 
 1;

@@ -9,7 +9,8 @@ import android.util.Log;
  */
 public class httpClientUsage {
     public void getUser(int userId) throws JSONException {
-        String url = "api/users" + userId;
+        String url = "users/" + userId;
+        Log.i("url = ", url);
         httpClient.get(url, null, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {

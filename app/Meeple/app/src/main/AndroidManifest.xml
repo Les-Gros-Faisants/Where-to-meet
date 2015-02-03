@@ -9,7 +9,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".Activity.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/meeple" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,7 +18,7 @@
         </activity>
         <activity
             android:name=".Activity.MainPageActivity"
-            android:label="@string/title_activity_main_page" >
+            android:label="@string/meeple" >
         </activity>
     </application>
 

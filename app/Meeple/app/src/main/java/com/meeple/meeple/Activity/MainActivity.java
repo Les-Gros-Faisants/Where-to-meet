@@ -18,9 +18,9 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        httpClientUsage httpclient = new httpClientUsage();
+        httpClientUsage httpClient = new httpClientUsage();
         try {
-            httpclient.getUser(2);
+            httpClient.getUser(2);
         }
         catch (JSONException e) {
             Log.i("error", e.toString());

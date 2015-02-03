@@ -8,15 +8,17 @@ use Data::Dumper;
 my $log = Mojo::Log->new;
 
 sub add_user {
-  my $self = shift;
+    my $self = shift;
 
-  my $json = decode_json( $self->req->body );
-  my $user = $self->db->resultset( 'User' );
-  my $ret = $user->update_or_create( {
-    passwd_user => $json->{ passwd },
-    pseudo_user => $json->{ username },
-  } );
-  return $self->render( text => $ret->id_user );
+    my $json = decode_json( $self->req->body );
+    my $user = $self->db->resultset('User');
+    my $ret  = $user->update_or_create(
+        {
+            passwd_user => $json->{passwd},
+            pseudo_user => $json->{username},
+        }
+    );
+    return $self->render( text => $ret->id_user );
 }
 
 sub update_user {
@@ -109,25 +111,30 @@ sub add_event_user {
 }
 
 sub add_event_tags {
-  my $self = shift;
+    my $self = shift;
 
-  my $json = decode_json( $self->req->body );
-  my $id = $self->param( 'id' );
-  $log->debug( Dumper( $json ) );
-  for my $i ( 0 .. 15 )  {
-    if ( $json->{ tags }[$i] ne '__stop__') {
-      my $tag = $self->db->resultset( 'Tag' )->find( {
-        tag_name => { like => $json->{ tags }[$i] }
-      } );
-      $log->debug( $tag );
-      my $eventag = $self->db->resultset( 'JunctionEventTag' )->update_or_create( {
-        id_tag => $tag->id_tag,
-        id_event => $id,
-      } );
+    my $json = decode_json( $self->req->body );
+    my $id   = $self->param('id');
+    $log->debug( Dumper($json) );
+    for my $i ( 0 .. 15 ) {
+        if ( $json->{tags}[$i] ne '__stop__' ) {
+            my $tag = $self->db->resultset('Tag')->find(
+                {
+                    tag_name => { like => $json->{tags}[$i] }
+                }
+            );
+            $log->debug($tag);
+            my $eventag =
+              $self->db->resultset('JunctionEventTag')->update_or_create(
+                {
+                    id_tag   => $tag->id_tag,
+                    id_event => $id,
+                }
+              );
+        }
+        last if ( $json->{tags}[$i] eq '__stop__' );
     }
-    last if ( $json->{ tags }[$i] eq '__stop__' );
-  }
-  return $self->render( text => 'ok' );
+    return $self->render( text => 'ok' );
 }
 
 1;

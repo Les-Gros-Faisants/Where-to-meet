@@ -13,7 +13,7 @@ public class httpClientUsage {
         httpClient.get(url, null, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                Log.i("response toi string", response.toString());
+                Log.i("response to string", response.toString());
             }
 
             @Override

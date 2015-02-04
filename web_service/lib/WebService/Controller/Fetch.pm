@@ -7,7 +7,7 @@ my $log = Mojo::Log->new;
 sub auth_user {
     my $self = shift;
 
-    my $passwd = self->param('passwd');
+    my $passwd = $self->param('passwd');
     my $id     = $self->param('id');
     my $user   = $self->db->resultset('User')->find( { pseudo_user => $id } );
     return $self->render( text => 'OK' ) if $passwd eq $user->passwd_user;

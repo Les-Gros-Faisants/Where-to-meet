@@ -13,8 +13,8 @@ public class httpClientUsage {
         httpClient.get(url, null, handler);
     }
 
-    public void logUser(String password, int id, JsonHttpResponseHandler handler) {
-        String url = "connect/" + id + "/" + password;
+    public void logUser(String password, String username, JsonHttpResponseHandler handler) {
+        String url = "connect/" + username + "/" + password;
 
         httpClient.get(url, null, handler);
     }

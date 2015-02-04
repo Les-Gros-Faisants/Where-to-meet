@@ -35,6 +35,8 @@ sub get_user {
   my $user = $self->db->resultset( 'User' )->find( { id_user => $id } );
   my %ret;
   $ret{ 'user_pseudo' } = $user->pseudo_user;
+  $ret{ 'mail_user' } = $user->mail_user;
+  $ret{ 'id_user' } = $user->id_user;
   return $self->render( text => encode_json( \%ret ) );
 }
 

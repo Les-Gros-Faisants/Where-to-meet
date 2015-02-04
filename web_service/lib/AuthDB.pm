@@ -2,7 +2,7 @@ package AuthDB;
 
 my %auth = (
   username => 'root',
-  passwd => 'lol',
+  passwd => 'Pangea/poil.21',
 );
 
 sub get_auth { return %auth; }

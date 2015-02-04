@@ -63,7 +63,7 @@ __PACKAGE__->table("past_events");
 
   data_type: 'varchar'
   is_nullable: 1
-  size: 50
+  size: 60
 
 =head2 date_event
 
@@ -83,7 +83,7 @@ __PACKAGE__->add_columns(
   "description_event",
   { data_type => "varchar", is_nullable => 1, size => 300 },
   "event_name",
-  { data_type => "varchar", is_nullable => 1, size => 50 },
+  { data_type => "varchar", is_nullable => 1, size => 60 },
   "date_event",
   { data_type => "date", datetime_undef_if_invalid => 1, is_nullable => 1 },
 );
@@ -153,8 +153,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-10 14:45:35
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:/6N8NLtM1Uhm4bsfsiDF1Q
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-02-04 11:50:13
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:CpQBbjsLqFSncyuTAPvPYw
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

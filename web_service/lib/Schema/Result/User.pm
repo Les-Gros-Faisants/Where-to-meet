@@ -51,7 +51,13 @@ __PACKAGE__->table("users");
 
   data_type: 'varchar'
   is_nullable: 1
-  size: 100
+  size: 30
+
+=head2 mail_user
+
+  data_type: 'varchar'
+  is_nullable: 1
+  size: 40
 
 =cut
 
@@ -61,7 +67,9 @@ __PACKAGE__->add_columns(
   "pseudo_user",
   { data_type => "varchar", is_nullable => 1, size => 20 },
   "passwd_user",
-  { data_type => "varchar", is_nullable => 1, size => 100 },
+  { data_type => "varchar", is_nullable => 1, size => 30 },
+  "mail_user",
+  { data_type => "varchar", is_nullable => 1, size => 40 },
 );
 
 =head1 PRIMARY KEY
@@ -139,8 +147,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2014-11-10 14:45:35
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:8tjwKY9T60KpWAApcyN15g
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-02-04 11:50:13
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:TkKj2TTcFL58gBo1h2jzmw
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

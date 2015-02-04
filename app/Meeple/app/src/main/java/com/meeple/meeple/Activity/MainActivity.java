@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.util.Log;
 
 import com.meeple.meeple.API.Handler.LoginHandler;
 import com.meeple.meeple.API.httpClientUsage;
@@ -70,9 +71,14 @@ public class MainActivity extends ActionBarActivity {
         EditText login = (EditText) findViewById(R.id.login);
         EditText password = (EditText) findViewById(R.id.password);
         httpClientUsage httpClient = new httpClientUsage();
-        httpClient.logUser(password.getText().toString(), login.getText().toString(), handler);
-        // fix in case of infinite loop
-        progressDialog = ProgressDialog.show(this, "Loading", "Please wait");
+        try {
+            httpClient.logUser(password.getText().toString(), login.getText().toString(), handler);
+            // fix in case of infinite loop
+            progressDialog = ProgressDialog.show(this, "Loading", "Please wait");
+        }
+        catch (Exception e) {
+            Log.e("Error:", e.getMessage());
+        }
     }
 
     public void logSuccess()

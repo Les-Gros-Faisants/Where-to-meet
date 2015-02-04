@@ -28,27 +28,6 @@ public class LoginHandler extends JsonHttpResponseHandler {
     }
 
     @Override
-    public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-        if (statusCode == 200) {
-            Log.i("Connection :", "OK");
-        }
-        else {
-            Log.i("Connection :", "KO");
-        }
-    }
-
-    @Override
-    public void onSuccess(int statusCode, Header[] headers, String response) {
-        if (statusCode == 200) {
-            Log.i("Connection :", "OK");
-        }
-        else {
-            Log.i("Connection :", "KO");
-        }
-    }
-
-
-    @Override
     public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
         Log.i("Connection :", "KO");
     }

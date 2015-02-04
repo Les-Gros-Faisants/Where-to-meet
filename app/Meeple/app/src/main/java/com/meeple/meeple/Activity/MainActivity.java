@@ -65,6 +65,6 @@ public class MainActivity extends ActionBarActivity {
         EditText login = (EditText) findViewById(R.id.login);
         EditText password = (EditText) findViewById(R.id.password);
         httpClientUsage httpClient = new httpClientUsage();
-        httpClient.logUser(password.getText(), login.getText(), handler);
+        httpClient.logUser(password.getText().toString(), login.getText().toString(), handler);
     }
 }

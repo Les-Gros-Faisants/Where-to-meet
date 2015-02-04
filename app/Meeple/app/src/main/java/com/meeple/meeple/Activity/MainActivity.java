@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.util.Log;
+import com.meeple.meeple.API.Handler.LoginHandler;
 import com.meeple.meeple.API.httpClientUsage;
 
 import com.meeple.meeple.R;
@@ -19,12 +20,8 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         httpClientUsage httpClient = new httpClientUsage();
-        try {
-            httpClient.getUser(2);
-        }
-        catch (JSONException e) {
-            Log.i("error", e.toString());
-        }
+        LoginHandler login = new LoginHandler(this);
+        httpClient.logUser("mdplol", 2, login);
 
         //starts directly mainpage
         Intent intent = new Intent(this, MainPageActivity.class);

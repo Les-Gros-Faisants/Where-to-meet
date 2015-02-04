@@ -10,8 +10,8 @@ sub auth_user {
     my $passwd = $self->param('passwd');
     my $id     = $self->param('id');
     my $user   = $self->db->resultset('User')->find( { pseudo_user => $id } );
-    return $self->render( text => 'OK' ) if $passwd eq $user->passwd_user;
-    return $self->render( text => "KO" );
+    return $self->render( text => encode_json('OK') ) if $passwd eq $user->passwd_user;
+    return $self->render( text => encode_json("KO") );
 }
 
 sub get_all_user {

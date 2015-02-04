@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.util.Log;
 
 import com.meeple.meeple.API.Handler.LoginHandler;
 import com.meeple.meeple.API.httpClientUsage;
@@ -65,6 +66,11 @@ public class MainActivity extends ActionBarActivity {
         EditText login = (EditText) findViewById(R.id.login);
         EditText password = (EditText) findViewById(R.id.password);
         httpClientUsage httpClient = new httpClientUsage();
-        httpClient.logUser(password.getText().toString(), login.getText().toString(), handler);
+        try {
+            httpClient.logUser(password.getText().toString(), login.getText().toString(), handler);
+        }
+        catch (Exception e) {
+            Log.e("Error:", e.getMessage());
+        }
     }
 }

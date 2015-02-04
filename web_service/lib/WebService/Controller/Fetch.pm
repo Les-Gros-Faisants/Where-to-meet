@@ -13,7 +13,7 @@ sub auth_user {
 	my %res;
 	$res{'ret'} = $passwd eq $user->passwd_user ? 'OK' : 'KO';
     #return $self->render( text => encode_json('OK') ) if $passwd eq $user->passwd_user;
-    return $self->render( text => encode_json(\%ret) );
+    return $self->render( text => encode_json(\%res) );
 }
 
 sub get_all_user {

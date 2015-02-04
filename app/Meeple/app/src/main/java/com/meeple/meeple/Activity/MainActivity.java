@@ -1,31 +1,40 @@
 package com.meeple.meeple.Activity;
 
-import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
 import com.meeple.meeple.API.Handler.LoginHandler;
 import com.meeple.meeple.API.httpClientUsage;
-
 import com.meeple.meeple.R;
-import org.json.JSONException;
 
 public class MainActivity extends ActionBarActivity {
+    private LoginHandler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        httpClientUsage httpClient = new httpClientUsage();
-        LoginHandler login = new LoginHandler(this);
-        httpClient.logUser("mdplol", 2, login);
+        Button login_button = (Button)findViewById(R.id.login_button);
+        login_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                logUser();
+            }
+        });
+        handler = new LoginHandler(this);
+
+//        httpClientUsage httpClient = new httpClientUsage();
+//        LoginHandler login = new LoginHandler(this);
+//        httpClient.logUser("mdplol", 2, login);
 
         //starts directly mainpage
-        Intent intent = new Intent(this, MainPageActivity.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, MainPageActivity.class);
+//        startActivity(intent);
     }
 
 
@@ -49,5 +58,13 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void logUser()
+    {
+        EditText login = (EditText) findViewById(R.id.login);
+        EditText password = (EditText) findViewById(R.id.password);
+        httpClientUsage httpClient = new httpClientUsage();
+        httpClient.logUser(password.getText(), login.getText(), handler);
     }
 }

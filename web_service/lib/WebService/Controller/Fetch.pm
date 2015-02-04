@@ -4,15 +4,14 @@ use Mojo::JSON qw( encode_json );
 use Mojo::Log;
 
 my $log = Mojo::Log->new;
-
 sub auth_user {
-  my $self = shift;
+    my $self = shift;
 
-  my $passwd = self->param( 'passwd' );
-  my $id = $self->param( 'id' );
-  my $user = $self->db->resultset( 'User' )->find( { id_user => $id } );
-  return $self->render( text => 'OK' ) if $passwd eq $user->passwd_user;
-  return $self->render( text => "KO" );
+    my $passwd = self->param('passwd');
+    my $id     = $self->param('id');
+    my $user   = $self->db->resultset('User')->find( { id_user => $id } );
+    return $self->render( text => 'OK' ) if $passwd eq $user->passwd_user;
+    return $self->render( text => "KO" );
 }
 
 sub get_all_user {
@@ -22,8 +21,9 @@ sub get_all_user {
   my %ret;
   foreach my $tmp ( @users ) {
     $ret{ $tmp->id_user } = {
-       'user_pseudo' => $tmp->pseudo_user,
-    };
+		'user_pseudo' => $tmp->pseudo_user,
+		'user_mail'   => $tmp->user_mail;
+	};
   }
   return $self->render( text => encode_json( \%ret ) );
 }

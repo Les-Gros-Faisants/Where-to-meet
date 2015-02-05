@@ -34,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
             }
         });
         Button signupButton = (Button)findViewById(R.id.signup_button);
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        signupButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 signUp();
             }
@@ -102,7 +102,7 @@ public class MainActivity extends ActionBarActivity {
         progressDialog.dismiss();
         dialogMaker.getAlert("Error !", "Login failed").show();
     }
-    
+
     public void signUp()
     {
         Intent intent = new Intent(this, SignUpActivity.class);

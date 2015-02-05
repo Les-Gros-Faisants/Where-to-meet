@@ -1,6 +1,6 @@
 package WebService::Controller::Insert;
 use Mojo::Base 'Mojolicious::Controller';
-use Mojo::JSON qw( decode_json );
+use Mojo::JSON qw( encode_json );
 use Mojo::Log;
 
 use Data::Dumper;
@@ -18,13 +18,14 @@ sub add_user {
 	    mail_user => $self->req->param('mail'),
         }
     );
-    return $self->render( text => $ret->id_user );
+    my %res = ( ret => 'OK', new_id => $ret->id_user );
+    return $self->render( text => encode_json(\%res));
 }
 
 sub update_user {
   my $self = shift;
 
-  my $id = $self->param( 'id' );=
+  my $id = $self->param( 'id' );
   my $user = $self->db->resultset( 'User' );
   my $ret = $user->update_or_create( {
     id_user => $id,

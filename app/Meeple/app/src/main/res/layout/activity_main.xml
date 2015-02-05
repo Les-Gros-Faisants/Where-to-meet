@@ -50,4 +50,12 @@
         android:id="@+id/login_button"
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:id="@+id/signup_button"
+        android:layout_below="@+id/login_button"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

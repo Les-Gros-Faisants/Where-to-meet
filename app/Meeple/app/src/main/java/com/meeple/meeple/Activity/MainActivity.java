@@ -1,5 +1,7 @@
 package com.meeple.meeple.Activity;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -12,9 +14,13 @@ import android.util.Log;
 import com.meeple.meeple.API.Handler.LoginHandler;
 import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.R;
+import com.meeple.meeple.Utils.DialogMaker;
 
 public class MainActivity extends ActionBarActivity {
     private LoginHandler handler;
+    private DialogMaker dialogMaker;
+    private ProgressDialog progressDialog;
+    private String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,11 +72,28 @@ public class MainActivity extends ActionBarActivity {
         EditText login = (EditText) findViewById(R.id.login);
         EditText password = (EditText) findViewById(R.id.password);
         httpClientUsage httpClient = new httpClientUsage();
+        username = login.getText().toString();
         try {
-            httpClient.logUser(password.getText().toString(), login.getText().toString(), handler);
+            httpClient.logUser(password.getText().toString(), username, handler);
+            // fix in case of infinite loop
+            progressDialog = ProgressDialog.show(this, "Loading", "Please wait");
         }
         catch (Exception e) {
             Log.e("Error:", e.getMessage());
         }
+    }
+
+    public void logSuccess()
+    {
+        progressDialog.dismiss();
+        Intent intent = new Intent(this, MainPageActivity.class);
+        intent.putExtra("USERNAME", username);
+        startActivity(intent);
+    }
+
+    public void logFailure()
+    {
+        progressDialog.dismiss();
+        dialogMaker.getAlert("Error !", "Login failed").show();
     }
 }

@@ -2,7 +2,7 @@ package com.meeple.meeple.API.Handler;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.meeple.meeple.Activity.MainActivity;
 import org.apache.http.Header;
-import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 import android.util.Log;
 
@@ -19,31 +19,17 @@ public class LoginHandler extends JsonHttpResponseHandler {
 
     @Override
     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-        if (statusCode == 200) {
-            Log.i("Connection :", "OK");
+        try {
+            if (statusCode == 200 && response.getString("ret").equals("OK")) {
+                Log.i("Connection :", "OK");
+                _act.log
+            }
+            else {
+                Log.i("Connection :", "KO");
+            }
         }
-        else {
-            Log.i("Connection :", "KO");
-        }
-    }
-
-    @Override
-    public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-        if (statusCode == 200) {
-            Log.i("Connection :", "OK");
-        }
-        else {
-            Log.i("Connection :", "KO");
-        }
-    }
-
-    @Override
-    public void onSuccess(int statusCode, Header[] headers, String response) {
-        if (statusCode == 200) {
-            Log.i("Connection :", "OK");
-        }
-        else {
-            Log.i("Connection :", "KO");
+        catch (JSONException e) {
+                Log.e("error", e.getMessage());
         }
     }
 

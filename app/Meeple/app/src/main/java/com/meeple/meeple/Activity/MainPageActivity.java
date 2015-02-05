@@ -23,6 +23,7 @@ public class MainPageActivity extends ActionBarActivity {
     private ActionBarDrawerToggle drawerToggle;
     private Fragment profileFragment;
     private Fragment mainPageFragment;
+    private String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,11 @@ public class MainPageActivity extends ActionBarActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+        // Get the username
+        Bundle extras = getIntent().getExtras();
+        if(extras != null) {
+            username = extras.getString("USERNAME");
+        }
         // Setting the fragments
         this.setFragments();
     }

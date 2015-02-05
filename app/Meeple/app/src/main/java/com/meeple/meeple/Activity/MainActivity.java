@@ -20,6 +20,7 @@ public class MainActivity extends ActionBarActivity {
     private LoginHandler handler;
     private DialogMaker dialogMaker;
     private ProgressDialog progressDialog;
+    private String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,8 +72,9 @@ public class MainActivity extends ActionBarActivity {
         EditText login = (EditText) findViewById(R.id.login);
         EditText password = (EditText) findViewById(R.id.password);
         httpClientUsage httpClient = new httpClientUsage();
+        username = login.getText().toString();
         try {
-            httpClient.logUser(password.getText().toString(), login.getText().toString(), handler);
+            httpClient.logUser(password.getText().toString(), username, handler);
             // fix in case of infinite loop
             progressDialog = ProgressDialog.show(this, "Loading", "Please wait");
         }
@@ -85,6 +87,7 @@ public class MainActivity extends ActionBarActivity {
     {
         progressDialog.dismiss();
         Intent intent = new Intent(this, MainPageActivity.class);
+        intent.putExtra("USERNAME", username);
         startActivity(intent);
     }
 

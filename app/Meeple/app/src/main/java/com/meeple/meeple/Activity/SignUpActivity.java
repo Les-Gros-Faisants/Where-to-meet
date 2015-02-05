@@ -1,25 +1,31 @@
 package com.meeple.meeple.Activity;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.meeple.meeple.API.Handler.NewUser;
+import com.meeple.meeple.API.Handler.SignUpHandler;
 import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.R;
+import com.meeple.meeple.Utils.DialogMaker;
 
 public class SignUpActivity extends ActionBarActivity {
-    private NewUser handler;
+    private DialogMaker dialogMaker;
+    private ProgressDialog progressDialog;
+    private SignUpHandler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        handler = new NewUser(this);
+        dialogMaker = new DialogMaker(this);
+        handler = new SignUpHandler(this);
         Button signupButton = (Button)findViewById(R.id.signup_button);
         signupButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -51,13 +57,24 @@ public class SignUpActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void signUp()
-    {
+    public void signUp() {
         EditText login = (EditText) findViewById(R.id.login);
         EditText email = (EditText) findViewById(R.id.email);
         EditText password = (EditText) findViewById(R.id.password);
-        EditText password_confirmation = (EditText)findViewById(R.id.password_validation);
-        httpClientUsage httpClient = new httpClientUsage();
-        httpClient.createUser(login.getText().toString(), email.getText().toString(), password.getText().toString(), handler);
+        EditText password_confirmation = (EditText) findViewById(R.id.password_validation);
+        if (password.getText().toString().equals(password_confirmation.getText().toString()))
+            httpClientUsage.createUser(login.getText().toString(), email.getText().toString(), password.getText().toString(), handler);
+        else
+            signUpFailure("Passwords differ");
+    }
+
+    public void signUpSuccess() {
+        dialogMaker.getAlert("Success !", "You are signed up.");
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void signUpFailure(String error) {
+        dialogMaker.getAlert("Error !", error);
     }
 }

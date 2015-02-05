@@ -37,7 +37,7 @@ public class LoginHandler extends JsonHttpResponseHandler {
 
     @Override
     public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
-        Log.i("Connection :", "KO");
+        Log.e("Connection :", "KO");
         _act.logFailure();
     }
 }

@@ -14,6 +14,7 @@ sub auth_user {
     my %res;
     if (defined $user) {
 	$res{'ret'} = $passwd eq $user->passwd_user ? 'OK' : 'KO';
+	$res{'id'} = $user->id_user;
     } else {
 	$res{'ret'} = 'KO';
     }
@@ -38,7 +39,7 @@ sub get_user {
   my $self = shift;
 
   my $id = $self->param( 'id' );
-  my $user = $self->db->resultset( 'User' )->find( { id_user => $id } );
+  my $user = $self->db->resultset( 'User' )->find( { pseudo_user => $id } );
   my %ret;
   $ret{ 'user_pseudo' } = $user->pseudo_user;
   $ret{ 'mail_user' } = $user->mail_user;

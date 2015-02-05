@@ -18,4 +18,14 @@ public class httpClientUsage {
 
         httpClient.get(url, null, handler);
     }
+
+    public void createUser(String userName, String mail, String password, JsonHttpResponseHandler handler) {
+        String url = "/users";
+
+        RequestParams params = new RequestParams();
+        params.put("passwd", password);
+        params.put("username", userName);
+        params.put("mail", mail);
+        httpClient.put(url, params, handler);
+    }
 }

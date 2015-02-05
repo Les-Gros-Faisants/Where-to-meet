@@ -21,21 +21,23 @@ public class SignUpHandler extends JsonHttpResponseHandler {
     @Override
     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
         try {
-            if (statusCode == 200 && response.getString("OK").equals("OK")) {
+            if (statusCode == 200 && response.getString("ret").equals("OK")) {
                 Log.i("Account created with success, new id:", response.getString("new_id"));
-                
+                _act.signUpSuccess();
             }
             else {
-
+                Log.e("Account creation failed", ";(");
+                _act.signUpFailure();
             }
         }
         catch (JSONException e) {
-
+            Log.e("error: ", e.getMessage());
+            _act.signUpFailure();
         }
     }
 
     @Override
     public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
-
+        _act.signUpFailure();
     }
 }

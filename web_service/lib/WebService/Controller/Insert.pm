@@ -10,13 +10,12 @@ my $log = Mojo::Log->new;
 sub add_user {
     my $self = shift;
 
-    my $json = decode_json( $self->req->body );
     my $user = $self->db->resultset('User');
     my $ret  = $user->update_or_create(
         {
-            passwd_user => $json->{passwd},
-            pseudo_user => $json->{username},
-	    mail_user => $json->{mail},
+            passwd_user => $self->req->param('passwd'),
+            pseudo_user => $self->req->param('username'),
+	    mail_user => $self->req->param('mail'),
         }
     );
     return $self->render( text => $ret->id_user );
@@ -25,13 +24,13 @@ sub add_user {
 sub update_user {
   my $self = shift;
 
-  my $id = $self->param( 'id' );
-  my $json = decode_json( $self->req->body );
+  my $id = $self->param( 'id' );=
   my $user = $self->db->resultset( 'User' );
   my $ret = $user->update_or_create( {
     id_user => $id,
-    passwd_user => $json->{ passwd },
-    pseudo_user => $json->{ username },
+    passwd_user => $self->req->param('passwd'),
+    pseudo_user => $self->req->param('username'),
+    mail_user => $self->req->param('mail'),
   } );
   $log->debug( $ret );
   return $self->render( text => 'ok' );

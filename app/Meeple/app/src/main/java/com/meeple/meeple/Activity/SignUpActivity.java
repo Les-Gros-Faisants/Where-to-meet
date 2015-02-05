@@ -1,5 +1,7 @@
 package com.meeple.meeple.Activity;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -11,16 +13,20 @@ import android.widget.EditText;
 import com.meeple.meeple.API.Handler.NewUser;
 import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.R;
+import com.meeple.meeple.Utils.DialogMaker;
 
 public class SignUpActivity extends ActionBarActivity {
     private NewUser handler;
+    private DialogMaker dialogMaker;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         handler = new NewUser(this);
-        Button signupButton = (Button)findViewById(R.id.signup_button);
+        dialogMaker = new DialogMaker(this);
+        Button signupButton = (Button) findViewById(R.id.signup_button);
         signupButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 signUp();
@@ -51,22 +57,24 @@ public class SignUpActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void signUp()
-    {
+    public void signUp() {
         EditText login = (EditText) findViewById(R.id.login);
         EditText email = (EditText) findViewById(R.id.email);
         EditText password = (EditText) findViewById(R.id.password);
-        EditText password_confirmation = (EditText)findViewById(R.id.password_validation);
-        httpClientUsage.createUser(login.getText().toString(), email.getText().toString(), password.getText().toString(), handler);
+        EditText password_confirmation = (EditText) findViewById(R.id.password_validation);
+        if (password.getText().toString().equals(password_confirmation.getText().toString()))
+            httpClientUsage.createUser(login.getText().toString(), email.getText().toString(), password.getText().toString(), handler);
+        else
+            signUpFailure("Passwords differ");
     }
 
-    public void signUpSuccess()
-    {
-
+    public void signUpSuccess() {
+        dialogMaker.getAlert("Success !", "You are signed up.");
+        Intent intent = new Intent(this, MainPageActivity.class);
+        startActivity(intent);
     }
 
-    public void signUpFailure()
-    {
-
+    public void signUpFailure(String error) {
+        dialogMaker.getAlert("Error !", error);
     }
 }

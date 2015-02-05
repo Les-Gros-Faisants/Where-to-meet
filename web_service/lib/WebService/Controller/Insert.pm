@@ -16,6 +16,7 @@ sub add_user {
         {
             passwd_user => $json->{passwd},
             pseudo_user => $json->{username},
+	    mail_user => $json->{mail},
         }
     );
     return $self->render( text => $ret->id_user );

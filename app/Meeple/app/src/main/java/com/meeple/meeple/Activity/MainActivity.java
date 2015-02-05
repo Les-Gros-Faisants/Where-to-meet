@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        dialogMaker = new DialogMaker(this);
         Button login_button = (Button)findViewById(R.id.login_button);
         login_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

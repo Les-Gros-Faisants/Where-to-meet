@@ -70,7 +70,7 @@ public class SignUpActivity extends ActionBarActivity {
 
     public void signUpSuccess() {
         dialogMaker.getAlert("Success !", "You are signed up.");
-        Intent intent = new Intent(this, MainPageActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

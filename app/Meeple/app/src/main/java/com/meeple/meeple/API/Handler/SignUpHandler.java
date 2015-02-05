@@ -1,19 +1,20 @@
 package com.meeple.meeple.API.Handler;
+
+import android.util.Log;
 import com.loopj.android.http.JsonHttpResponseHandler;
-import com.meeple.meeple.Activity.MainActivity;
+import com.meeple.meeple.Activity.SignUpActivity;
 import org.apache.http.Header;
 import org.json.JSONException;
 import org.json.JSONObject;
-import android.util.Log;
 
 /**
- * Created by arkeopix on 2/4/15.
+ * Created by arkeopix on 2/5/15.
  */
-public class LoginHandler extends JsonHttpResponseHandler {
-    private MainActivity _act;
+public class SignUpHandler extends JsonHttpResponseHandler {
+    private SignUpActivity _act;
 
-    public LoginHandler(){}
-    public LoginHandler(MainActivity act) {
+    public SignUpHandler() {}
+    public SignUpHandler(SignUpActivity act) {
         this._act = act;
     }
 
@@ -21,23 +22,22 @@ public class LoginHandler extends JsonHttpResponseHandler {
     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
         try {
             if (statusCode == 200 && response.getString("ret").equals("OK")) {
-                Log.i("Connection :", "OK");
-                _act.logSuccess();
+                Log.i("Account created with success, new id:", response.getString("new_id"));
+                _act.signUpSuccess();
             }
             else {
-                Log.i("Connection :", "KO");
-                _act.logFailure();
+                Log.e("Account creation failed", ";(");
+                _act.signUpFailure();
             }
         }
         catch (JSONException e) {
-                Log.e("error", e.getMessage());
-                _act.logFailure();
+            Log.e("error: ", e.getMessage());
+            _act.signUpFailure();
         }
     }
 
     @Override
     public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
-        Log.e("Connection :", "KO");
-        _act.logFailure();
+        _act.signUpFailure();
     }
 }

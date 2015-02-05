@@ -13,11 +13,11 @@ public class httpClient {
     }
 
     public static void put(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
-        client.get(getAbsoluteUrl(url), params, responseHandler);
+        client.put(getAbsoluteUrl(url), params, responseHandler);
     }
 
     public static void del(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
-        client.get(getAbsoluteUrl(url), params, responseHandler);
+        //client.delete(getAbsoluteUrl(url), params, responseHandler);
     }
 
     private static String getAbsoluteUrl(String url) {

@@ -27,10 +27,16 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dialogMaker = new DialogMaker(this);
-        Button login_button = (Button)findViewById(R.id.login_button);
-        login_button.setOnClickListener(new View.OnClickListener() {
+        Button loginButton = (Button)findViewById(R.id.login_button);
+        loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 logUser();
+            }
+        });
+        Button signupButton = (Button)findViewById(R.id.signup_button);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                signUp();
             }
         });
         handler = new LoginHandler(this);
@@ -96,4 +102,11 @@ public class MainActivity extends ActionBarActivity {
         progressDialog.dismiss();
         dialogMaker.getAlert("Error !", "Login failed").show();
     }
+    
+    public void signUp()
+    {
+        Intent intent = new Intent(this, SignUpActivity.class);
+        startActivity(intent);
+    }
+
 }

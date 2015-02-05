@@ -20,7 +20,7 @@ public class httpClientUsage {
     }
 
     public void createUser(String userName, String mail, String password, JsonHttpResponseHandler handler) {
-        String url = "/users";
+        String url = "users/";
 
         RequestParams params = new RequestParams();
         params.put("passwd", password);

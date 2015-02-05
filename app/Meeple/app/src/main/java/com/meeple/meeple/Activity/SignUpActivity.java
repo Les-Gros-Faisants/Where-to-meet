@@ -8,18 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.meeple.meeple.API.Handler.NewUser;
+import com.meeple.meeple.API.Handler.SignUpHandler;
 import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.R;
 
 public class SignUpActivity extends ActionBarActivity {
-    private NewUser handler;
+    private SignUpHandler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        handler = new NewUser(this);
+        handler = new SignUpHandler(this);
         Button signupButton = (Button)findViewById(R.id.signup_button);
         signupButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

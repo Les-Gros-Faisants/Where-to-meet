@@ -1,7 +1,7 @@
 package com.meeple.meeple.Activity;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -57,7 +57,16 @@ public class SignUpActivity extends ActionBarActivity {
         EditText email = (EditText) findViewById(R.id.email);
         EditText password = (EditText) findViewById(R.id.password);
         EditText password_confirmation = (EditText)findViewById(R.id.password_validation);
-        httpClientUsage httpClient = new httpClientUsage();
-        httpClient.createUser(login.getText().toString(), email.getText().toString(), password.getText().toString(), handler);
+        httpClientUsage.createUser(login.getText().toString(), email.getText().toString(), password.getText().toString(), handler);
+    }
+
+    public void signUpSuccess()
+    {
+
+    }
+
+    public void signUpFailure()
+    {
+
     }
 }

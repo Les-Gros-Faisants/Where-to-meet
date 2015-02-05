@@ -22,7 +22,7 @@ public class LoginHandler extends JsonHttpResponseHandler {
         try {
             if (statusCode == 200 && response.getString("ret").equals("OK")) {
                 Log.i("Connection :", "OK");
-                _act.logSuccess();
+                _act.logSuccess(response.getInt("id"));
             }
             else {
                 Log.i("Connection :", "KO");

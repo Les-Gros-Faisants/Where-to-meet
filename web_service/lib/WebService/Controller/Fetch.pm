@@ -28,7 +28,7 @@ sub get_all_user {
   foreach my $tmp ( @users ) {
     $ret{ $tmp->id_user } = {
 		'user_pseudo' => $tmp->pseudo_user,
-		'user_mail'   => $tmp->user_mail,
+		'mail_user'   => $tmp->mail_user,
 	};
   }
   return $self->render( text => encode_json( \%ret ) );

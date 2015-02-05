@@ -27,17 +27,17 @@ public class SignUpHandler extends JsonHttpResponseHandler {
             }
             else {
                 Log.e("Account creation failed", ";(");
-                _act.signUpFailure();
+                _act.signUpFailure("Something went wrong");
             }
         }
         catch (JSONException e) {
             Log.e("error: ", e.getMessage());
-            _act.signUpFailure();
+            _act.signUpFailure(e.getMessage());
         }
     }
 
     @Override
     public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
-        _act.signUpFailure();
+        _act.signUpFailure("Something went wrong: Connection to server failed");
     }
 }

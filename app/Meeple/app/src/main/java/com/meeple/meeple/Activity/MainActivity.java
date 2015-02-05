@@ -88,11 +88,12 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-    public void logSuccess()
+    public void logSuccess(int id)
     {
         progressDialog.dismiss();
         Intent intent = new Intent(this, MainPageActivity.class);
         intent.putExtra("USERNAME", username);
+        intent.putExtra("USERNAME_ID", id);
         startActivity(intent);
     }
 

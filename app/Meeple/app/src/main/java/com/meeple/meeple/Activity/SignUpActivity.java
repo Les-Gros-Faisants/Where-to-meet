@@ -1,6 +1,8 @@
 package com.meeple.meeple.Activity;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -26,7 +28,7 @@ public class SignUpActivity extends ActionBarActivity {
         setContentView(R.layout.activity_sign_up);
         dialogMaker = new DialogMaker(this);
         handler = new SignUpHandler(this);
-        Button signupButton = (Button)findViewById(R.id.signup_button);
+        Button signupButton = (Button) findViewById(R.id.signup_button);
         signupButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 signUp();
@@ -69,9 +71,18 @@ public class SignUpActivity extends ActionBarActivity {
     }
 
     public void signUpSuccess() {
-        dialogMaker.getAlert("Success !", "You are signed up.");
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+//        dialogMaker.getAlert("Success !", "You are signed up.");
+        final Intent intent = new Intent(this, MainActivity.class);
+        AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+        dlgAlert.setMessage("You are signed up.");
+        dlgAlert.setPositiveButton("Ok",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(intent);
+                    }
+                });
+        dlgAlert.setCancelable(true);
+        dlgAlert.create().show();
     }
 
     public void signUpFailure(String error) {

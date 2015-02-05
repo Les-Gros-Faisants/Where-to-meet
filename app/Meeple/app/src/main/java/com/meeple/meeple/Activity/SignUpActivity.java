@@ -4,15 +4,28 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
+import com.meeple.meeple.API.Handler.NewUser;
+import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.R;
 
 public class SignUpActivity extends ActionBarActivity {
+    private NewUser handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        handler = new NewUser(this);
+        Button signupButton = (Button)findViewById(R.id.signup_button);
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                signUp();
+            }
+        });
     }
 
 
@@ -36,5 +49,15 @@ public class SignUpActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void signUp()
+    {
+        EditText login = (EditText) findViewById(R.id.login);
+        EditText email = (EditText) findViewById(R.id.email);
+        EditText password = (EditText) findViewById(R.id.password);
+        EditText password_confirmation = (EditText)findViewById(R.id.password_validation);
+        httpClientUsage httpClient = new httpClientUsage();
+        httpClient.createUser(login.getText().toString(), email.getText().toString(), password.getText().toString(), handler);
     }
 }

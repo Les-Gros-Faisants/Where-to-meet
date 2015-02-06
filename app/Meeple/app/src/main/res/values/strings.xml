@@ -3,6 +3,7 @@
 
     <string-array name="items_list">
         <item>Profile</item>
+        <item>Create Event</item>
         <item>Logout</item>
     </string-array>
 
@@ -22,5 +23,7 @@
     <string name="password_validation_text">Password confirmation</string>
     <string name="signup">Sign Up</string>
     <string name="email_example">example@email.com</string>
+    <string name="title_name">Name</string>
+    <string name="title_email">Email</string>
 
 </resources>

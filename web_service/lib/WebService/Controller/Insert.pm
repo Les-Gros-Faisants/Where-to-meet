@@ -15,11 +15,11 @@ sub add_user {
         {
             passwd_user => $self->req->param('passwd'),
             pseudo_user => $self->req->param('username'),
-	    mail_user => $self->req->param('mail'),
+            mail_user   => $self->req->param('mail'),
         }
     );
     my %res = ( ret => 'OK', new_id => $ret->id_user );
-    return $self->render( text => encode_json(\%res));
+    return $self->render( text => encode_json( \%res ) );
 }
 
 sub update_user {
@@ -34,81 +34,86 @@ sub update_user {
     mail_user => $self->req->param('mail'),
   } );
   $log->debug( $ret );
-  return $self->render( text => 'ok' );
+  my %res = ( ret => 'OK');
+  return $self->render( text => encode_json(\%res) );
 }
 
 sub update_user_passwd {
   my $self = shift;
 
   my $id = $self->param( 'id' );
-  my $json = decode_json( $self->req->body );
   my $user = $self->db->resultset( 'User' )->find( {
     id_user => $id
   } );
   my $ret = $user->update( {
-    password_user => $json->{ passwd }
-  } );
-  return $self->render( text => 'ok' );
+    password_user => $self->req->param->('passwd'),
+						   } );
+  my %res = ( ret => 'OK');
+  return $self->render( text => encode_json(\%res) );
 }
 
 sub update_user_pseudo {
-  my $self = shift;
+    my $self = shift;
 
-  my $id = $self->param( 'id' );
-  my $json = decode_json( $self->req->body );
-  my $user = $self->db->resultset( 'User' )->find( {
-    id_user => $id
-  } );
-  my $ret = $user->update( {
-    pseudo_user => $json->{ username }
-  } );
-  return $self->render( text => 'ok' );
+    my $id   = $self->param('id');
+    my $user = $self->db->resultset('User')->find(
+        {
+            id_user => $id
+        }
+    );
+    my $ret = $user->update(
+        {
+            pseudo_user => $self->req->param('username'),
+        }
+    );
+    my %res = ( ret => 'OK' );
+    return $self->render( text => encode_json( \%res ) );
 }
 
 sub add_tag {
   my $self = shift;
 
-  my $json = decode_json( $self->req->body );
   my $tag = $self->db->resultset( 'Tag' );
   my $ret = $tag->create( {
-    tag_name => $json->{ tag_name },
-    id_victim => $json->{ id_victim },
-    id_aggressor => $json->{ id_aggressor },
-  });
-  return $self->render( text => 'ok' );
+    tag_name => $self->req->param('tag_name'),
+    id_victim => $self->req->param('id_victim'),
+    id_aggressor => $self->req->param('id_aggressor'),
+						  });
+  my %res = ( ret => 'OK');
+  return $self->render( text => encode_json(\%res) );
 }
 
 sub add_event {
   my $self = shift;
 
-  my $json = decode_json( $self->req->body );
   my $event = $self->db->resultset( 'PastEvent' );
   my $ret = $event->create( {
-    event_name => $json->{ event_name },
-    description_event => $json->{ desc },
-    id_organizer => $json->{ id_organizer },
-    geolocation => $json->{ geolocation },
-    date_event => $json->{ date },
+    event_name => $self->req->param('event_name'),
+    description_event => $self->req->param('desc'),
+    id_organizer => $self->req->param('id_organizer'),
+    geolocation => $self->req->param('geolocation'),
+    date_event => $self->req->param('date'),
   });
   my $jnevent = $self->db->resultset( 'JunctionUserEvent' );
   $ret = $jnevent->update_or_create({
     id_event => $event->get_column( 'id_event' )->max,
-    id_user => $json->{ id_organizer },
-  });
-  return $self->render( text => 'ok' );
+    id_user => $self->req->param('id_organizer'),
+									});
+  my %res = ( ret => 'OK');
+  return $self->render( text => encode_json(\%ret) );
 }
 
 sub add_event_user {
   my $self = shift;
 
-  my $json = decode_json( $self->req->body );
   my $id = $self->param( 'id' );
   my $event = $self->db->resultset( 'JunctionUserEvent' );
   my $ret = $event->create( {
     id_event => $id,
-    id_user => $json->{ id_user },
-  } );
-  return $self->render( text => 'ok' );
+    id_user => $self->req->param('id_user'),
+							} );
+  my %res = ( ret => 'OK');
+  return $self->render( text => encode_json(\%res) );
 }
 
 sub add_event_tags {

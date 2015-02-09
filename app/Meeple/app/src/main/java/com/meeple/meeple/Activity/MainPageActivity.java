@@ -28,6 +28,7 @@ public class MainPageActivity extends ActionBarActivity {
     private Fragment EventCreationFragment;
     private String username;
     public static FragmentManager fragmentManager;
+    public int userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,7 @@ public class MainPageActivity extends ActionBarActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             username = extras.getString("USERNAME");
+            userId = extras.getInt("USERNAME_ID");
         }
         // Setting the fragments
         this.setFragments();

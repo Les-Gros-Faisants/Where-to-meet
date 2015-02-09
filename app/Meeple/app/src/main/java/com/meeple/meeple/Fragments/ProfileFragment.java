@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.meeple.meeple.API.Handler.ProfileHandler;
 import com.meeple.meeple.API.httpClientUsage;
+import com.meeple.meeple.Activity.MainPageActivity;
 import com.meeple.meeple.Models.User;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
@@ -20,7 +21,7 @@ import com.meeple.meeple.Utils.DialogMaker;
  */
 public class ProfileFragment extends Fragment {
     private ProfileHandler handler;
-    private int id;
+    private Integer id;
     private TextView name;
     private TextView email;
     private DialogMaker dialogMaker;
@@ -35,7 +36,9 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         dialogMaker = new DialogMaker(getActivity());
         handler = new ProfileHandler(this);
-        id = getArguments().getInt("USERNAME_ID");
+//        id = getArguments().getInt("USERNAME_ID");
+        id = ((MainPageActivity) getActivity()).userId;
+        Log.i("TESTEST", id.toString());
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         name = (TextView) view.findViewById(R.id.name);
         email = (TextView) view.findViewById(R.id.email);

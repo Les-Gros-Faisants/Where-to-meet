@@ -5,10 +5,6 @@ import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Context;
-import android.location.Criteria;
-import android.location.Location;
-import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -24,47 +20,35 @@ import com.meeple.meeple.Models.Event;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
 
-import java.util.List;
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainPageFragment extends Fragment {
-    private DialogMaker dialogMaker;
+public class EventFragment extends Fragment {
     private static GoogleMap map;
     private static FragmentManager fragmentManager;
     private static MapFragment mapFragment;
-    private static Double lat;
-    private static Double lng;
+    private static DialogMaker dialogMaker;
+    private static EventHandler handler;
+    private static Double lat = null;
+    private static Double lng = null;
+    private static int id;
 
-    public MainPageFragment() {
+    public EventFragment() {
         // Required empty public constructor
     }
+
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        dialogMaker = new DialogMaker(getActivity());
         if (container == null) {
             return null;
         }
-        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-        Criteria criteria = new Criteria();
-        String provider = locationManager.getBestProvider(criteria, false);
-        Location location = null;
-        if (provider != null)
-            location = locationManager.getLastKnownLocation(provider);
-        if (location != null) {
-            System.out.println("Provider " + provider + " has been selected.");
-            lat = (location.getLatitude());
-            lng = (location.getLongitude());
-        } else
-        {
-            lat = (double) 0;
-            lng = (double) 0;
-        }
+        dialogMaker = new DialogMaker(getActivity());
+        handler = new EventHandler(this);
+
         fragmentManager = getChildFragmentManager();
         mapFragment = MapFragment.newInstance();
         mapFragment.getMapAsync(new OnMapReadyCallback() {
@@ -78,32 +62,36 @@ public class MainPageFragment extends Fragment {
                 fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.content_frame, mapFragment);
         fragmentTransaction.commit();
-        return inflater.inflate(R.layout.fragment_main_page, container, false);
+        return inflater.inflate(R.layout.fragment_event, container, false);
     }
 
     public static void setUpMap() {
         // Do a null check to confirm that we have not already instantiated the map.
         if (map != null) {
             if (mapFragment != null) {
-
-                map.addMarker(new MarkerOptions()
-                        .position(new LatLng(lat, lng))
-                        .title("You are here"));
+                getEvent();
             }
         }
     }
 
-    public void getEvents()
+    public static void getEvent()
     {
 
     }
 
-    public void getEventsSuccess(List<Event> list)
+    /**
+     * callback of the getEvent request
+     * @param event object Event containing event's info
+     */
+    public static void getEventSuccess(Event event)
     {
+                map.addMarker(new MarkerOptions()
+                        .position(new LatLng(Integer.valueOf(event.get_geolocation().get("lat")), Integer.valueOf(event.get_geolocation().get("long"))))
+                        .title(event.get_nameEvent()));
 
     }
 
-    public void getEventFailure(String error)
+    public static void getEventFailure(String error)
     {
         dialogMaker.getAlert("Error !", error).show();
     }

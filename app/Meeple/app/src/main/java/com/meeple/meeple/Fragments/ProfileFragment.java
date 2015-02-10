@@ -77,8 +77,7 @@ public class ProfileFragment extends Fragment {
         email.setText(user.get_mailUser());
         name.setText(user.get_pseudoUser());
 
-        //LOOOOOOOOOOOOOOOOOOOOOOOL
-        final List<Event> list = null;
+        final List<Event> list = user.get_events();
         String[] values = new String[list.size()];
         for (int i = 0; i < list.size(); ++i) {
             Event event = list.get(i);

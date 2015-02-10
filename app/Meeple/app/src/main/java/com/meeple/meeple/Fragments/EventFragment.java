@@ -28,7 +28,7 @@ public class EventFragment extends Fragment {
     private static FragmentManager fragmentManager;
     private static MapFragment mapFragment;
     private static DialogMaker dialogMaker;
-    private static EventHandler handler;
+//    private static EventHandler handler;
     private static Double lat = null;
     private static Double lng = null;
     private static int id;
@@ -47,7 +47,7 @@ public class EventFragment extends Fragment {
             return null;
         }
         dialogMaker = new DialogMaker(getActivity());
-        handler = new EventHandler(this);
+//        handler = new EventHandler(this);
 
         fragmentManager = getChildFragmentManager();
         mapFragment = MapFragment.newInstance();

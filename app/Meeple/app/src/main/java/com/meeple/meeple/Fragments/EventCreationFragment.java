@@ -27,7 +27,6 @@ import com.meeple.meeple.R;
  */
 public class EventCreationFragment extends Fragment {
     private static GoogleMap map;
-    private static Double latitude, longitude;
     private static FragmentManager fragmentManager;
     private static MapFragment mapFragment;
     private static Double lat = null;

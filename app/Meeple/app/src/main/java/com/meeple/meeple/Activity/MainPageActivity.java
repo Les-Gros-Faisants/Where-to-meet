@@ -2,6 +2,7 @@ package com.meeple.meeple.Activity;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -25,7 +26,7 @@ public class MainPageActivity extends ActionBarActivity {
     private ActionBarDrawerToggle drawerToggle;
     private Fragment profileFragment;
     private Fragment mainPageFragment;
-    private Fragment EventCreationFragment;
+    private Fragment eventCreationFragment;
     private String username;
     public static FragmentManager fragmentManager;
     public int userId;
@@ -84,7 +85,7 @@ public class MainPageActivity extends ActionBarActivity {
     private void setFragments() {
         this.profileFragment = new ProfileFragment();
         this.mainPageFragment = new MainPageFragment();
-        this.EventCreationFragment = new EventCreationFragment();
+        this.eventCreationFragment = new EventCreationFragment();
         fragmentManager.beginTransaction().replace(R.id.content_frame, mainPageFragment).commit();
         setTitle(itemsList[0]);
         drawerList.setItemChecked(0, true);
@@ -95,14 +96,18 @@ public class MainPageActivity extends ActionBarActivity {
 
         switch (position) {
             case 0:
-                fragment = profileFragment;
+                fragment = mainPageFragment;
                 break;
             case 1:
-                fragment = EventCreationFragment;
+                fragment = profileFragment;
                 break;
-            //TODO:logout (+ mainpage)
             case 2:
+                fragment = eventCreationFragment;
+                break;
+            case 3:
                 fragment = null;
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;

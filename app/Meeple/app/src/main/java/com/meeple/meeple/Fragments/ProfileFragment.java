@@ -45,6 +45,12 @@ public class ProfileFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void	onViewCreated(View view, Bundle savedInstanceState)
+    {
+         getUserInfos();
+    }
+
     public void getUserInfos()
     {
         try

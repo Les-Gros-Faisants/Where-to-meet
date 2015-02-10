@@ -2,6 +2,7 @@
 <resources>
 
     <string-array name="items_list">
+        <item>Main Page</item>
         <item>Profile</item>
         <item>Create Event</item>
         <item>Logout</item>

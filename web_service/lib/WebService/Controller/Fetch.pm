@@ -39,9 +39,9 @@ sub get_user {
     my $self = shift;
 
     my $id = $self->param('id');
-    my $user = $self->db->resultset('User')->find( { pseudo_user => $id } );
-    my @user_event = $self->db->resultset('Junctionuserevent')
-      ->search( { id_event => $user->id_user } )->all;
+    my $user = $self->db->resultset('User')->find( { id_user => $id } );
+    my @user_event = $self->db->resultset('JunctionUserEvent')
+       ->search( { id_user => $user->id_user } )->all;
     my %ret;
     $ret{'user_pseudo'} = $user->pseudo_user;
     $ret{'mail_user'}   = $user->mail_user;
@@ -49,17 +49,18 @@ sub get_user {
     my %events;
     my $i = 0;
     foreach my $event (@user_event) {
-        $events{ 'id_event' . $i } = $event->id_event;
-        $events{'stuff'} = {
-              $event{'geolocation'} = $event->geolocation;
-              $event{'desc_event'}  = $event->description_event;
-              $event{'event_name'}  = $event->event_name;
-              $event{'event_date'}  = $event->date_event;
-        };
+    	$events{ 'id_event' . $i } = {
+	    $event->id_event->id_event => {
+		'geolocation' => $event->id_event->geolocation,
+		'desc_event'  => $event->id_event->description_event,
+		'event_name'  => $event->id_event->event_name,
+		'event_date'  => $event->id_event->date_event,
+	    },
+	};
         $i++;
     }
-    $ret{'events'} = %events;
-	return $self->render( text => encode_json( \%ret ) );
+    $ret{'events'} = \%events; 
+    return $self->render( text => encode_json( \%ret ) );
 }
 
 sub get_user_tags {

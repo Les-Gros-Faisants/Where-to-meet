@@ -1,6 +1,7 @@
 package com.meeple.meeple.Models;
 
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by arkeopix on 2/3/15.
@@ -12,6 +13,7 @@ public class Event {
     private String _descriptionEvent;
     private String _nameEvent;
     private String _dateEvent;
+    private List<User> _users;
 
     public Event(){}
     public Event(int idEvent, int idOrganizer, String geo, String desc, String name, String date) {

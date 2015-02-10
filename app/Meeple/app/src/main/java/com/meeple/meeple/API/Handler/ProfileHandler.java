@@ -27,19 +27,19 @@ public class ProfileHandler extends JsonHttpResponseHandler {
             if (statusCode == 200) {
                 Log.i("Successfully got user: ", response.toString());
 
-                    User user = new User(response.getInt("id_user"), response.getString("pseudo_user"), response.getString("mail"));
+                    User user = new User(response.getInt("id_user"), response.getString("user_pseudo"), response.getString("mail_user"));
                     _frag.getInfosSucces(user);
-
-
             }
         }
         catch (JSONException e) {
             Log.e("something went wrong", e.getMessage());
+            _frag.getInfosFailure(e.getMessage());
         }
     }
 
     @Override
     public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
-
+        Log.e("something went wrong", e.getMessage());
+        _frag.getInfosFailure(e.getMessage());
     }
 }

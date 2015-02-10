@@ -12,10 +12,11 @@ public class User {
     private List<Event> _events;
 
     public User(){}
-    public User(int idUser, String pseudoUser, String mailUser) {
+    public User(int idUser, String pseudoUser, String mailUser, List<Event> events) {
         this._idUser = idUser;
         this._pseudoUser = pseudoUser;
         this._mailUser = mailUser;
+        this._events = events;
     }
 
     public int get_idUser() {
@@ -28,5 +29,13 @@ public class User {
 
     public String get_mailUser() {
         return _mailUser;
+    }
+
+    public List<Event> get_events() {
+        return _events;
+    }
+
+    public void set_events(List<Event> _events) {
+        this._events = _events;
     }
 }

@@ -50,12 +50,12 @@ sub get_user {
     my $i = 0;
     foreach my $event (@user_event) {
     	$events{ 'id_event' . $i } = {
-	    $event->id_event->id_event => {
-		'geolocation' => $event->id_event->geolocation,
-		'desc_event'  => $event->id_event->description_event,
-		'event_name'  => $event->id_event->event_name,
-		'event_date'  => $event->id_event->date_event,
-	    },
+	    'id_event' => $event->id_event->id_event,
+	    'geolocation' => $event->id_event->geolocation,
+	    'desc_event'  => $event->id_event->description_event,
+	    'event_name'  => $event->id_event->event_name,
+	    'event_date'  => $event->id_event->date_event,
+	    'event_organizer' => $event->id_event->id_organizer->id_user,
 	};
         $i++;
     }

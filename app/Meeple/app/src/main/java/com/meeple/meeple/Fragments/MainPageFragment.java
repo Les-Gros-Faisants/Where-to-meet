@@ -37,6 +37,7 @@ public class MainPageFragment extends Fragment {
     private static MapFragment mapFragment;
     private static Double lat;
     private static Double lng;
+    private static Boolean located;
 
     public MainPageFragment() {
         // Required empty public constructor
@@ -55,17 +56,24 @@ public class MainPageFragment extends Fragment {
         Criteria criteria = new Criteria();
         String provider = locationManager.getBestProvider(criteria, false);
         Location location = null;
-        if (provider != null)
+        if (provider != null) {
             location = locationManager.getLastKnownLocation(provider);
+        }
+        else
+            dialogMaker.getAlert("Error !", "No provider found, impossible to locate you !").show();
         if (location != null) {
             System.out.println("Provider " + provider + " has been selected.");
             lat = (location.getLatitude());
             lng = (location.getLongitude());
+            located = true;
         } else
         {
+            dialogMaker.getAlert("Error !", "Couldn't locate you !").show();
             lat = (double) 0;
             lng = (double) 0;
+            located = false;
         }
+
         fragmentManager = getChildFragmentManager();
         mapFragment = MapFragment.newInstance();
         mapFragment.getMapAsync(new OnMapReadyCallback() {
@@ -81,6 +89,7 @@ public class MainPageFragment extends Fragment {
         fragmentTransaction.commit();
         return inflater.inflate(R.layout.fragment_main_page, container, false);
     }
+
 
     public static void setUpMap() {
         // Do a null check to confirm that we have not already instantiated the map.

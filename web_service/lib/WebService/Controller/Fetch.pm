@@ -140,7 +140,7 @@ sub get_event {
     $ret{'event_name'}   = $event->event_name;
     $ret{'id_organizer'} = $event->id_organizer->id_user;
     $ret{'geolocation'}  = $event->geolocation;
-    $ret{'desciption'}   = $event->description_event;
+    $ret{'description'}   = $event->description_event;
     return $self->render( text => encode_json( \%ret ) );
 }
 

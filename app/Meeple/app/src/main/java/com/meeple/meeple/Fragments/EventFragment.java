@@ -16,6 +16,8 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.meeple.meeple.API.Handler.EventHandler;
+import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.Models.Event;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
@@ -28,7 +30,7 @@ public class EventFragment extends Fragment {
     private static FragmentManager fragmentManager;
     private static MapFragment mapFragment;
     private static DialogMaker dialogMaker;
-//    private static EventHandler handler;
+    private static EventHandler handler;
     private static Double lat = null;
     private static Double lng = null;
     private static int id;
@@ -47,7 +49,7 @@ public class EventFragment extends Fragment {
             return null;
         }
         dialogMaker = new DialogMaker(getActivity());
-//        handler = new EventHandler(this);
+        handler = new EventHandler(this);
 
         fragmentManager = getChildFragmentManager();
         mapFragment = MapFragment.newInstance();
@@ -76,7 +78,7 @@ public class EventFragment extends Fragment {
 
     public static void getEvent()
     {
-
+        httpClientUsage.getEvent(id, handler);
     }
 
     /**

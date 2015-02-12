@@ -81,7 +81,8 @@ public class ProfileFragment extends Fragment {
         String[] values = new String[list.size()];
         for (int i = 0; i < list.size(); ++i) {
             Event event = list.get(i);
-            String formatted = event.get_nameEvent() + "\n" + event.get_descriptionEvent() + "\n" + event.get_dateEvent();
+            String date = event.get_dateEvent().split("T")[0];
+            String formatted = event.get_nameEvent() + "\n" + event.get_descriptionEvent() + "\n" + date;
             values[i] = new String(formatted);
         }
 

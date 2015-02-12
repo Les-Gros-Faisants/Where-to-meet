@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/event_description"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/event_name"/>
 

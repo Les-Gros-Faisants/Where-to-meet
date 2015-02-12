@@ -97,11 +97,12 @@ public class EventFragment extends Fragment {
         ((TextView) rootview.findViewById(R.id.event_name)).setText(event.get_nameEvent());
         ((TextView) rootview.findViewById(R.id.event_description)).setText(event.get_descriptionEvent());
 //        ((TextView) rootview.findViewById(R.id.event_tags)).setText(event.get_);
-        ((TextView) rootview.findViewById(R.id.event_date)).setText(event.get_dateEvent());
+        String date = event.get_dateEvent().split("T")[0];
+        ((TextView) rootview.findViewById(R.id.event_date)).setText(date);
         ((TextView) rootview.findViewById(R.id.event_creator)).setText(Integer.toString(event.get_idOrganizer()));
              map.addMarker(new MarkerOptions()
-                        .position(new LatLng(Double.valueOf(event.get_geolocation().get("lat")), Double.valueOf(event.get_geolocation().get("long"))))
-                        .title(event.get_nameEvent()));
+                     .position(new LatLng(Double.valueOf(event.get_geolocation().get("lat")), Double.valueOf(event.get_geolocation().get("long"))))
+                     .title(event.get_nameEvent()));
 
     }
 

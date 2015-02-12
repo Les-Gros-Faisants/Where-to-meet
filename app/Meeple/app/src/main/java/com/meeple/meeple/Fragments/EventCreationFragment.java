@@ -11,6 +11,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.meeple.meeple.R;
+
+import java.lang.reflect.Field;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -81,7 +84,6 @@ public class EventCreationFragment extends Fragment {
         // Do a null check to confirm that we have not already instantiated the map.
         if (map != null) {
             if (mapFragment != null) {
-
                 map.addMarker(new MarkerOptions()
                         .position(new LatLng(lat, lng))
                         .title("You are here"));
@@ -97,12 +99,30 @@ public class EventCreationFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        if (map != null) {
+        Log.i("REMOVING", "DESTROYEING");
+        if (mapFragment != null) {
+            Log.i("REMOVING", "DESTROYEING DA MAP");
 //            map = null;
 //            Fragment fragment = (getFragmentManager().findFragmentById(R.id.location_map));
 //            FragmentTransaction ft = getActivity().getFragmentManager().beginTransaction();
 //            ft.remove(fragment);
 //            ft.commit();
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+
+        try {
+            Field childFragmentManager = Fragment.class.getDeclaredField("mChildFragmentManager");
+            childFragmentManager.setAccessible(true);
+            childFragmentManager.set(this, null);
+
+        } catch (NoSuchFieldException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
         }
     }
 }

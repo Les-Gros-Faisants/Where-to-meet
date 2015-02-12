@@ -24,6 +24,7 @@ import com.meeple.meeple.Models.Event;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
 
+import java.lang.reflect.Field;
 import java.util.List;
 
 /**
@@ -106,5 +107,21 @@ public class MainPageFragment extends Fragment {
     public void getEventFailure(String error)
     {
         dialogMaker.getAlert("Error !", error).show();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+
+        try {
+            Field childFragmentManager = Fragment.class.getDeclaredField("mChildFragmentManager");
+            childFragmentManager.setAccessible(true);
+            childFragmentManager.set(this, null);
+
+        } catch (NoSuchFieldException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

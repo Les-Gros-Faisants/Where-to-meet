@@ -39,4 +39,10 @@ public class EventHandler extends JsonHttpResponseHandler {
             this._frag.getEventFailure("Server returned: " + statusCode);
         }
     }
+
+    @Override
+    public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
+        Log.e("error: ", e.getMessage());
+        this._frag.getEventFailure(e.getMessage());
+    }
 }

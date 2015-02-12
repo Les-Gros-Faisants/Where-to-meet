@@ -11,10 +11,11 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -22,6 +23,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.meeple.meeple.R;
+import com.meeple.meeple.Utils.DialogMaker;
 
 import java.lang.reflect.Field;
 
@@ -29,11 +31,13 @@ import java.lang.reflect.Field;
  * A simple {@link Fragment} subclass.
  */
 public class EventCreationFragment extends Fragment {
+    private DialogMaker dialogMaker;
     private static GoogleMap map;
     private static FragmentManager fragmentManager;
     private static MapFragment mapFragment;
     private static Double lat = null;
     private static Double lng = null;
+    private static View rootview;
 
     public EventCreationFragment() {
         // Required empty public constructor
@@ -44,10 +48,14 @@ public class EventCreationFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         if (container == null) {
             return null;
         }
+
+        dialogMaker = new DialogMaker(getActivity());
+        rootview = inflater.inflate(R.layout.fragment_event_creation, container, false);
+
+        // Map and location setup
         LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
         Criteria criteria = new Criteria();
         String provider = locationManager.getBestProvider(criteria, false);
@@ -77,9 +85,20 @@ public class EventCreationFragment extends Fragment {
                 fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.content_frame, mapFragment);
         fragmentTransaction.commit();
-        return inflater.inflate(R.layout.fragment_event_creation, container, false);
+
+        // Button setup
+        Button signupButton = (Button)rootview.findViewById(R.id.event_creation_button);
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                createEvent();
+            }
+        });
+        return rootview;
     }
 
+    /**
+     * called once the map is ready, will add the user's last known location
+     */
     public static void setUpMap() {
         // Do a null check to confirm that we have not already instantiated the map.
         if (map != null) {
@@ -99,17 +118,11 @@ public class EventCreationFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        Log.i("REMOVING", "DESTROYEING");
-        if (mapFragment != null) {
-            Log.i("REMOVING", "DESTROYEING DA MAP");
-//            map = null;
-//            Fragment fragment = (getFragmentManager().findFragmentById(R.id.location_map));
-//            FragmentTransaction ft = getActivity().getFragmentManager().beginTransaction();
-//            ft.remove(fragment);
-//            ft.commit();
-        }
     }
 
+    /**
+     * fixing crash when reloading a map
+     */
     @Override
     public void onDetach() {
         super.onDetach();
@@ -124,5 +137,34 @@ public class EventCreationFragment extends Fragment {
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * triggered by the event create button
+     * will retrieve infos from fields and request add of the event on the db
+     *
+     */
+public void createEvent()
+{
+    String name = ((EditText)getActivity().findViewById(R.id.event_name)).getText().toString();
+    String desc = ((EditText)getActivity().findViewById(R.id.event_desc)).getText().toString();
+    String tags = ((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString();
+}
+
+    /**
+     * callback of the event add request on success
+     */
+    public void eventCreationSucces()
+    {
+        dialogMaker.getAlert("Success !", "Event created").show();
+    }
+
+    /**
+     * callback of the event add request on failure
+     * @param error string describing the error
+     */
+    public void eventCreationFailure(String error)
+    {
+        dialogMaker.getAlert("Error !", error).show();
     }
 }

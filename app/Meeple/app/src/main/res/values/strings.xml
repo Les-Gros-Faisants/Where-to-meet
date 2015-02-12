@@ -26,5 +26,9 @@
     <string name="email_example">example@email.com</string>
     <string name="title_name">Name</string>
     <string name="title_email">Email</string>
+    <string name="event_name_hint">Event name</string>
+    <string name="event_desc_hint">Event description</string>
+    <string name="event_tags_hint">Event tags</string>
+    <string name="event_creation_button">Create event</string>
 
 </resources>

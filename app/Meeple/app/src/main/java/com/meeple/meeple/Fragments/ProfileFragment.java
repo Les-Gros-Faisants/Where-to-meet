@@ -61,6 +61,9 @@ public class ProfileFragment extends Fragment {
          getUserInfos();
     }
 
+    /**
+     * requests user's informations
+     */
     public void getUserInfos()
     {
         try
@@ -72,6 +75,11 @@ public class ProfileFragment extends Fragment {
         }
     }
 
+    /**
+     * callback of the getInfos request on success
+     * will display users information and a clickable list of his previous events
+     * @param user user's informations
+     */
     public void getInfosSucces(User user)
     {
         email.setText(user.get_mailUser());
@@ -113,6 +121,10 @@ public class ProfileFragment extends Fragment {
         });
     }
 
+    /**
+     * calback of the getInfos request on failure
+     * @param error string describing the error
+     */
     public void getInfosFailure(String error)
     {
         dialogMaker.getAlert("Error !", error).show();

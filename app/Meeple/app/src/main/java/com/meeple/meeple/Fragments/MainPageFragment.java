@@ -47,11 +47,12 @@ public class MainPageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        dialogMaker = new DialogMaker(getActivity());
         if (container == null) {
             return null;
         }
+        dialogMaker = new DialogMaker(getActivity());
+
+        // map and location setup
         LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
         Criteria criteria = new Criteria();
         String provider = locationManager.getBestProvider(criteria, false);
@@ -90,7 +91,9 @@ public class MainPageFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_main_page, container, false);
     }
 
-
+    /**
+     * called when the map is ready
+     */
     public static void setUpMap() {
         // Do a null check to confirm that we have not already instantiated the map.
         if (map != null) {
@@ -103,21 +106,35 @@ public class MainPageFragment extends Fragment {
         }
     }
 
+    /**
+     * get the events surrounding the user
+     */
     public void getEvents()
     {
 
     }
 
+    /**
+     * callback of the getEvents request on success
+     * @param list list of the requested events
+     */
     public void getEventsSuccess(List<Event> list)
     {
 
     }
 
+    /**
+     * callback of the getEvents request on failure
+     * @param error string describing the error
+     */
     public void getEventFailure(String error)
     {
         dialogMaker.getAlert("Error !", error).show();
     }
 
+    /**
+     * fixing crash when reloading a map
+     */
     @Override
     public void onDetach() {
         super.onDetach();

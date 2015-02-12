@@ -7,9 +7,11 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -34,6 +36,7 @@ public class EventFragment extends Fragment {
     private static Double lat = null;
     private static Double lng = null;
     private static int id;
+    private static View rootview;
 
     public EventFragment() {
         // Required empty public constructor
@@ -50,6 +53,8 @@ public class EventFragment extends Fragment {
         }
         dialogMaker = new DialogMaker(getActivity());
         handler = new EventHandler(this);
+        Bundle bundle = getArguments();
+        id = bundle.getInt("EVENT_ID");
 
         fragmentManager = getChildFragmentManager();
         mapFragment = MapFragment.newInstance();
@@ -64,7 +69,8 @@ public class EventFragment extends Fragment {
                 fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.content_frame, mapFragment);
         fragmentTransaction.commit();
-        return inflater.inflate(R.layout.fragment_event, container, false);
+        rootview = inflater.inflate(R.layout.fragment_event, container, false);;
+        return rootview;
     }
 
     public static void setUpMap() {
@@ -87,8 +93,14 @@ public class EventFragment extends Fragment {
      */
     public static void getEventSuccess(Event event)
     {
-                map.addMarker(new MarkerOptions()
-                        .position(new LatLng(Integer.valueOf(event.get_geolocation().get("lat")), Integer.valueOf(event.get_geolocation().get("long"))))
+        Log.i("MAPTEST", "SUCCESS");
+        ((TextView) rootview.findViewById(R.id.event_name)).setText(event.get_nameEvent());
+        ((TextView) rootview.findViewById(R.id.event_description)).setText(event.get_descriptionEvent());
+//        ((TextView) rootview.findViewById(R.id.event_tags)).setText(event.get_);
+        ((TextView) rootview.findViewById(R.id.event_date)).setText(event.get_dateEvent());
+        ((TextView) rootview.findViewById(R.id.event_creator)).setText(Integer.toString(event.get_idOrganizer()));
+             map.addMarker(new MarkerOptions()
+                        .position(new LatLng(Double.valueOf(event.get_geolocation().get("lat")), Double.valueOf(event.get_geolocation().get("long"))))
                         .title(event.get_nameEvent()));
 
     }

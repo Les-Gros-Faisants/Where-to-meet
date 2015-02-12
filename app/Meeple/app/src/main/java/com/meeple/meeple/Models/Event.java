@@ -23,6 +23,7 @@ public class Event {
         this._nameEvent = name;
         this._dateEvent = date;
         String[] parts = geo.split("/");
+        this._geolocation = new HashMap<String, String>();
         this._geolocation.put("long", parts[0]);
         this._geolocation.put("lat", parts[1]);
     }

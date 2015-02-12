@@ -41,9 +41,12 @@ public class ProfileHandler extends JsonHttpResponseHandler {
                     String key = (String)keys.next();
                     if (test.get(key) instanceof JSONObject) {
                         Log.i("get: ", test.get(key).toString());
-                        eventList.add(new Event(test.getInt("id_event"), test.getInt("event_organizer"),
-                                test.getString("geolocation"), test.getString("desc_event"),
-                                test.getString("event_name"), test.getString("event_date")));
+                        eventList.add(new Event(((JSONObject) test.get(key)).getInt("id_event"),
+                                ((JSONObject)test.get(key)).getInt("event_organizer"),
+                                ((JSONObject)test.get(key)).getString("geolocation"),
+                                ((JSONObject)test.get(key)).getString("desc_event"),
+                                ((JSONObject)test.get(key)).getString("event_name"),
+                                ((JSONObject)test.get(key)).getString("event_date")));
                     }
                 }
                 User user = new User(response.getInt("id_user"), response.getString("user_pseudo"), response.getString("mail_user"), eventList);

@@ -13,6 +13,12 @@ public class httpClientUsage {
         httpClient.get(url, null, handler);
     }
 
+    public static void getEvent(int id, JsonHttpResponseHandler handler) {
+        String url = "events/" + id;
+
+        httpClient.get(url, null, handler);
+    }
+
     public static void logUser(String password, String username, JsonHttpResponseHandler handler) throws Exception {
         String url = "connect/" + username + "/" + password;
 

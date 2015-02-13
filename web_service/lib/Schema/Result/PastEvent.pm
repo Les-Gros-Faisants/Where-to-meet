@@ -47,11 +47,15 @@ __PACKAGE__->table("past_events");
   is_foreign_key: 1
   is_nullable: 1
 
-=head2 geolocation
+=head2 lat
 
-  data_type: 'varchar'
+  data_type: 'float'
   is_nullable: 1
-  size: 50
+
+=head2 lng
+
+  data_type: 'float'
+  is_nullable: 1
 
 =head2 description_event
 
@@ -78,8 +82,10 @@ __PACKAGE__->add_columns(
   { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
   "id_organizer",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 1 },
-  "geolocation",
-  { data_type => "varchar", is_nullable => 1, size => 50 },
+  "lat",
+  { data_type => "float", is_nullable => 1 },
+  "lng",
+  { data_type => "float", is_nullable => 1 },
   "description_event",
   { data_type => "varchar", is_nullable => 1, size => 300 },
   "event_name",
@@ -153,8 +159,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-02-04 11:50:13
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:CpQBbjsLqFSncyuTAPvPYw
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-02-13 14:14:49
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:7vbIOs57an9/hF6+JeOH7w
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

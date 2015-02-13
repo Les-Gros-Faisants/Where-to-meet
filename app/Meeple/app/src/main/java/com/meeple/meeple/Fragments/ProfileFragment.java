@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -45,14 +47,27 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         dialogMaker = new DialogMaker(getActivity());
         handler = new ProfileHandler(this);
-        id = getArguments().getInt("USERNAME_ID");
-        if (id == null)
-            id = ((MainPageActivity) getActivity()).userId;
-        Log.i("TESTEST", id.toString());
+        Bundle args = getArguments();
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        if (args != null)
+            id = args.getInt("USERNAME_ID");
+        if (id == null) {
+            id = ((MainPageActivity) getActivity()).userId;
+//            view.findViewById(R.id)
+        }
+        Log.i("TESTEST", id.toString());
         name = (TextView) view.findViewById(R.id.name);
         email = (TextView) view.findViewById(R.id.email);
         listview = (ListView) view.findViewById(R.id.listView);
+
+        // Tag Button setup
+        Button signupButton = (Button)view.findViewById(R.id.tag_button);
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                tagUser();
+            }
+        });
+
         return view;
     }
 
@@ -136,7 +151,7 @@ public class ProfileFragment extends Fragment {
      */
     public void tagUser()
     {
-
+        String tag = ((EditText)getActivity().findViewById(R.id.tag_field)).getText().toString();
     }
 
     /**

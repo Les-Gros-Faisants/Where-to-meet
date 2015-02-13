@@ -24,7 +24,8 @@ public class EventHandler extends JsonHttpResponseHandler {
             try {
                 this._frag.getEventSuccess(new Event(response.getInt("id_event"),
                         response.getInt("id_organizer"),
-                        response.getString("geolocation"),
+                        response.getDouble("lat"),
+                        response.getDouble("lng"),
                         response.getString("description"),
                         response.getString("event_name"),
                         response.getString("date_event")));

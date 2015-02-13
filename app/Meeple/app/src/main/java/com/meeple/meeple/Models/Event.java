@@ -9,23 +9,22 @@ import java.util.List;
 public class Event {
     private int _idEvent;
     private int _idOrganizer;
-    private HashMap<String, String> _geolocation;
+    private HashMap<String, Double> _geolocation;
     private String _descriptionEvent;
     private String _nameEvent;
     private String _dateEvent;
     private List<User> _users;
 
     public Event(){}
-    public Event(int idEvent, int idOrganizer, String geo, String desc, String name, String date) {
+    public Event(int idEvent, int idOrganizer, Double lat, Double lng, String desc, String name, String date) {
         this._idEvent = idEvent;
         this._idOrganizer = idOrganizer;
         this._descriptionEvent = desc;
         this._nameEvent = name;
         this._dateEvent = date;
-        String[] parts = geo.split("/");
-        this._geolocation = new HashMap<String, String>();
-        this._geolocation.put("long", parts[0]);
-        this._geolocation.put("lat", parts[1]);
+        this._geolocation = new HashMap<String, Double>();
+        this._geolocation.put("long", lat);
+        this._geolocation.put("lat", lng);
     }
 
     public String get_dateEvent() {
@@ -40,7 +39,7 @@ public class Event {
         return _idOrganizer;
     }
 
-    public HashMap<String, String> get_geolocation() {
+    public HashMap<String, Double> get_geolocation() {
         return _geolocation;
     }
 

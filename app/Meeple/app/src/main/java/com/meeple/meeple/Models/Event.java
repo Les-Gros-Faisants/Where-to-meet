@@ -27,6 +27,7 @@ public class Event {
         this._geolocation.put("lat", lng);
     }
 
+
     public Event(int idEvent, int idOrganizer, Double lat, Double lng, String desc, String name, String date, List<User> users) {
         this._idEvent = idEvent;
         this._idOrganizer = idOrganizer;
@@ -37,8 +38,17 @@ public class Event {
         this._geolocation.put("long", lat);
         this._geolocation.put("lat", lng);
         this._users = users;
+
     }
 
+
+    public void set_users(List<User> _users) {
+        this._users = _users;
+    }
+
+    public List<User> get_users() {
+        return _users;
+    }
 
     public String get_dateEvent() {
         return _dateEvent;

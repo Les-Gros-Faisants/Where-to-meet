@@ -3,16 +3,45 @@
     android:layout_height="match_parent"
     tools:context="com.meeple.meeple.Fragments.EventCreationFragment">
 
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/event_name"
+        android:inputType="text"
+        android:hint="@string/event_name_hint"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/event_desc"
+        android:hint="@string/event_desc_hint"
+        android:layout_below="@+id/event_name"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/event_tags"
+        android:hint="@string/event_tags_hint"
+        android:layout_below="@+id/event_desc"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/event_creation_button"
+        android:id="@+id/event_creation_button"
+        android:layout_below="@+id/event_tags"
+        android:layout_centerHorizontal="true"/>
 
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <!--<fragment-->
-        <!--android:id="@+id/location_map"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--class="com.google.android.gms.maps.MapFragment" />-->
+        android:layout_height="match_parent"
+        android:layout_below="@+id/event_creation_button"/>
 
 </RelativeLayout>

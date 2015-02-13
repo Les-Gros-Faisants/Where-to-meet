@@ -47,7 +47,6 @@ public class EventFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         if (container == null) {
             return null;
         }
@@ -55,7 +54,9 @@ public class EventFragment extends Fragment {
         handler = new EventHandler(this);
         Bundle bundle = getArguments();
         id = bundle.getInt("EVENT_ID");
+        rootview = inflater.inflate(R.layout.fragment_event, container, false);;
 
+        // map setup
         fragmentManager = getChildFragmentManager();
         mapFragment = MapFragment.newInstance();
         mapFragment.getMapAsync(new OnMapReadyCallback() {
@@ -69,10 +70,12 @@ public class EventFragment extends Fragment {
                 fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.content_frame, mapFragment);
         fragmentTransaction.commit();
-        rootview = inflater.inflate(R.layout.fragment_event, container, false);;
         return rootview;
     }
 
+    /**
+     * called when the map is ready
+     */
     public static void setUpMap() {
         // Do a null check to confirm that we have not already instantiated the map.
         if (map != null) {
@@ -82,13 +85,16 @@ public class EventFragment extends Fragment {
         }
     }
 
+    /**
+     * requests an object Event from the db
+     */
     public static void getEvent()
     {
         httpClientUsage.getEvent(id, handler);
     }
 
     /**
-     * callback of the getEvent request
+     * callback of the getEvent request on success
      * @param event object Event containing event's info
      */
     public static void getEventSuccess(Event event)
@@ -106,6 +112,10 @@ public class EventFragment extends Fragment {
 
     }
 
+    /**
+     * callback of the getEvent request on failure
+     * @param error string describing the error
+     */
     public static void getEventFailure(String error)
     {
         dialogMaker.getAlert("Error !", error).show();

@@ -2,6 +2,7 @@ package WebService::Controller::Fetch;
 use Mojo::Base 'Mojolicious::Controller';
 use Mojo::JSON qw( encode_json );
 use Mojo::Log;
+use Math::Trig;
 
 my $log = Mojo::Log->new;
 
@@ -53,7 +54,8 @@ sub get_user {
     foreach my $event (@user_event) {
         $events{ 'id_event' . $i } = {
             'id_event'        => $event->id_event->id_event,
-            'geolocation'     => $event->id_event->geolocation,
+            'lat'             => $event->id_event->lat,
+            'lng'             => $event->id_event->lng,
             'desc_event'      => $event->id_event->description_event,
             'event_name'      => $event->id_event->event_name,
             'event_date'      => $event->id_event->date_event,
@@ -90,9 +92,10 @@ sub get_user_events {
       ->all;
     foreach my $event (@events) {
         $ret{ $event->id_event->id_event } = {
-            'organizer'   => $event->id_event->id_organizer->id_user,
-            'geolocation' => $event->id_event->geolocation,
-            'desc'        => $event->id_event->description_event,
+            'organizer' => $event->id_event->id_organizer->id_user,
+            'lat'       => $event->id_event->lat,
+            'lng'       => $event->id_event->lng,
+            'desc'      => $event->id_event->description_event,
         };
     }
     return $self->render( text => encode_json( \%ret ) );
@@ -122,7 +125,8 @@ sub get_all_events {
         $ret{ $tmp->id_event } = {
             'event_name'   => $tmp->event_name,
             'id_organizer' => $tmp->id_organizer->id_user,
-            'geolocation'  => $tmp->geolocation,
+            'lat'          => $tmp->lat,
+            'lng'          => $tmp->lng,
             'desc'         => $tmp->description_event,
         };
     }
@@ -139,22 +143,49 @@ sub get_event {
     $ret{'date_event'}   = $event->date_event;
     $ret{'event_name'}   = $event->event_name;
     $ret{'id_organizer'} = $event->id_organizer->id_user;
-    $ret{'geolocation'}  = $event->geolocation;
-    $ret{'description'}   = $event->description_event;
+    $ret{'lat'}          = $event->lat;
+    $ret{'lng'}          = $event->lng;
+    $ret{'description'}  = $event->description_event;
     return $self->render( text => encode_json( \%ret ) );
 }
 
 sub get_event_radius {
     my $self = shift;
 
-    my %lat = (
+    my %coord = (
         lat => $self->param('lat'),
         lng => $self->param('lng'),
     );
-	my $radius = $self->param('radius');
-	my @events = $self->db->resultset('PastEvent')->search({
-															
-														   });
+    my $radius = $self->param('radius');
+    my @events = $self->db->resultset('PastEvent')->all;
+    my %ret;
+    my @tmp;
+    foreach my $event (@events) {
+        if (
+            (
+                (
+                    acos(
+                        sin( $event->lat * pi / 180 ) *
+                          sin( $coord{lat} * pi / 180 ) +
+                          cos( $event->lat * pi / 180 ) *
+                          cos( $coord{lat} * pi / 180 ) *
+                          cos( ( $event->lng - $coord{lng} ) * pi / 180 )
+                    ) * 180 / pi * 60 * 1.1515
+                )
+            ) <= $radius
+          )
+        {
+            $ret{ 'event' . $event->id_event } = {
+                'id_event'     => $event->id_event,
+                'date_event'   => $event->date_event,
+                'event_name'   => $event->event_name,
+                'id_organizer' => $event->id_organizer,
+                'description'  => $event->description_event,
+                'lat'          => $event->lat,
+                'lng'          => $event->lng
+            };
+        }
+    }
 }
 
 

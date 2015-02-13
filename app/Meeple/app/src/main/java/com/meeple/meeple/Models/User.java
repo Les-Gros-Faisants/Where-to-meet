@@ -18,6 +18,10 @@ public class User {
         this._mailUser = mailUser;
         this._events = events;
     }
+    public User(int idUser, String _pseudoUser) {
+        this._idUser = idUser;
+        this._pseudoUser = _pseudoUser;
+    }
 
     public int get_idUser() {
         return _idUser;

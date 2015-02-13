@@ -27,6 +27,19 @@ public class Event {
         this._geolocation.put("lat", lng);
     }
 
+    public Event(int idEvent, int idOrganizer, Double lat, Double lng, String desc, String name, String date, List<User> users) {
+        this._idEvent = idEvent;
+        this._idOrganizer = idOrganizer;
+        this._descriptionEvent = desc;
+        this._nameEvent = name;
+        this._dateEvent = date;
+        this._geolocation = new HashMap<String, Double>();
+        this._geolocation.put("long", lat);
+        this._geolocation.put("lat", lng);
+        this._users = users;
+    }
+
+
     public String get_dateEvent() {
         return _dateEvent;
     }

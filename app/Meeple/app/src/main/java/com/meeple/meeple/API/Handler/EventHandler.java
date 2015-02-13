@@ -7,6 +7,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.util.Log;
 import com.meeple.meeple.Models.Event;
+import com.meeple.meeple.Models.User;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created by arkeopix on 2/12/15.
@@ -22,6 +27,18 @@ public class EventHandler extends JsonHttpResponseHandler {
         if (statusCode == 200) {
             Log.i("Got: ", response.toString());
             try {
+                List<User> users = new ArrayList<>();
+                JSONObject usersObject = response.getJSONObject("users");
+                Iterator<?> keys = usersObject.keys();
+                while (keys.hasNext()) {
+                    String key = (String)keys.next();
+                    if (usersObject.get(key) instanceof JSONObject) {
+                        Log.i("get: ", usersObject.get(key).toString());
+                        users.add(new User(((JSONObject) usersObject.get(key)).getInt("id_user"),
+                                ((JSONObject) usersObject.get(key)).getString("user_name")));
+                    }
+                }
+
                 this._frag.getEventSuccess(new Event(response.getInt("id_event"),
                         response.getInt("id_organizer"),
                         response.getDouble("lat"),

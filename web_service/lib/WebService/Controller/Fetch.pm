@@ -151,7 +151,7 @@ sub get_event {
 
     my %users;
     foreach my $tmp (@users) {
-        $users{ id_user . $tmp->id_user->id_user } = {
+        $users{ 'id_user' . $tmp->id_user->id_user } = {
             'id_user'   => $tmp->id_user->id_user,
             'user_name' => $tmp->id_user->pseudo_user,
         };

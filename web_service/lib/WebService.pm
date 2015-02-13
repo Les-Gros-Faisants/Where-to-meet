@@ -40,6 +40,7 @@ sub startup {
     $r->get('/api/events/:id')->to('fetch#get_event');
     $r->get('/api/events/:id/tags')->to('fetch#get_event_tags');
     $r->get('/api/events/:id/users')->to('fetch#get_event_users');
+	$r->get('/api/events/radius/:lat/:long/:radius')->to('fetch#get_event_radius');
 
     # Put Routes
     $r->put('/api/users')->to('insert#add_user');

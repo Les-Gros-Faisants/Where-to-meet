@@ -136,8 +136,10 @@ sub get_all_events {
 sub get_event {
     my $self = shift;
 
-    my $id = $self->param('id');
+    my $id    = $self->param('id');
     my $event = $self->db->resultset('PastEvent')->find( { id_event => $id } );
+    my @users = $self->db->resultset('JunctionUserEvent')
+      ->search( { id_event => $event->id_event } )->all;
     my %ret;
     $ret{'id_event'}     = $event->id_event;
     $ret{'date_event'}   = $event->date_event;
@@ -146,6 +148,15 @@ sub get_event {
     $ret{'lat'}          = $event->lat;
     $ret{'lng'}          = $event->lng;
     $ret{'description'}  = $event->description_event;
+
+    my %users;
+    foreach my $tmp (@users) {
+        $users{ id_user . $tmp->id_user->id_user } = {
+            'id_user'   => $tmp->id_user->id_user,
+            'user_name' => $tmp->id_user->pseudo_user,
+        };
+    }
+    $ret{'users'} = \%users;
     return $self->render( text => encode_json( \%ret ) );
 }
 

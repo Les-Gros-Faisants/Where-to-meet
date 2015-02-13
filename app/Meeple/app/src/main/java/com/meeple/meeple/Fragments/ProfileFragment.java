@@ -45,8 +45,9 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         dialogMaker = new DialogMaker(getActivity());
         handler = new ProfileHandler(this);
-//        id = getArguments().getInt("USERNAME_ID");
-        id = ((MainPageActivity) getActivity()).userId;
+        id = getArguments().getInt("USERNAME_ID");
+        if (id == null)
+            id = ((MainPageActivity) getActivity()).userId;
         Log.i("TESTEST", id.toString());
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         name = (TextView) view.findViewById(R.id.name);
@@ -135,7 +136,7 @@ public class ProfileFragment extends Fragment {
      */
     public void tagUser()
     {
-        
+
     }
 
     /**

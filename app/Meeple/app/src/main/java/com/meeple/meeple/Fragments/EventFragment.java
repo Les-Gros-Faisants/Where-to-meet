@@ -5,12 +5,15 @@ import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -22,8 +25,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.meeple.meeple.API.Handler.EventHandler;
 import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.Models.Event;
+import com.meeple.meeple.Models.User;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -114,38 +120,38 @@ public class EventFragment extends Fragment {
                 .title(event.get_nameEvent()));
 
         // listView creation
-//        final List<User> list = event.get_users();
-//        String[] values = new String[list.size()];
-//        for (int i = 0; i < list.size(); ++i) {
-//            User user = list.get(i);
-//            String formatted = user.get_pseudoUser();
-//            values[i] = new String(formatted);
-//        }
-//
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),
-//                android.R.layout.simple_list_item_1, values) {
-//            @Override
-//            public View getView(int position, View convertView, ViewGroup parent) {
-//                View view = super.getView(position, convertView, parent);
-//                TextView textView = (TextView) view.findViewById(android.R.id.text1);
-//                textView.setTextColor(Color.BLACK);
-//                return view;
-//            }
-//        };
-//        listView.setAdapter(adapter);
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, final View view,
-//                                    int position, long id) {
-//                FragmentTransaction ft = getFragmentManager().beginTransaction();
-//                Fragment fragment = new ProfileFragment();
-//                Bundle args = new Bundle();
-//                args.putInt("USERNAME_ID", list.get(position).get_idUser());
-//                fragment.setArguments(args);
-//                ft.replace(R.id.content_frame, fragment);
-//                ft.commit();
-//            }
-//        });
+        final List<User> list = event.get_users();
+        String[] values = new String[list.size()];
+        for (int i = 0; i < list.size(); ++i) {
+            User user = list.get(i);
+            String formatted = user.get_pseudoUser();
+            values[i] = new String(formatted);
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),
+                android.R.layout.simple_list_item_1, values) {
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+                TextView textView = (TextView) view.findViewById(android.R.id.text1);
+                textView.setTextColor(Color.BLACK);
+                return view;
+            }
+        };
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, final View view,
+                                    int position, long id) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Fragment fragment = new ProfileFragment();
+                Bundle args = new Bundle();
+                args.putInt("USERNAME_ID", list.get(position).get_idUser());
+                fragment.setArguments(args);
+                ft.replace(R.id.content_frame, fragment);
+                ft.commit();
+            }
+        });
     }
 
     /**

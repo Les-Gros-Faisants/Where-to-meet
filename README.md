@@ -10,6 +10,7 @@ Schema 'dbi:mysql:database=wtm;host=127.0.0.1;port=3306' user pass
 
 TODO:
 
+-button drawer
 -get event : return le nom de l'organisateur + la liste des participants
 -fix les progress dialog
 -tags

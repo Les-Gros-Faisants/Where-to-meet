@@ -149,6 +149,10 @@ public void createEvent()
     String name = ((EditText)getActivity().findViewById(R.id.event_name)).getText().toString();
     String desc = ((EditText)getActivity().findViewById(R.id.event_desc)).getText().toString();
     String tags = ((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString();
+    if (name.equals("") || desc.equals("") || tags.equals(""))
+        eventCreationFailure("One or serveral fields are empty");
+//    else
+//        httpClientUsage.createEvent();
 }
 
     /**

@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -37,6 +38,7 @@ public class EventFragment extends Fragment {
     private static Double lng = null;
     private static int id;
     private static View rootview;
+    private static ListView listView;
 
     public EventFragment() {
         // Required empty public constructor
@@ -54,7 +56,9 @@ public class EventFragment extends Fragment {
         handler = new EventHandler(this);
         Bundle bundle = getArguments();
         id = bundle.getInt("EVENT_ID");
-        rootview = inflater.inflate(R.layout.fragment_event, container, false);;
+        rootview = inflater.inflate(R.layout.fragment_event, container, false);
+        ;
+        listView = (ListView) rootview.findViewById(R.id.listView);
 
         // map setup
         fragmentManager = getChildFragmentManager();
@@ -88,17 +92,16 @@ public class EventFragment extends Fragment {
     /**
      * requests an object Event from the db
      */
-    public static void getEvent()
-    {
+    public static void getEvent() {
         httpClientUsage.getEvent(id, handler);
     }
 
     /**
      * callback of the getEvent request on success
+     *
      * @param event object Event containing event's info
      */
-    public static void getEventSuccess(Event event)
-    {
+    public void getEventSuccess(Event event) {
         Log.i("MAPTEST", "SUCCESS");
         ((TextView) rootview.findViewById(R.id.event_name)).setText(event.get_nameEvent());
         ((TextView) rootview.findViewById(R.id.event_description)).setText(event.get_descriptionEvent());
@@ -106,18 +109,51 @@ public class EventFragment extends Fragment {
         String date = event.get_dateEvent().split("T")[0];
         ((TextView) rootview.findViewById(R.id.event_date)).setText(date);
         ((TextView) rootview.findViewById(R.id.event_creator)).setText(Integer.toString(event.get_idOrganizer()));
-             map.addMarker(new MarkerOptions()
-                     .position(new LatLng(Double.valueOf(event.get_geolocation().get("lat")), Double.valueOf(event.get_geolocation().get("long"))))
-                     .title(event.get_nameEvent()));
+        map.addMarker(new MarkerOptions()
+                .position(new LatLng(event.get_geolocation().get("lat"), event.get_geolocation().get("long")))
+                .title(event.get_nameEvent()));
 
+        // listView creation
+//        final List<User> list = event.get_users();
+//        String[] values = new String[list.size()];
+//        for (int i = 0; i < list.size(); ++i) {
+//            User user = list.get(i);
+//            String formatted = user.get_pseudoUser();
+//            values[i] = new String(formatted);
+//        }
+//
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),
+//                android.R.layout.simple_list_item_1, values) {
+//            @Override
+//            public View getView(int position, View convertView, ViewGroup parent) {
+//                View view = super.getView(position, convertView, parent);
+//                TextView textView = (TextView) view.findViewById(android.R.id.text1);
+//                textView.setTextColor(Color.BLACK);
+//                return view;
+//            }
+//        };
+//        listView.setAdapter(adapter);
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, final View view,
+//                                    int position, long id) {
+//                FragmentTransaction ft = getFragmentManager().beginTransaction();
+//                Fragment fragment = new ProfileFragment();
+//                Bundle args = new Bundle();
+//                args.putInt("USERNAME_ID", list.get(position).get_idUser());
+//                fragment.setArguments(args);
+//                ft.replace(R.id.content_frame, fragment);
+//                ft.commit();
+//            }
+//        });
     }
 
     /**
      * callback of the getEvent request on failure
+     *
      * @param error string describing the error
      */
-    public static void getEventFailure(String error)
-    {
+    public static void getEventFailure(String error) {
         dialogMaker.getAlert("Error !", error).show();
     }
 }

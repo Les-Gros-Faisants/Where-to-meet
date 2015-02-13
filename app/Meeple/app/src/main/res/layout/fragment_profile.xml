@@ -78,8 +78,10 @@
         android:id="@+id/tag_field"
         android:hint="@string/tag_hint"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/tags"
-        android:layout_alignEnd="@+id/tags" />
+        android:layout_toLeftOf="@+id/email"
+        android:layout_toStartOf="@+id/email"
+        android:layout_below="@+id/tags"
+        android:layout_marginTop="20dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -88,6 +90,8 @@
         android:text="@string/tag_button"
         android:id="@+id/tag_button"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/title_name"
-        android:layout_toEndOf="@+id/title_name" />
+        android:layout_toRightOf="@+id/title_tags"
+        android:layout_toEndOf="@+id/title_tags"
+        android:layout_below="@+id/tags"
+        android:layout_marginTop="20dp" />
 </RelativeLayout>

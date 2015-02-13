@@ -63,7 +63,7 @@ public class EventFragment extends Fragment {
         Bundle bundle = getArguments();
         id = bundle.getInt("EVENT_ID");
         rootview = inflater.inflate(R.layout.fragment_event, container, false);
-        ;
+
         listView = (ListView) rootview.findViewById(R.id.listView);
 
         // map setup

@@ -53,7 +53,10 @@ public class ProfileFragment extends Fragment {
             id = args.getInt("USERNAME_ID");
         if (id == null) {
             id = ((MainPageActivity) getActivity()).userId;
-//            view.findViewById(R.id)
+            view.findViewById(R.id.title_tags).setVisibility(View.GONE);
+            view.findViewById(R.id.tag_button).setVisibility(View.GONE);
+            view.findViewById(R.id.tag_field).setVisibility(View.GONE);
+            view.findViewById(R.id.tags).setVisibility(View.GONE);
         }
         Log.i("TESTEST", id.toString());
         name = (TextView) view.findViewById(R.id.name);

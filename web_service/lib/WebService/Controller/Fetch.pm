@@ -144,6 +144,20 @@ sub get_event {
     return $self->render( text => encode_json( \%ret ) );
 }
 
+sub get_event_radius {
+    my $self = shift;
+
+    my %lat = (
+        lat => $self->param('lat'),
+        lng => $self->param('lng'),
+    );
+	my $radius = $self->param('radius');
+	my @events = $self->db->resultset('PastEvent')->search({
+															
+														   });
+}
+
+
 sub get_event_tags {
     my $self = shift;
 

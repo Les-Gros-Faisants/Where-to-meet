@@ -43,7 +43,8 @@ public class ProfileHandler extends JsonHttpResponseHandler {
                         Log.i("get: ", test.get(key).toString());
                         eventList.add(new Event(((JSONObject) test.get(key)).getInt("id_event"),
                                 ((JSONObject)test.get(key)).getInt("event_organizer"),
-                                ((JSONObject)test.get(key)).getString("geolocation"),
+                                ((JSONObject)test.get(key)).getDouble("lat"),
+                                ((JSONObject)test.get(key)).getDouble("lng"),
                                 ((JSONObject)test.get(key)).getString("desc_event"),
                                 ((JSONObject)test.get(key)).getString("event_name"),
                                 ((JSONObject)test.get(key)).getString("event_date")));

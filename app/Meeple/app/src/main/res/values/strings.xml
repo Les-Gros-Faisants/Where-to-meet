@@ -30,5 +30,9 @@
     <string name="event_desc_hint">Event description</string>
     <string name="event_tags_hint">Event tags</string>
     <string name="event_creation_button">Create event</string>
+    <string name="title_tags">Tags</string>
+    <string name="tags_default">Tags</string>
+    <string name="tag_hint">Tag him/her !</string>
+    <string name="tag_button">Tag !</string>
 
 </resources>

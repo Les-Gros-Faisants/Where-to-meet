@@ -98,7 +98,7 @@ public class ProfileFragment extends Fragment {
                 android.R.layout.simple_list_item_1, values){
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
-                View view =super.getView(position, convertView, parent);
+                View view = super.getView(position, convertView, parent);
                 TextView textView=(TextView) view.findViewById(android.R.id.text1);
                 textView.setTextColor(Color.BLACK);
                 return view;
@@ -126,6 +126,31 @@ public class ProfileFragment extends Fragment {
      * @param error string describing the error
      */
     public void getInfosFailure(String error)
+    {
+        dialogMaker.getAlert("Error !", error).show();
+    }
+
+    /**
+     * called by the Tag ! button
+     */
+    public void tagUser()
+    {
+        
+    }
+
+    /**
+     * callback of the tagUser request on success
+     */
+    public void tagUserSuccess()
+    {
+        dialogMaker.getAlert("Success !", "User tagged !").show();
+    }
+
+    /**
+     * callback of the tagUser request on failure
+     * @param error string describing the error
+     */
+    public void tagUserFailure(String error)
     {
         dialogMaker.getAlert("Error !", error).show();
     }

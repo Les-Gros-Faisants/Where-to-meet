@@ -159,7 +159,7 @@ public void createEvent()
         eventCreationFailure("You are not localized");
     else {
 
-        httpClientUsage.createEvent(lat, lng, );
+        //httpClientUsage.createEvent(lat, lng, );
     }
 }
 

@@ -4,6 +4,7 @@ use Mojo::JSON qw( encode_json );
 use Mojo::Log;
 
 use Data::Dumper;
+use Data::Dumper;
 
 my $log = Mojo::Log->new;
 
@@ -94,11 +95,12 @@ sub add_tag {
 sub add_event {
     my $self = shift;
 
+	$log->debug(Dumper($self->req));
     my $event = $self->db->resultset('PastEvent');
     my $ret   = $event->create(
         {
             event_name        => $self->req->param('event_name'),
-            description_event => $self->req->param('desc'),
+            description_event => $self->req->param('event_desc'),
             id_organizer      => $self->req->param('id_organizer'),
             lat               => $self->req->param('lat'),
             lng               => $self->req->param('lng'),

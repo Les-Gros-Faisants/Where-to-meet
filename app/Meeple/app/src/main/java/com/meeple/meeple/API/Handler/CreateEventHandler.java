@@ -23,7 +23,7 @@ public class CreateEventHandler extends JsonHttpResponseHandler {
         try {
             if (statusCode == 200 && response.getString("ret").equals("OK")) {
                 Log.i("got: ", response.toString());
-                this._frag.eventCreationSuccess(response.getInt("id_event"));
+                this._frag.eventCreationSuccess(response.getInt("new_event"));
             }
         }
         catch (JSONException e) {

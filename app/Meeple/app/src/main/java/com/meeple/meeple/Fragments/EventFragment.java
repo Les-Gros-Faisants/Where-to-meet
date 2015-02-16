@@ -5,6 +5,7 @@ import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -44,6 +45,7 @@ public class EventFragment extends Fragment {
     private static int id;
     private static View rootview;
     private static ListView listView;
+    private ProgressDialog progressDialog;
 
     public EventFragment() {
         // Required empty public constructor
@@ -57,6 +59,7 @@ public class EventFragment extends Fragment {
         if (container == null) {
             return null;
         }
+        progressDialog = ProgressDialog.show(getActivity(), "Loading", "Please wait");
         dialogMaker = new DialogMaker(getActivity());
         handler = new EventHandler(this);
         Bundle bundle = getArguments();
@@ -150,6 +153,7 @@ public class EventFragment extends Fragment {
                 ft.commit();
             }
         });
+        progressDialog.dismiss();
     }
 
     /**
@@ -157,7 +161,8 @@ public class EventFragment extends Fragment {
      *
      * @param error string describing the error
      */
-    public static void getEventFailure(String error) {
+    public void getEventFailure(String error) {
         dialogMaker.getAlert("Error !", error).show();
+        progressDialog.dismiss();
     }
 }

@@ -142,7 +142,6 @@ public class ProfileFragment extends Fragment {
 
         });
         progressDialog.dismiss();
-
     }
 
     /**

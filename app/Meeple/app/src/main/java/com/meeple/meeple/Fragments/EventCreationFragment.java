@@ -12,7 +12,6 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,14 +24,10 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.meeple.meeple.API.Handler.CreateEventHandler;
-import com.meeple.meeple.API.httpClientUsage;
-import com.meeple.meeple.Activity.MainPageActivity;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
 
 import java.lang.reflect.Field;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -165,12 +160,7 @@ public void createEvent()
     else if (lat == null || lat == 0.0 || lng == null || lng == 0.0)
         eventCreationFailure("You are not localized");
     else {
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat dfDays = new SimpleDateFormat("dd-MM-yyyy");
-        SimpleDateFormat dfSecs = new SimpleDateFormat("kk:mm:ss");
-        String date = dfDays.format(c.getTime()) + " " + dfSecs.format(c.getTime());
-        Log.i("MAPKEK", lat + " " + lng + " " + date + " " + ((MainPageActivity) getActivity()).userId + " " + name + " " + desc);
-        httpClientUsage.createEvent(lat, lng, date, ((MainPageActivity) getActivity()).userId, name, desc, handler);
+//        httpClientUsage.createEvent(lat, lng, ((MainPageActivity) getActivity()).userId, name, desc, handler);
     }
 }
 

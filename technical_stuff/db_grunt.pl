@@ -14,6 +14,7 @@ my $dbh = DBI->connect( 'dbi:mysql:database=wtm:host=localhost',
 sub clean_exit {
     $dbh->disconnect
       || die "Disconnection error: $DBI::errstr\n";
+	exit 1;
 }
 
 while (42) {

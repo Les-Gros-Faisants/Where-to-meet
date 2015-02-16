@@ -54,7 +54,7 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         if (args != null)
             id = args.getInt("USERNAME_ID");
-        if (id == null) {
+        if (id == null || id == ((MainPageActivity)getActivity()).userId) {
             id = ((MainPageActivity) getActivity()).userId;
             view.findViewById(R.id.title_tags).setVisibility(View.GONE);
             view.findViewById(R.id.tag_button).setVisibility(View.GONE);

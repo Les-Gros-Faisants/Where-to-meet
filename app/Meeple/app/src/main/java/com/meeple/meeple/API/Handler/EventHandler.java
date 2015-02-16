@@ -24,7 +24,7 @@ public class EventHandler extends JsonHttpResponseHandler {
 
     @Override
     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-        if (statusCode == 200) {
+         if (statusCode == 200) {
             Log.i("Got: ", response.toString());
             try {
                 List<User> users = new ArrayList<>();
@@ -45,7 +45,8 @@ public class EventHandler extends JsonHttpResponseHandler {
                         response.getDouble("lng"),
                         response.getString("description"),
                         response.getString("event_name"),
-                        response.getString("date_event")));
+                        response.getString("date_event"),
+                        users));
 
             }
             catch (JSONException e) {

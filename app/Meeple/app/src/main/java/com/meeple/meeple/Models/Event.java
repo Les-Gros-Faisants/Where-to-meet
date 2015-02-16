@@ -62,6 +62,10 @@ public class Event {
         return _users;
     }
 
+    public String get_nOrganizer() {
+        return _nOrganizer;
+    }
+
     public String get_dateEvent() {
         return _dateEvent;
     }

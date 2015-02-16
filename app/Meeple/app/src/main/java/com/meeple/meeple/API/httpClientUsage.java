@@ -34,4 +34,8 @@ public class httpClientUsage {
         params.put("mail", mail);
         httpClient.put(url, params, handler);
     }
+
+//    public static void putEvent(Double lat, Double lng, ) {
+//
+//    }
 }

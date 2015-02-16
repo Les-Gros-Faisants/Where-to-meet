@@ -8,7 +8,6 @@ import android.app.FragmentTransaction;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -108,13 +107,12 @@ public class EventFragment extends Fragment {
      * @param event object Event containing event's info
      */
     public void getEventSuccess(Event event) {
-        Log.i("MAPTEST", "SUCCESS");
         ((TextView) rootview.findViewById(R.id.event_name)).setText(event.get_nameEvent());
         ((TextView) rootview.findViewById(R.id.event_description)).setText(event.get_descriptionEvent());
 //        ((TextView) rootview.findViewById(R.id.event_tags)).setText(event.get_);
         String date = event.get_dateEvent().split("T")[0];
         ((TextView) rootview.findViewById(R.id.event_date)).setText(date);
-        ((TextView) rootview.findViewById(R.id.event_creator)).setText(Integer.toString(event.get_idOrganizer()));
+        ((TextView) rootview.findViewById(R.id.event_creator)).setText(event.get_nOrganizer());
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(event.get_geolocation().get("lat"), event.get_geolocation().get("long")))
                 .title(event.get_nameEvent()));

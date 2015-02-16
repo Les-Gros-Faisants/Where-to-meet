@@ -5,6 +5,7 @@ import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.location.Criteria;
 import android.location.Location;
@@ -22,6 +23,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
 
@@ -38,6 +40,7 @@ public class EventCreationFragment extends Fragment {
     private static Double lat = null;
     private static Double lng = null;
     private static View rootview;
+    private ProgressDialog progressDialog;
 
     public EventCreationFragment() {
         // Required empty public constructor
@@ -51,7 +54,7 @@ public class EventCreationFragment extends Fragment {
         if (container == null) {
             return null;
         }
-
+        progressDialog = ProgressDialog.show(getActivity(), "Loading", "Please wait");
         dialogMaker = new DialogMaker(getActivity());
         rootview = inflater.inflate(R.layout.fragment_event_creation, container, false);
 
@@ -93,6 +96,7 @@ public class EventCreationFragment extends Fragment {
                 createEvent();
             }
         });
+        progressDialog.dismiss();
         return rootview;
     }
 
@@ -151,14 +155,18 @@ public void createEvent()
     String tags = ((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString();
     if (name.equals("") || desc.equals("") || tags.equals(""))
         eventCreationFailure("One or serveral fields are empty");
-//    else
-//        httpClientUsage.createEvent();
+    else if (lat == null ||lng == null)
+        eventCreationFailure("You are not localized");
+    else {
+
+        httpClientUsage.createEvent(lat, lng, );
+    }
 }
 
     /**
      * callback of the event add request on success
      */
-    public void eventCreationSucces()
+    public void eventCreationSuccess()
     {
         dialogMaker.getAlert("Success !", "Event created").show();
     }

@@ -3,6 +3,7 @@ package com.meeple.meeple.Fragments;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +37,7 @@ public class ProfileFragment extends Fragment {
     private TextView email;
     private DialogMaker dialogMaker;
     private ListView listview = null;
+    private ProgressDialog progressDialog;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -45,6 +47,7 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        progressDialog = ProgressDialog.show(getActivity(), "Loading", "Please wait");
         dialogMaker = new DialogMaker(getActivity());
         handler = new ProfileHandler(this);
         Bundle args = getArguments();
@@ -71,6 +74,7 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        progressDialog.dismiss();
         return view;
     }
 

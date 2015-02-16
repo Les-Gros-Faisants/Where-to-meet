@@ -71,8 +71,19 @@ __PACKAGE__->table("past_events");
 
 =head2 date_event
 
-  data_type: 'date'
+  data_type: 'timestamp'
   datetime_undef_if_invalid: 1
+  default_value: current_timestamp
+  is_nullable: 0
+
+=head2 timeout
+
+  data_type: 'integer'
+  is_nullable: 1
+
+=head2 active
+
+  data_type: 'tinyint'
   is_nullable: 1
 
 =cut
@@ -91,7 +102,16 @@ __PACKAGE__->add_columns(
   "event_name",
   { data_type => "varchar", is_nullable => 1, size => 60 },
   "date_event",
-  { data_type => "date", datetime_undef_if_invalid => 1, is_nullable => 1 },
+  {
+    data_type => "timestamp",
+    datetime_undef_if_invalid => 1,
+    default_value => \"current_timestamp",
+    is_nullable => 0,
+  },
+  "timeout",
+  { data_type => "integer", is_nullable => 1 },
+  "active",
+  { data_type => "tinyint", is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -159,8 +179,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-02-13 14:14:49
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:7vbIOs57an9/hF6+JeOH7w
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-02-16 15:19:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:10rlthoyxcPogxbcNZ2iLA
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

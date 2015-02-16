@@ -102,7 +102,6 @@ sub add_event {
             id_organizer      => $self->req->param('id_organizer'),
             lat               => $self->req->param('lat'),
             lng               => $self->req->param('lng'),
-            geolocation       => $self->req->param('geolocation'),
             date_event        => $self->req->param('date'),
         }
     );

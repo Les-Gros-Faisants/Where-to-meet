@@ -12,6 +12,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -161,13 +162,14 @@ public void createEvent()
     String tags = ((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString();
     if (name.equals("") || desc.equals("") || tags.equals(""))
         eventCreationFailure("One or serveral fields are empty");
-    else if (lat == null ||lng == null)
+    else if (lat == null || lat == 0.0 || lng == null || lng == 0.0)
         eventCreationFailure("You are not localized");
     else {
         Calendar c = Calendar.getInstance();
-        SimpleDateFormat dfDays = new SimpleDateFormat("dd-MMM-yyyy");
+        SimpleDateFormat dfDays = new SimpleDateFormat("dd-MM-yyyy");
         SimpleDateFormat dfSecs = new SimpleDateFormat("kk:mm:ss");
         String date = dfDays.format(c.getTime()) + " " + dfSecs.format(c.getTime());
+        Log.i("MAPKEK", lat + " " + lng + " " + date + " " + ((MainPageActivity) getActivity()).userId + " " + name + " " + desc);
         httpClientUsage.createEvent(lat, lng, date, ((MainPageActivity) getActivity()).userId, name, desc, handler);
     }
 }

@@ -74,7 +74,6 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        progressDialog.dismiss();
         return view;
     }
 
@@ -142,6 +141,8 @@ public class ProfileFragment extends Fragment {
             }
 
         });
+        progressDialog.dismiss();
+
     }
 
     /**
@@ -151,6 +152,7 @@ public class ProfileFragment extends Fragment {
     public void getInfosFailure(String error)
     {
         dialogMaker.getAlert("Error !", error).show();
+        progressDialog.dismiss();
     }
 
     /**

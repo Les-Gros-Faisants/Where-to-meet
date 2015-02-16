@@ -24,6 +24,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.meeple.meeple.API.Handler.CreateEventHandler;
+import com.meeple.meeple.API.httpClientUsage;
+import com.meeple.meeple.Activity.MainPageActivity;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
 
@@ -160,7 +162,7 @@ public void createEvent()
     else if (lat == null || lat == 0.0 || lng == null || lng == 0.0)
         eventCreationFailure("You are not localized");
     else {
-//        httpClientUsage.createEvent(lat, lng, ((MainPageActivity) getActivity()).userId, name, desc, handler);
+        httpClientUsage.createEvent(lat, lng, ((MainPageActivity) getActivity()).userId, name, desc, handler);
     }
 }
 

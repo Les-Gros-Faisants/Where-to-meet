@@ -35,7 +35,14 @@ public class httpClientUsage {
         httpClient.put(url, params, handler);
     }
 
-//    public static void putEvent(Double lat, Double lng, ) {
-//
-//    }
+    public static void createEvent(Double lat, Double lng, String date, int idOrganizer, String eventName, String eventDesc, JsonHttpResponseHandler handler) {
+        String url = "/events/";
+        RequestParams params = new RequestParams();
+        params.put("lat", lat);
+        params.put("lng", lng);
+        params.put("date", date);
+        params.put("event_name", eventName);
+        params.put("event_desc", eventDesc);
+        httpClient.put(url, params, handler);
+    }
 }

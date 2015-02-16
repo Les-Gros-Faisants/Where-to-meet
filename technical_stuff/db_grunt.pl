@@ -19,6 +19,6 @@ sub clean_exit {
 
 while (42) {
     my $sth = $dbh->do(
-        'UPDATE wtm SET active=false WHERE now() - date_event > timeout');
+        'UPDATE past_events SET active=false WHERE now() - date_event > timeout');
     sleep(5);
 }

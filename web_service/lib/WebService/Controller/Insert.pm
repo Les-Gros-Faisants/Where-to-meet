@@ -114,7 +114,7 @@ sub add_event {
         }
     );
     my %res = ( ret => 'OK' );
-    return $self->render( text => encode_json( \%ret ) );
+    return $self->render( text => encode_json( \%res ) );
 }
 
 sub add_event_user {

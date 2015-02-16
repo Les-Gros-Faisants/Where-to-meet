@@ -22,6 +22,7 @@ public class CreateEventHandler extends JsonHttpResponseHandler {
     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
         try {
             if (statusCode == 200 && response.getString("ret").equals("OK")) {
+                Log.i("got: ", response.toString());
                 this._frag.eventCreationSuccess(response.getInt("id_event"));
             }
         }

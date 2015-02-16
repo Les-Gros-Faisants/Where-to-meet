@@ -112,10 +112,7 @@ sub add_event {
             id_user  => $self->req->param('id_organizer'),
         }
     );
-    my %res = (
-        ret      => 'OK',
-        id_event => $ret->id_event
-    );
+    my %res = (ret => 'OK', new_event => $ret->id_event );
     return $self->render( text => encode_json( \%res ) );
 }
 

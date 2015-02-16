@@ -94,6 +94,7 @@ sub add_tag {
 sub add_event {
     my $self = shift;
 
+	$log->debug($self->req);
     my $event = $self->db->resultset('PastEvent');
     my $ret   = $event->create(
         {

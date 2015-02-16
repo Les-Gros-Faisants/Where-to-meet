@@ -167,7 +167,7 @@ public void createEvent()
         Calendar c = Calendar.getInstance();
         SimpleDateFormat dfDays = new SimpleDateFormat("dd-MMM-yyyy");
         SimpleDateFormat dfSecs = new SimpleDateFormat("kk:mm:ss");
-        String date = dfDays.format(c.getTime()) + "T" + dfSecs.format(c.getTime());
+        String date = dfDays.format(c.getTime()) + " " + dfSecs.format(c.getTime());
         httpClientUsage.createEvent(lat, lng, date, ((MainPageActivity) getActivity()).userId, name, desc, handler);
     }
 }

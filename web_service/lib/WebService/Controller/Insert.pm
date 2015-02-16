@@ -102,7 +102,6 @@ sub add_event {
             id_organizer      => $self->req->param('id_organizer'),
             lat               => $self->req->param('lat'),
             lng               => $self->req->param('lng'),
-            geolocation       => $self->req->param('geolocation'),
             date_event        => $self->req->param('date'),
         }
     );
@@ -114,7 +113,7 @@ sub add_event {
         }
     );
     my %res = ( ret => 'OK' );
-    return $self->render( text => encode_json( \%ret ) );
+    return $self->render( text => encode_json( \%res ) );
 }
 
 sub add_event_user {

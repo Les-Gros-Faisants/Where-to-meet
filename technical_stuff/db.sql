@@ -23,7 +23,7 @@ CREATE TABLE `past_events` (
   `event_name` VARCHAR(60),
   `date_event` TIMESTAMP,
   `timeout` INT,
-  `active` BOOLEAN,
+  `active` BOOLEAN DEFAULT true,
   PRIMARY KEY  (`id_event`)
 );
 

@@ -23,11 +23,15 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.meeple.meeple.API.Handler.CreateEventHandler;
 import com.meeple.meeple.API.httpClientUsage;
+import com.meeple.meeple.Activity.MainPageActivity;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
 
 import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,6 +45,7 @@ public class EventCreationFragment extends Fragment {
     private static Double lng = null;
     private static View rootview;
     private ProgressDialog progressDialog;
+    private CreateEventHandler handler;
 
     public EventCreationFragment() {
         // Required empty public constructor
@@ -57,6 +62,7 @@ public class EventCreationFragment extends Fragment {
         progressDialog = ProgressDialog.show(getActivity(), "Loading", "Please wait");
         dialogMaker = new DialogMaker(getActivity());
         rootview = inflater.inflate(R.layout.fragment_event_creation, container, false);
+        handler = new CreateEventHandler(this);
 
         // Map and location setup
         LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
@@ -158,17 +164,27 @@ public void createEvent()
     else if (lat == null ||lng == null)
         eventCreationFailure("You are not localized");
     else {
-
-        httpClientUsage.createEvent(lat, lng, );
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat dfDays = new SimpleDateFormat("dd-MMM-yyyy");
+        SimpleDateFormat dfSecs = new SimpleDateFormat("kk:mm:ss");
+        String date = dfDays.format(c.getTime()) + "T" + dfSecs.format(c.getTime());
+        httpClientUsage.createEvent(lat, lng, date, ((MainPageActivity) getActivity()).userId, name, desc, handler);
     }
 }
 
     /**
      * callback of the event add request on success
      */
-    public void eventCreationSuccess()
+    public void eventCreationSuccess(int id)
     {
         dialogMaker.getAlert("Success !", "Event created").show();
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        Fragment fragment = new EventFragment();
+        Bundle args = new Bundle();
+        args.putInt("EVENT_ID", id);
+        fragment.setArguments(args);
+        ft.replace(R.id.content_frame, fragment);
+        ft.commit();
     }
 
     /**

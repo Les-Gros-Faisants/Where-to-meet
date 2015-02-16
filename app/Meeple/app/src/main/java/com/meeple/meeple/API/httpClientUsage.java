@@ -38,6 +38,7 @@ public class httpClientUsage {
     public static void createEvent(Double lat, Double lng, String date, int idOrganizer, String eventName, String eventDesc, JsonHttpResponseHandler handler) {
         String url = "events/";
         RequestParams params = new RequestParams();
+        params.put("id_organizer", idOrganizer);
         params.put("lat", lat);
         params.put("lng", lng);
         params.put("date", date);

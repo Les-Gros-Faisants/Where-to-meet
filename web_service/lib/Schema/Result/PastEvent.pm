@@ -84,6 +84,7 @@ __PACKAGE__->table("past_events");
 =head2 active
 
   data_type: 'tinyint'
+  default_value: 1
   is_nullable: 1
 
 =cut
@@ -111,7 +112,7 @@ __PACKAGE__->add_columns(
   "timeout",
   { data_type => "integer", is_nullable => 1 },
   "active",
-  { data_type => "tinyint", is_nullable => 1 },
+  { data_type => "tinyint", default_value => 1, is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -179,8 +180,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-02-16 15:19:29
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:10rlthoyxcPogxbcNZ2iLA
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-02-16 16:13:19
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:G0ZJ/SWrIx7BiRrhfJEQhQ
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

@@ -144,7 +144,7 @@ sub get_event {
     $ret{'id_event'}     = $event->id_event;
     $ret{'date_event'}   = $event->date_event;
     $ret{'event_name'}   = $event->event_name;
-    $ret{'id_organizer'} = $event->id_organizer->id_user;
+    $ret{'name_organizer'} = $event->id_organizer->pseudo_user;
     $ret{'lat'}          = $event->lat;
     $ret{'lng'}          = $event->lng;
     $ret{'description'}  = $event->description_event;

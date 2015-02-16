@@ -9,6 +9,7 @@ import java.util.List;
 public class Event {
     private int _idEvent;
     private int _idOrganizer;
+    private String _nOrganizer;
     private HashMap<String, Double> _geolocation;
     private String _descriptionEvent;
     private String _nameEvent;
@@ -38,7 +39,18 @@ public class Event {
         this._geolocation.put("long", lat);
         this._geolocation.put("lat", lng);
         this._users = users;
+    }
 
+    public Event(int idEvent, String pseudo, Double lat, Double lng, String desc, String name, String date, List<User> users) {
+        this._idEvent = idEvent;
+        this._nOrganizer = pseudo;
+        this._descriptionEvent = desc;
+        this._nameEvent = name;
+        this._dateEvent = date;
+        this._geolocation = new HashMap<String, Double>();
+        this._geolocation.put("long", lat);
+        this._geolocation.put("lat", lng);
+        this._users = users;
     }
 
 

@@ -95,7 +95,7 @@ sub add_tag {
 sub add_event {
     my $self = shift;
 
-	$log->debug($self->req->param('date'));
+    $log->debug( $self->req->param('date') );
     my $event = $self->db->resultset('PastEvent');
     my $ret   = $event->create(
         {
@@ -104,7 +104,8 @@ sub add_event {
             id_organizer      => $self->req->param('id_organizer'),
             lat               => $self->req->param('lat'),
             lng               => $self->req->param('lng'),
-		}
+            timeout           => $self->req->param('timemout')
+        }
     );
     my $jnevent = $self->db->resultset('JunctionUserEvent');
     $ret = $jnevent->update_or_create(
@@ -113,7 +114,7 @@ sub add_event {
             id_user  => $self->req->param('id_organizer'),
         }
     );
-    my %res = (ret => 'OK', new_event => $ret->id_event->id_event );
+    my %res = ( ret => 'OK', new_event => $ret->id_event->id_event );
     return $self->render( text => encode_json( \%res ) );
 }
 

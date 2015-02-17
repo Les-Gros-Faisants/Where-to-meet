@@ -104,7 +104,7 @@ sub add_event {
             id_organizer      => $self->req->param('id_organizer'),
             lat               => $self->req->param('lat'),
             lng               => $self->req->param('lng'),
-            timeout           => $self->req->param('timemout')
+            timeout           => $self->req->param('timeout')
         }
     );
     my $jnevent = $self->db->resultset('JunctionUserEvent');

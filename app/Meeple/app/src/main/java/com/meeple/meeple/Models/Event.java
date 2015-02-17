@@ -48,8 +48,8 @@ public class Event {
         this._nameEvent = name;
         this._dateEvent = date;
         this._geolocation = new HashMap<String, Double>();
-        this._geolocation.put("long", lat);
-        this._geolocation.put("lat", lng);
+        this._geolocation.put("long", lng);
+        this._geolocation.put("lat", lat);
         this._users = users;
     }
 

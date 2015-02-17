@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -114,6 +115,8 @@ public class EventCreationFragment extends Fragment {
                 map.addMarker(new MarkerOptions()
                         .position(new LatLng(lat, lng))
                         .title("You are here"));
+                //Move the camera to the user's location and zoom in!
+                map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lng), 12.0f));
             }
         }
     }
@@ -157,6 +160,12 @@ public void createEvent()
     String name = ((EditText)getActivity().findViewById(R.id.event_name)).getText().toString();
     String desc = ((EditText)getActivity().findViewById(R.id.event_desc)).getText().toString();
     String tags = ((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString();
+    Integer timeout = Integer.valueOf(((EditText) getActivity().findViewById(R.id.event_timeout)).getText().toString());
+    if (timeout < 1)
+        timeout = 1;
+    else if (timeout > 60 * 5)
+        timeout = 60 * 5;
+    timeout *= 60;
     if (name.equals("") || desc.equals("") || tags.equals(""))
         eventCreationFailure("One or serveral fields are empty");
     else if (lat == null || lat == 0.0 || lng == null || lng == 0.0)

@@ -34,5 +34,6 @@
     <string name="tags_default">Tags</string>
     <string name="tag_hint">Tag him/her !</string>
     <string name="tag_button">Tag !</string>
+    <string name="event_timeout_hint">timeout (minutes)</string>
 
 </resources>

@@ -167,10 +167,13 @@ public void createEvent()
     timeout *= 60;
     if (name.equals("") || desc.equals("") || tags.equals(""))
         eventCreationFailure("One or serveral fields are empty");
-    else if (lat == null || lat == 0.0 || lng == null || lng == 0.0)
+    else if (lat == null || lat == 0.0 || lng == null || lng == 0.0) {
         eventCreationFailure("You are not localized");
+        lat = 44.339722;
+        lng = 1.210278;
+    }
     else {
-        httpClientUsage.createEvent(lat, lng, ((MainPageActivity) getActivity()).userId, name, desc, handler);
+        httpClientUsage.createEvent(lat, lng, ((MainPageActivity) getActivity()).userId, name, desc, timeout, handler);
     }
 }
 

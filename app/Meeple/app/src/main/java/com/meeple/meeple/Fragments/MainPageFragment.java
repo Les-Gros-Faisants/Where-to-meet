@@ -71,8 +71,8 @@ public class MainPageFragment extends Fragment {
         } else
         {
             dialogMaker.getAlert("Error !", "Couldn't locate you !").show();
-            lat = (double) 0;
-            lng = (double) 0;
+            lat = 44.339722;
+            lng = 1.210278;
             located = false;
         }
 

@@ -169,7 +169,7 @@ sub get_event_radius {
 	$log->debug(Dumper($self->param));
     my %coord = (
         lat => $self->param('lat'),
-        lng => $self->param('lng'),
+        lng => $self->param('long'),
     );
     my $radius = $self->param('radius');
     my @events =

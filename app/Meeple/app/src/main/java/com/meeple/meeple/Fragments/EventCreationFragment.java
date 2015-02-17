@@ -115,7 +115,6 @@ public class EventCreationFragment extends Fragment {
                 map.addMarker(new MarkerOptions()
                         .position(new LatLng(lat, lng))
                         .title("You are here"));
-                //Move the camera to the user's location and zoom in!
                 map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lng), 12.0f));
             }
         }

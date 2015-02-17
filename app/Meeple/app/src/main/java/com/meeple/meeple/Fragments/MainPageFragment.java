@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -102,6 +103,7 @@ public class MainPageFragment extends Fragment {
                 map.addMarker(new MarkerOptions()
                         .position(new LatLng(lat, lng))
                         .title("You are here"));
+                map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lng), 12.0f));
             }
         }
     }

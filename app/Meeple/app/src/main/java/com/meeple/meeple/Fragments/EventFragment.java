@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -119,6 +120,7 @@ public class EventFragment extends Fragment {
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(event.get_geolocation().get("lat"), event.get_geolocation().get("long")))
                 .title(event.get_nameEvent()));
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lng), 12.0f));
 
         // listView creation
         final List<User> list = event.get_users();

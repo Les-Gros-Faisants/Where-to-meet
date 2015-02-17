@@ -166,17 +166,18 @@ sub get_event {
 sub get_event_radius {
     my $self = shift;
 
-	$log->debug(Dumper($self->param));
+    $log->debug( Dumper( $self->param ) );
     my %coord = (
         lat => $self->param('lat'),
         lng => $self->param('long'),
     );
     my $radius = $self->param('radius');
     my @events =
-      $self->db->resultset('PastEvent')->search( {'active' => 1} )->all;
+      $self->db->resultset('PastEvent')->search( { 'active' => 1 } )->all;
     my %ret;
     my @tmp;
     foreach my $event (@events) {
+
         if (
             (
                 (
@@ -202,6 +203,7 @@ sub get_event_radius {
             };
         }
     }
+    return $self->render( text => encode_json( \%ret ) );
 }
 
 

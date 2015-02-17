@@ -193,13 +193,14 @@ sub get_event_radius {
           )
         {
             $ret{ 'event' . $event->id_event } = {
-                'id_event'     => $event->id_event,
-                'date_event'   => $event->date_event,
-                'event_name'   => $event->event_name,
-                'id_organizer' => $event->id_organizer,
-                'description'  => $event->description_event,
-                'lat'          => $event->lat,
-                'lng'          => $event->lng
+                'id_event'       => $event->id_event,
+                'date_event'     => $event->date_event,
+                'event_name'     => $event->event_name,
+                'id_organizer'   => $event->id_organizer->id_organizer,
+                'organizer_name' => $event->id_organizer->pseudo_user,
+                'description'    => $event->description_event,
+                'lat'            => $event->lat,
+                'lng'            => $event->lng
             };
         }
     }

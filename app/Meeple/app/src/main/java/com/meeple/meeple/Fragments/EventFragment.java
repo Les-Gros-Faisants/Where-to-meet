@@ -120,7 +120,7 @@ public class EventFragment extends Fragment {
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(event.get_geolocation().get("lat"), event.get_geolocation().get("long")))
                 .title(event.get_nameEvent()));
-        map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat, lng), 12.0f));
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(event.get_geolocation().get("lat"), event.get_geolocation().get("long")), 12.0f));
 
         // listView creation
         final List<User> list = event.get_users();

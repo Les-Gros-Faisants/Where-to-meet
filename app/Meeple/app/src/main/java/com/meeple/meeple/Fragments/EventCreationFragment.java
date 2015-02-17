@@ -76,8 +76,8 @@ public class EventCreationFragment extends Fragment {
             lng = (location.getLongitude());
         } else
         {
-            lat = (double) 0;
-            lng = (double) 0;
+            lat = 44.339722;
+            lng = 1.210278;
         }
 
         fragmentManager = getChildFragmentManager();
@@ -159,11 +159,17 @@ public void createEvent()
     String name = ((EditText)getActivity().findViewById(R.id.event_name)).getText().toString();
     String desc = ((EditText)getActivity().findViewById(R.id.event_desc)).getText().toString();
     String tags = ((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString();
-    Integer timeout = Integer.valueOf(((EditText) getActivity().findViewById(R.id.event_timeout)).getText().toString());
+    Integer timeout = 0;
+    try {
+        timeout = Integer.valueOf(((EditText) getActivity().findViewById(R.id.event_timeout)).getText().toString());
+    } catch (NumberFormatException e) {
+        eventCreationFailure("Timeout should be a number");
+        return ;
+    }
     if (timeout < 1)
-        timeout = 1;
-    else if (timeout > 60 * 5)
-        timeout = 60 * 5;
+            timeout = 1;
+        else if (timeout > 60 * 5)
+            timeout = 60 * 5;
     timeout *= 60;
     if (name.equals("") || desc.equals("") || tags.equals(""))
         eventCreationFailure("One or serveral fields are empty");

@@ -35,5 +35,6 @@
     <string name="tag_hint">Tag him/her !</string>
     <string name="tag_button">Tag !</string>
     <string name="event_timeout_hint">Timeout (minutes)</string>
+    <string name="search_button">Search events</string>
 
 </resources>

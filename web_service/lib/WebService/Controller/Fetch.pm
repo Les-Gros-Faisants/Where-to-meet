@@ -4,7 +4,9 @@ use Mojo::JSON qw( encode_json );
 use Mojo::Log;
 use Math::Trig;
 
+use Data::Dumper;
 my $log = Mojo::Log->new;
+
 
 sub auth_user {
     my $self = shift;
@@ -164,7 +166,7 @@ sub get_event {
 sub get_event_radius {
     my $self = shift;
 
-	$log->debug('lat = '. $self->param('lat') . ' lng = '. $self->param('lng'));
+	$log->debug(Dumper($self->param));
     my %coord = (
         lat => $self->param('lat'),
         lng => $self->param('lng'),

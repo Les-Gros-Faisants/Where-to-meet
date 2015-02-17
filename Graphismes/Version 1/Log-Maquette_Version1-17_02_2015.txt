@@ -1,0 +1,12 @@
+Version 01 : Proche du graphisme de la version de départ pour permettre changements rapides et simples.
+Normalement, pour la plupart des éléments, il faut juste changer la couleur et/ou la font utilisée. 
+Autres changements : 
+- Ajouts d'icônes à la barre de menu ouverte
+- Pas de barre de menu sur la page de login
+- Nouveaux noms pour certaines pages, et nouveaux noms dans la barre de menu
+- Logo meeple (gris & noir) présent sur la barre de menu en permanence
+- Ajout de titres (Robot Slab Light) en haut de chaque page
+- Seul le titre des derniers évènements apparaît directement sur la page "Profile" par défaut
+- Ajout d'un bouton "+" sur la page "Profile" qui ouvre un onglet déroulant permettant d'avoir plus d'informations sur les derniers évènements
+
+Se reporter aux images du dossier "Export Entier" pour voir le rendu de l'application.

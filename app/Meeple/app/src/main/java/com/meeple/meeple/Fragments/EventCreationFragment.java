@@ -157,6 +157,12 @@ public void createEvent()
     String name = ((EditText)getActivity().findViewById(R.id.event_name)).getText().toString();
     String desc = ((EditText)getActivity().findViewById(R.id.event_desc)).getText().toString();
     String tags = ((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString();
+    Integer timeout = Integer.valueOf(((EditText)getActivity().findViewById(R.id.event_timeout)).getText().toString());
+    if (timeout < 1)
+        timeout = 1;
+    else if (timeout > 60 * 5)
+        timeout = 60 * 5;
+    timeout *= 60;
     if (name.equals("") || desc.equals("") || tags.equals(""))
         eventCreationFailure("One or serveral fields are empty");
     else if (lat == null || lat == 0.0 || lng == null || lng == 0.0)

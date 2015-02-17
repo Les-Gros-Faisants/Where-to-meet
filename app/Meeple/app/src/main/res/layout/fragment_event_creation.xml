@@ -30,12 +30,22 @@
         android:layout_below="@+id/event_desc"
         android:layout_centerHorizontal="true" />
 
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/event_timeout"
+        android:hint="@string/event_timeout_hint"
+        android:layout_below="@+id/event_tags"
+        android:layout_centerHorizontal="true" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/event_creation_button"
         android:id="@+id/event_creation_button"
-        android:layout_below="@+id/event_tags"
+        android:layout_below="@+id/event_timeout"
         android:layout_centerHorizontal="true"/>
 
     <FrameLayout

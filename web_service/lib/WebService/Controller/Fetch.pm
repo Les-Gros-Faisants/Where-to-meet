@@ -164,13 +164,14 @@ sub get_event {
 sub get_event_radius {
     my $self = shift;
 
+	$self->debug('lat = '. $self->req->param('lat') . ' lng = '. $self->req->param('lng'));
     my %coord = (
-        lat => $self->param('lat'),
-        lng => $self->param('lng'),
+        lat => $self->req->param('lat'),
+        lng => $self->req->param('lng'),
     );
     my $radius = $self->param('radius');
     my @events =
-      $self->db->resultset('PastEvent')->search( 'active' => 1 )->all;
+      $self->db->resultset('PastEvent')->search( {'active' => 1} )->all;
     my %ret;
     my @tmp;
     foreach my $event (@events) {

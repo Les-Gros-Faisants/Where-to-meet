@@ -25,11 +25,13 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.meeple.meeple.API.Handler.SearchEventHandler;
 import com.meeple.meeple.Models.Event;
 import com.meeple.meeple.Models.Tags;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
 import com.meeple.meeple.Utils.InteractiveArrayAdapter;
+import com.meeple.meeple.API.httpClientUsage;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -143,6 +145,9 @@ public class MainPageFragment extends Fragment {
             tags = ((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString();
         if (!((EditText)getActivity().findViewById(R.id.event_radius)).getText().toString().equals(radius))
             radius = ((EditText)getActivity().findViewById(R.id.event_radius)).getText().toString();
+        httpClientUsage client = new httpClientUsage();
+        SearchEventHandler handler = new SearchEventHandler(this);
+        client.searchEvents(Integer.parseInt(radius), lat, lng, tags, null, handler);
     }
 
     /**

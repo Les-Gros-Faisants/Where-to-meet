@@ -37,6 +37,7 @@ public class httpClientUsage {
 
     public static void createEvent(Double lat, Double lng, int idOrganizer, String eventName, String eventDesc, int timeout, JsonHttpResponseHandler handler) {
         String url = "events/";
+
         RequestParams params = new RequestParams();
         params.put("id_organizer", idOrganizer);
         params.put("lat", lat);
@@ -46,4 +47,14 @@ public class httpClientUsage {
         params.put("timeout", timeout);
         httpClient.put(url, params, handler);
     }
+
+    public static void searchEvents(int radius, Double lat, Double lng, String tagWanted, String tagUnwanted, JsonHttpResponseHandler handler) {
+        String url = "events/radius/" + lat + "/" + lng + "/" + radius;
+
+        RequestParams params = new RequestParams();
+        params.put("tag_wanted", tagUnwanted);
+        params.put("tag_unwanted", tagUnwanted);
+        httpClient.get(url, params, handler);
+    }
+
 }

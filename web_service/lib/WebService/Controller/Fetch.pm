@@ -164,10 +164,10 @@ sub get_event {
 sub get_event_radius {
     my $self = shift;
 
-	$self->debug('lat = '. $self->req->param('lat') . ' lng = '. $self->req->param('lng'));
+	$log->debug('lat = '. $self->param('lat') . ' lng = '. $self->param('lng'));
     my %coord = (
-        lat => $self->req->param('lat'),
-        lng => $self->req->param('lng'),
+        lat => $self->param('lat'),
+        lng => $self->param('lng'),
     );
     my $radius = $self->param('radius');
     my @events =

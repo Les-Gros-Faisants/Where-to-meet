@@ -169,7 +169,8 @@ sub get_event_radius {
         lng => $self->param('lng'),
     );
     my $radius = $self->param('radius');
-    my @events = $self->db->resultset('PastEvent')->all;
+    my @events =
+      $self->db->resultset('PastEvent')->search( 'active' => 1 )->all;
     my %ret;
     my @tmp;
     foreach my $event (@events) {

@@ -196,7 +196,7 @@ sub get_event_radius {
                 'id_event'       => $event->id_event,
                 'date_event'     => $event->date_event,
                 'event_name'     => $event->event_name,
-                'id_organizer'   => $event->id_organizer->id_organizer,
+                'id_organizer'   => $event->id_organizer->id_user,
                 'organizer_name' => $event->id_organizer->pseudo_user,
                 'description'    => $event->description_event,
                 'lat'            => $event->lat,

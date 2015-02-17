@@ -8,6 +8,7 @@ public class Tags {
     private int _idAggressor;
     private int _idVictim;
     private String _tagName;
+    private boolean _selected;
 
     public Tags(){}
     public Tags(int _idTags, int _idAggressor, int _idVictim, String _tagName) {
@@ -31,5 +32,13 @@ public class Tags {
 
     public String get_tagName() {
         return _tagName;
+    }
+
+    public boolean isSelected() {
+        return _selected;
+    }
+
+    public void setSelected(boolean selected){
+        _selected = selected;
     }
 }

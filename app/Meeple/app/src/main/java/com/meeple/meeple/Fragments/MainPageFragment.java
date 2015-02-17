@@ -14,6 +14,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ExpandableListView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -22,8 +26,10 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.meeple.meeple.Models.Event;
+import com.meeple.meeple.Models.Tags;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
+import com.meeple.meeple.Utils.InteractiveArrayAdapter;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -39,6 +45,11 @@ public class MainPageFragment extends Fragment {
     private static Double lat;
     private static Double lng;
     private static Boolean located;
+    private ExpandableListView listview;
+
+    private String tags;
+    private String excluded_tags;
+    private String radius;
 
     public MainPageFragment() {
         // Required empty public constructor
@@ -52,6 +63,22 @@ public class MainPageFragment extends Fragment {
             return null;
         }
         dialogMaker = new DialogMaker(getActivity());
+        View rootview = inflater.inflate(R.layout.fragment_main_page, container, false);
+        tags = "";
+        excluded_tags = "";
+        radius = "1";
+
+        //Listview setup
+        listview = (ExpandableListView)rootview.findViewById(R.id.listView);
+        getTags();
+
+        // Button setup
+        Button signupButton = (Button) rootview.findViewById(R.id.event_search_button);
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                getEvents();
+            }
+        });
 
         // map and location setup
         LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
@@ -89,7 +116,7 @@ public class MainPageFragment extends Fragment {
                 fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.content_frame, mapFragment);
         fragmentTransaction.commit();
-        return inflater.inflate(R.layout.fragment_main_page, container, false);
+        return rootview;
     }
 
     /**
@@ -99,7 +126,6 @@ public class MainPageFragment extends Fragment {
         // Do a null check to confirm that we have not already instantiated the map.
         if (map != null) {
             if (mapFragment != null) {
-
                 map.addMarker(new MarkerOptions()
                         .position(new LatLng(lat, lng))
                         .title("You are here"));
@@ -113,7 +139,10 @@ public class MainPageFragment extends Fragment {
      */
     public void getEvents()
     {
-
+        if (!((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString().equals(tags))
+            tags = ((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString();
+        if (!((EditText)getActivity().findViewById(R.id.event_radius)).getText().toString().equals(radius))
+            radius = ((EditText)getActivity().findViewById(R.id.event_radius)).getText().toString();
     }
 
     /**
@@ -122,7 +151,8 @@ public class MainPageFragment extends Fragment {
      */
     public void getEventsSuccess(List<Event> list)
     {
-
+// liste d'events avec les tags à exclure
+// user courant
     }
 
     /**
@@ -131,7 +161,23 @@ public class MainPageFragment extends Fragment {
      */
     public void getEventFailure(String error)
     {
-        dialogMaker.getAlert("Error !", error).show();
+        dialogMaker.getAlert("Event retrieval error !", error).show();
+    }
+
+    public void getTags()
+    {
+
+    }
+
+    public void getTagsSuccess(List<Tags> list)
+    {
+        ArrayAdapter<Tags> adapter = new InteractiveArrayAdapter(getActivity(), list);
+        listview.setAdapter(adapter);
+    }
+
+    public void getTagsFailure(String error)
+    {
+        dialogMaker.getAlert("Tag list error !", error).show();
     }
 
     /**

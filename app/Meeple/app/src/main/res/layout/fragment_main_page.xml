@@ -8,9 +8,18 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:ems="10"
+        android:id="@+id/event_radius"
+        android:hint="@string/radius_hint"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
         android:id="@+id/event_tags"
         android:hint="@+id/tags_default"
-        android:layout_below="@+id/event_tags"
+        android:layout_below="@+id/event_radius"
         android:layout_centerHorizontal="true" />
 
     <ExpandableListView

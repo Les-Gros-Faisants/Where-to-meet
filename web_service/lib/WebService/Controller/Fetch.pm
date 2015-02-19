@@ -59,7 +59,7 @@ sub get_user {
 	while ($row = $sth->fetchrow_arrayref()) {
 	  $log->debug("@$row[1]\n");
 	}
-
+	my %ret;
     $ret{'user_pseudo'} = $user->pseudo_user;
     $ret{'mail_user'}   = $user->mail_user;
     $ret{'id_user'}     = $user->id_user;

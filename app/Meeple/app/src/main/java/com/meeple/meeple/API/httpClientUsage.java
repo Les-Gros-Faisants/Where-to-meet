@@ -56,5 +56,4 @@ public class httpClientUsage {
         params.put("tag_unwanted", tagUnwanted);
         httpClient.get(url, params, handler);
     }
-
 }

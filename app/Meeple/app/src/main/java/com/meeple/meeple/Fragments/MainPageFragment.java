@@ -193,7 +193,7 @@ public class MainPageFragment extends Fragment {
                             ft.commit();
                         }
                     }
-                    return true;
+                    return false;
                 }
 
             });

@@ -18,7 +18,7 @@
         android:inputType="text"
         android:ems="10"
         android:id="@+id/event_tags"
-        android:hint="@+id/tags_default"
+        android:hint="@string/tags_default"
         android:layout_below="@+id/event_radius"
         android:layout_centerHorizontal="true" />
 

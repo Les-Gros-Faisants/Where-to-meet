@@ -23,15 +23,17 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.meeple.meeple.API.Handler.SearchEventHandler;
+import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.Models.Event;
 import com.meeple.meeple.Models.Tags;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
 import com.meeple.meeple.Utils.InteractiveArrayAdapter;
-import com.meeple.meeple.API.httpClientUsage;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -160,9 +162,11 @@ public class MainPageFragment extends Fragment {
 // user courant
         for (Event event : list)
         {
-            map.addMarker(new MarkerOptions()
+            Marker marker = map.addMarker(new MarkerOptions()
                     .position(new LatLng(event.get_geolocation().get("lat"), event.get_geolocation().get("long")))
-                    .title(event.get_nameEvent()));
+                    .title(event.get_nameEvent())
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+            marker.showInfoWindow();
         }
     }
 

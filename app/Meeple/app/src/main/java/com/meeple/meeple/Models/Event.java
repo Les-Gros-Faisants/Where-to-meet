@@ -17,6 +17,15 @@ public class Event {
     private List<User> _users;
 
     public Event(){}
+
+    public Event(int idEvent, String nameEvent, Double lat, Double lng) {
+        this._nameEvent = nameEvent;
+        this._idEvent = idEvent;
+        this._geolocation = new HashMap<String, Double>();
+        this._geolocation.put("long", lng);
+        this._geolocation.put("lat", lat);
+    }
+
     public Event(int idEvent, int idOrganizer, Double lat, Double lng, String desc, String name, String date) {
         this._idEvent = idEvent;
         this._idOrganizer = idOrganizer;

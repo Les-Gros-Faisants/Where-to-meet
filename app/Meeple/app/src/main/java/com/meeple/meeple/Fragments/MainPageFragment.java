@@ -152,6 +152,12 @@ public class MainPageFragment extends Fragment {
             tags = ((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString();
         if (!((EditText)getActivity().findViewById(R.id.event_radius)).getText().toString().equals(radius))
             radius = ((EditText)getActivity().findViewById(R.id.event_radius)).getText().toString();
+        try {
+            int radiusInt = Integer.valueOf(radius);
+        } catch (NumberFormatException e) {
+            getEventFailure("Radius should be a number");
+            return ;
+        }
         httpClientUsage.searchEvents(Integer.parseInt(radius), lat, lng, tags, null, handler);
     }
 
@@ -161,8 +167,6 @@ public class MainPageFragment extends Fragment {
      */
     public void getEventsSuccess(List<Event> list)
     {
-// liste d'events avec les tags à exclure
-// user courant
         eventList = list;
         markerList = new ArrayList<>();
         for (Event event : list)

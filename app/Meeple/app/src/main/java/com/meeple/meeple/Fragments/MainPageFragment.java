@@ -41,6 +41,7 @@ import java.util.List;
  */
 public class MainPageFragment extends Fragment {
     private DialogMaker dialogMaker;
+    private SearchEventHandler handler;
     private static GoogleMap map;
     private static FragmentManager fragmentManager;
     private static MapFragment mapFragment;
@@ -64,6 +65,7 @@ public class MainPageFragment extends Fragment {
         if (container == null) {
             return null;
         }
+        handler = new SearchEventHandler(this);
         dialogMaker = new DialogMaker(getActivity());
         View rootview = inflater.inflate(R.layout.fragment_main_page, container, false);
         tags = "";
@@ -145,9 +147,7 @@ public class MainPageFragment extends Fragment {
             tags = ((EditText)getActivity().findViewById(R.id.event_tags)).getText().toString();
         if (!((EditText)getActivity().findViewById(R.id.event_radius)).getText().toString().equals(radius))
             radius = ((EditText)getActivity().findViewById(R.id.event_radius)).getText().toString();
-        httpClientUsage client = new httpClientUsage();
-        SearchEventHandler handler = new SearchEventHandler(this);
-        client.searchEvents(Integer.parseInt(radius), lat, lng, tags, null, handler);
+        httpClientUsage.searchEvents(Integer.parseInt(radius), lat, lng, tags, null, handler);
     }
 
     /**
@@ -158,6 +158,12 @@ public class MainPageFragment extends Fragment {
     {
 // liste d'events avec les tags à exclure
 // user courant
+        for (Event event : list)
+        {
+            map.addMarker(new MarkerOptions()
+                    .position(new LatLng(event.get_geolocation().get("lat"), event.get_geolocation().get("long")))
+                    .title(event.get_nameEvent()));
+        }
     }
 
     /**

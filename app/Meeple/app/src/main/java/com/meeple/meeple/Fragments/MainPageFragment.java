@@ -193,6 +193,8 @@ public class MainPageFragment extends Fragment {
                             ft.commit();
                         }
                     }
+                    for (Marker marker : markerList)
+                        marker.showInfoWindow();
                     return false;
                 }
 

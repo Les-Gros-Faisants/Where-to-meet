@@ -50,10 +50,7 @@ sub get_user {
 	my $dbh = DBI->connect( 'dbi:mysql:database=wtm:host=localhost',
 							'root', 'Pangea/poil.21' )
 	  || die "Can't connect to db: $DBI::errstr";
-	my $sth = $dbh->prepare('SELECT tag_name, count(tag_name) as counted
-							 WHERE id_vitim = ?
-							 GROUP BY tag_name
-							 ORDER BY counted DESC LIMIT 5');
+	my $sth = $dbh->prepare('SELECT tag_name, count(tag_name) as counted WHERE id_vitim = ? GROUP BY tag_name ORDER BY counted DESC LIMIT 5');
 	$sth->execute(int($id));
 	my $row;
 	while ($row = $sth->fetchrow_arrayref()) {

@@ -54,7 +54,7 @@ sub get_user {
 	$sth->execute(int($id));
 	my $row;
 	while ($row = $sth->fetchrow_arrayref()) {
-	  $log->debug("@$row[1]\n");
+	  $log->debug(Dumper(@$row));
 	}
 	my %ret;
     $ret{'user_pseudo'} = $user->pseudo_user;

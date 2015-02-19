@@ -54,7 +54,7 @@ sub get_user {
 							 WHERE id_vitim = ?
 							 GROUP BY tag_name
 							 ORDER BY counted DESC LIMIT 5');
-	$sth->execute($id);
+	$sth->execute(int($id));
 	my $row;
 	while ($row = $sth->fetchrow_arrayref()) {
 	  $log->debug("@$row[1]\n");

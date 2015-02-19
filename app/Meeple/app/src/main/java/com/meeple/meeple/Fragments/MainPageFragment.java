@@ -36,6 +36,7 @@ import com.meeple.meeple.Utils.DialogMaker;
 import com.meeple.meeple.Utils.InteractiveArrayAdapter;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -51,6 +52,8 @@ public class MainPageFragment extends Fragment {
     private static Double lng;
     private static Boolean located;
     private ExpandableListView listview;
+    private List<Event> eventList;
+    private List<Marker> markerList;
 
     private String tags;
     private String excluded_tags;
@@ -160,6 +163,8 @@ public class MainPageFragment extends Fragment {
     {
 // liste d'events avec les tags à exclure
 // user courant
+        eventList = list;
+        markerList = new ArrayList<>();
         for (Event event : list)
         {
             Marker marker = map.addMarker(new MarkerOptions()
@@ -167,6 +172,27 @@ public class MainPageFragment extends Fragment {
                     .title(event.get_nameEvent())
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
             marker.showInfoWindow();
+            markerList.add(list.indexOf(event), marker);
+            map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener()
+            {
+                @Override
+                public boolean onMarkerClick(Marker markerArg) {
+                    if (eventList != null) {
+                        int index = markerList.indexOf(markerArg);
+                        if (index != -1) {
+                            FragmentTransaction ft = getFragmentManager().beginTransaction();
+                            Fragment fragment = new EventFragment();
+                            Bundle args = new Bundle();
+                            args.putInt("EVENT_ID", eventList.get(index).get_idEvent());
+                            fragment.setArguments(args);
+                            ft.replace(R.id.content_frame, fragment);
+                            ft.commit();
+                        }
+                    }
+                    return true;
+                }
+
+            });
         }
     }
 

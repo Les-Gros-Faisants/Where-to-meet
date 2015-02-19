@@ -177,10 +177,9 @@ public class MainPageFragment extends Fragment {
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
             marker.showInfoWindow();
             markerList.add(list.indexOf(event), marker);
-            map.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener()
-            {
+            map.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
                 @Override
-                public boolean onMarkerClick(Marker markerArg) {
+                public void onInfoWindowClick(Marker markerArg) {
                     if (eventList != null) {
                         int index = markerList.indexOf(markerArg);
                         if (index != -1) {
@@ -193,9 +192,6 @@ public class MainPageFragment extends Fragment {
                             ft.commit();
                         }
                     }
-                    for (Marker marker : markerList)
-                        marker.showInfoWindow();
-                    return false;
                 }
 
             });

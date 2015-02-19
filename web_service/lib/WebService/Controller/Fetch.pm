@@ -79,14 +79,14 @@ sub get_user {
         $i++;
     }
     $ret{'events'} = \%events;
-    my %tags;
-    foreach my $tag (@tags) {
-        $tags{ 'id_tag' . $tag->id_tag }{
-            'id_tag'   => $tag->id_tag,
-            'tag_name' => $tag->tag_name,
-        };
-	  }
-	$ret{'tags'} = \%tags;
+    # my %tags;
+    # foreach my $tag (@tags) {
+    #     $tags{ 'id_tag' . $tag->id_tag }{
+    #         'id_tag'   => $tag->id_tag,
+    #         'tag_name' => $tag->tag_name,
+    #     };
+	#   }
+	# $ret{'tags'} = \%tags;
     return $self->render( text => encode_json( \%ret ) );
 }
 

@@ -55,7 +55,7 @@ sub get_user {
 							 GROUP BY tag_name
 							 ORDER BY counted DESC LIMIT 5');
 	$sth->execute($id);
-	my $rows;
+	my $row;
 	while ($row = $sth->fetchrow_arrayref()) {
 	  $log->debug("@$row[1]\n");
 	}

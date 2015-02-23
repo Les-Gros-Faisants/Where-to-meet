@@ -30,4 +30,10 @@ public class TagHandler extends JsonHttpResponseHandler {
             _frag.tagUserFailure(e.getMessage());
         }
     }
+
+    @Override
+    public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
+        Log.i("error", e.getMessage());
+        _frag.tagUserFailure(e.getMessage());
+    }
 }

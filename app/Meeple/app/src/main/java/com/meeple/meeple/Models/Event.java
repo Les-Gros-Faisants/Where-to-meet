@@ -57,6 +57,7 @@ public class Event {
         this._nOrganizer = pseudo;
         this._descriptionEvent = desc;
         this._nameEvent = name;
+
         this._dateEvent = date;
         this._geolocation = new HashMap<String, Double>();
         this._geolocation.put("long", lng);
@@ -65,6 +66,10 @@ public class Event {
         this._tags = tags;
     }
 
+
+    public List<Tags> get_tags() {
+        return _tags;
+    }
 
     public void set_users(List<User> _users) {
         this._users = _users;

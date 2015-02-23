@@ -4,17 +4,20 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.util.Log;
 
 import com.meeple.meeple.API.Handler.LoginHandler;
 import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class MainActivity extends ActionBarActivity {
     private LoginHandler handler;
@@ -78,13 +81,28 @@ public class MainActivity extends ActionBarActivity {
         EditText login = (EditText) findViewById(R.id.login);
         EditText password = (EditText) findViewById(R.id.password);
         username = login.getText().toString();
+        MessageDigest md = null;
         try {
-            httpClientUsage.logUser(password.getText().toString(), username, handler);
-            // fix in case of infinite loop
-            progressDialog = ProgressDialog.show(this, "Loading", "Please wait");
+            md = MessageDigest.getInstance("MD5");
+        } catch (NoSuchAlgorithmException e) {
+            logFailure();
         }
-        catch (Exception e) {
-            Log.e("Error:", e.getMessage());
+        if (md != null) {
+            md.update(password.getText().toString().getBytes());
+            byte[] digest = md.digest();
+            StringBuffer sb = new StringBuffer();
+            for (byte b : digest) {
+                sb.append(String.format("%02x", b & 0xff));
+            }
+            try {
+                httpClientUsage.logUser(sb.toString(), username, handler);
+                progressDialog = ProgressDialog.show(this, "Loading", "Please wait");
+            }
+            catch (Exception e) {
+                Log.e("Error:", e.getMessage());
+            }
+        } else {
+            logFailure();
         }
     }
 

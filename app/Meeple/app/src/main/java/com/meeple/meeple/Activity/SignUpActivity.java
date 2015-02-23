@@ -17,6 +17,9 @@ import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 public class SignUpActivity extends ActionBarActivity {
     private DialogMaker dialogMaker;
     private ProgressDialog progressDialog;
@@ -60,20 +63,38 @@ public class SignUpActivity extends ActionBarActivity {
     }
 
     public void signUp() {
+        progressDialog = ProgressDialog.show(this, "Loading", "Please wait");
         EditText login = (EditText) findViewById(R.id.login);
         EditText email = (EditText) findViewById(R.id.email);
         EditText password = (EditText) findViewById(R.id.password);
         EditText password_confirmation = (EditText) findViewById(R.id.password_validation);
-        if (password.getText().toString().equals(password_confirmation.getText().toString()))
-            httpClientUsage.createUser(login.getText().toString(), email.getText().toString(), password.getText().toString(), handler);
-        else
+        if (password.getText().toString().equals(password_confirmation.getText().toString())) {
+            MessageDigest md = null;
+            try {
+                md = MessageDigest.getInstance("MD5");
+            } catch (NoSuchAlgorithmException e) {
+                signUpFailure("Password encryption algorithm not found");
+            }
+            if (md != null) {
+                md.update(password.getText().toString().getBytes());
+                byte[] digest = md.digest();
+                StringBuffer sb = new StringBuffer();
+                for (byte b : digest) {
+                    sb.append(String.format("%02x", b & 0xff));
+                }
+                httpClientUsage.createUser(login.getText().toString(), email.getText().toString(), sb.toString(), handler);
+            } else {
+                signUpFailure("Password encryption failure");
+            }
+        } else
             signUpFailure("Passwords differ");
     }
 
     public void signUpSuccess() {
 //        dialogMaker.getAlert("Success !", "You are signed up.");
+        progressDialog.dismiss();
         final Intent intent = new Intent(this, MainActivity.class);
-        AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+        AlertDialog.Builder dlgAlert = new AlertDialog.Builder(this);
         dlgAlert.setMessage("You are signed up.");
         dlgAlert.setPositiveButton("Ok",
                 new DialogInterface.OnClickListener() {
@@ -86,6 +107,7 @@ public class SignUpActivity extends ActionBarActivity {
     }
 
     public void signUpFailure(String error) {
+        progressDialog.dismiss();
         dialogMaker.getAlert("Error !", error);
     }
 }

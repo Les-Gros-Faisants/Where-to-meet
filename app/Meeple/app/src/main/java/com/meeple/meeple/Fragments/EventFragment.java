@@ -26,6 +26,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.meeple.meeple.API.Handler.EventHandler;
 import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.Models.Event;
+import com.meeple.meeple.Models.Tags;
 import com.meeple.meeple.Models.User;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
@@ -113,10 +114,18 @@ public class EventFragment extends Fragment {
     public void getEventSuccess(Event event) {
         ((TextView) rootview.findViewById(R.id.event_name)).setText(event.get_nameEvent());
         ((TextView) rootview.findViewById(R.id.event_description)).setText(event.get_descriptionEvent());
-//        ((TextView) rootview.findViewById(R.id.event_tags)).setText(event.get_);
         String date = event.get_dateEvent().split("T")[0];
         ((TextView) rootview.findViewById(R.id.event_date)).setText(date);
         ((TextView) rootview.findViewById(R.id.event_creator)).setText(event.get_nOrganizer());
+        String tag_cat = new String();
+        List<Tags> tag_list = event.get_tags();
+        for (int i = 0; i < tag_list.size(); ++i)
+        {
+            tag_cat += tag_list.get(i).get_tagName() + " ";
+        }
+        tag_cat = tag_cat.trim();
+        ((TextView) rootview.findViewById(R.id.event_tags)).setText(tag_cat);
+
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(event.get_geolocation().get("lat"), event.get_geolocation().get("long")))
                 .title(event.get_nameEvent()));

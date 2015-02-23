@@ -21,6 +21,7 @@ import com.meeple.meeple.API.Handler.ProfileHandler;
 import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.Activity.MainPageActivity;
 import com.meeple.meeple.Models.Event;
+import com.meeple.meeple.Models.Tags;
 import com.meeple.meeple.Models.User;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DialogMaker;
@@ -35,6 +36,7 @@ public class ProfileFragment extends Fragment {
     private Integer id;
     private TextView name;
     private TextView email;
+    private TextView tags;
     private DialogMaker dialogMaker;
     private ListView listview = null;
     private ProgressDialog progressDialog;
@@ -56,14 +58,15 @@ public class ProfileFragment extends Fragment {
             id = args.getInt("USERNAME_ID");
         if (id == null || id == ((MainPageActivity)getActivity()).userId) {
             id = ((MainPageActivity) getActivity()).userId;
-            view.findViewById(R.id.title_tags).setVisibility(View.GONE);
+//            view.findViewById(R.id.title_tags).setVisibility(View.GONE);
             view.findViewById(R.id.tag_button).setVisibility(View.GONE);
             view.findViewById(R.id.tag_field).setVisibility(View.GONE);
-            view.findViewById(R.id.tags).setVisibility(View.GONE);
+//            view.findViewById(R.id.tags).setVisibility(View.GONE);
         }
         Log.i("TESTEST", id.toString());
         name = (TextView) view.findViewById(R.id.name);
         email = (TextView) view.findViewById(R.id.email);
+        tags = (TextView) view.findViewById(R.id.tags);
         listview = (ListView) view.findViewById(R.id.listView);
 
         // Tag Button setup
@@ -106,6 +109,14 @@ public class ProfileFragment extends Fragment {
     {
         email.setText(user.get_mailUser());
         name.setText(user.get_pseudoUser());
+        String tag_cat = new String();
+        List<Tags> tag_list = user.get_tags();
+        for (int i = 0; i < tag_list.size(); ++i)
+        {
+            tag_cat += tag_list.get(i).get_tagName() + " ";
+        }
+        tag_cat = tag_cat.trim();
+        tags.setText(tag_cat);
 
         final List<Event> list = user.get_events();
         String[] values = new String[list.size()];

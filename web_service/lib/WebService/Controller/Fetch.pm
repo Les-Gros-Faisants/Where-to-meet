@@ -53,7 +53,7 @@ sub get_user {
         group_by => ['tag_name']
     )->all;
 
-	$log->debug(Dumper(@tags));
+	$log->debug('coucou enculer' . Dumper(@tags));
 # my $dbh = DBI->connect( 'dbi:mysql:database=wtm:host=localhost',
 # 						'root', 'Pangea/poil.21' )
 #   || die "Can't connect to db: $DBI::errstr";

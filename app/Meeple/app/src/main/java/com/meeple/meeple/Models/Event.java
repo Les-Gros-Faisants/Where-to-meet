@@ -66,7 +66,6 @@ public class Event {
         this._tags = tags;
     }
 
-
     public List<Tags> get_tags() {
         return _tags;
     }

@@ -185,7 +185,7 @@ sub get_event {
     }
     my %tags;
     foreach my $tmp (@tags) {
-        $tags{ 'id_tag' . $tmp->id_tag } = {
+        $tags{ 'id_tag' . $tmp->id_tag->id_tag } = {
             'id_tag'       => $tmp->id_tag->id_tag,
             'id_victim'    => $tmp->id_tag->id_victim->id_user,
             'id_aggressor' => $tmp->id_tag->id_aggressor->id_user,

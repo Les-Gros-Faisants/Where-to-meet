@@ -186,10 +186,10 @@ sub get_event {
     my %tags;
     foreach my $tmp (@tags) {
         $tags{ 'id_tag' . $tmp->id_tag } = {
-            'id_tag'       => $tmp->id_tag,
-            'id_victim'    => $tmp->id_victim,
-            'id_aggressor' => $tmp->id_aggressor,
-            'tag_name'     => $tmp->tag_name,
+            'id_tag'       => $tmp->id_tag->id_tag,
+            'id_victim'    => $tmp->id_tag->id_victim->id_user,
+            'id_aggressor' => $tmp->id_tag->id_aggressor->id_user,
+            'tag_name'     => $tmp->id_tag->tag_name,
         };
     }
     $ret{'users'} = \%users;

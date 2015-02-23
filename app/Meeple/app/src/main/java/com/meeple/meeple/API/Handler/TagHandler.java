@@ -21,7 +21,7 @@ public class TagHandler extends JsonHttpResponseHandler {
     @Override
     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
         try {
-            if (statusCode == 200 && response.getString("ret").equals("OK"))) {
+            if (statusCode == 200 && response.getString("ret").equals("OK")) {
                 Log.i("Succesfuly added tag", "lol");
                 _frag.tagUserSuccess();
             }

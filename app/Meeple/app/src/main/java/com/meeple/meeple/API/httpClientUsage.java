@@ -52,8 +52,18 @@ public class httpClientUsage {
         String url = "events/radius/" + lat + "/" + lng + "/" + radius;
 
         RequestParams params = new RequestParams();
-        params.put("tag_wanted", tagUnwanted);
+        params.put("tag_wanted", tagWanted);
         params.put("tag_unwanted", tagUnwanted);
         httpClient.get(url, params, handler);
+    }
+
+    public static void addTag(String tagName, int idVictim, int idAggressor, JsonHttpResponseHandler handler) {
+        String url = "tags/";
+
+        RequestParams params = new RequestParams();
+        params.put("tag_name", tagName);
+        params.put("id_victim", idVictim);
+        params.put("id_aggressor", idAggressor);
+        httpClient.put(url, params, handler);
     }
 }

@@ -4,7 +4,6 @@ use Mojo::JSON qw( encode_json );
 use Mojo::Log;
 
 use Data::Dumper;
-use Data::Dumper;
 
 my $log = Mojo::Log->new;
 

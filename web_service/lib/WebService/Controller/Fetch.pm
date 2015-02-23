@@ -193,7 +193,7 @@ sub get_event {
         };
     }
     $ret{'users'} = \%users;
-	$ret{'tags'} = \%tags;
+    $ret{'tags'}  = \%tags;
     return $self->render( text => encode_json( \%ret ) );
 }
 

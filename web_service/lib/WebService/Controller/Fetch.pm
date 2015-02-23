@@ -47,15 +47,15 @@ sub get_user {
     my @user_event = $self->db->resultset('JunctionUserEvent')
       ->search( { id_user => $user->id_user } )->all;
     my @tags = $self->db->resultset('Tag')->search(
-	{},
+        {},
         {
-	    select => [ 'tag_name', { count => 'id_victim' } ],
-	    as     => [qw / name tag_count /],
-	    where    => { id_victim => $id },
-	    group_by => [qw / tag_name /],
-	}
+            select => [ 'tag_name', { count => 'id_victim' } ],
+            as     => [qw / name tag_count /],
+            where    => { id_victim => $id },
+            group_by => [qw / tag_name /],
+        }
     );
-    
+
     my %ret;
     $ret{'user_pseudo'} = $user->pseudo_user;
     $ret{'mail_user'}   = $user->mail_user;
@@ -78,13 +78,13 @@ sub get_user {
     $ret{'events'} = \%events;
 
     my %tags;
-    my $i = 0;
+    $i = 0;
     foreach my $tag (@tags) {
-        $tags{ 'id_tag' . $i} = {
-            'tag_name'   => $tag->get_column('name'),
+        $tags{ 'id_tag' . $i } = {
+            'tag_name'      => $tag->get_column('name'),
             'tag_occurence' => $tag->get_column('tag_count'),
         };
-	$i++;
+        $i++;
     }
     $ret{'tags'} = \%tags;
     return $self->render( text => encode_json( \%ret ) );
@@ -163,6 +163,9 @@ sub get_event {
     my $event = $self->db->resultset('PastEvent')->find( { id_event => $id } );
     my @users = $self->db->resultset('JunctionUserEvent')
       ->search( { id_event => $event->id_event } )->all;
+    my @tags =
+      $self->db->resultset('JunctionEventTag')->search( { id_event => $id } )
+      ->all;
     my %ret;
     $ret{'id_event'}       = $event->id_event;
     $ret{'date_event'}     = $event->date_event;
@@ -180,7 +183,17 @@ sub get_event {
             'user_name' => $tmp->id_user->pseudo_user,
         };
     }
+    my %tags;
+    foreach my $tmp (@tags) {
+        $tags{ 'id_tag' . $tmp->id_tag } = {
+            'id_tag'       => $tmp->id_tag,
+            'id_victim'    => $tmp->id_victim,
+            'id_aggressor' => $tmp->id_aggressor,
+            'tag_name'     => $tmp->tag_name,
+        };
+    }
     $ret{'users'} = \%users;
+	$ret{'tags'} = \%tags;
     return $self->render( text => encode_json( \%ret ) );
 }
 

@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.meeple.meeple.API.Handler.ProfileHandler;
+import com.meeple.meeple.API.Handler.TagHandler;
 import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.Activity.MainPageActivity;
 import com.meeple.meeple.Models.Event;
@@ -33,6 +34,7 @@ import java.util.List;
  */
 public class ProfileFragment extends Fragment {
     private ProfileHandler handler;
+    private TagHandler tagHandler;
     private Integer id;
     private TextView name;
     private TextView email;
@@ -40,6 +42,7 @@ public class ProfileFragment extends Fragment {
     private DialogMaker dialogMaker;
     private ListView listview = null;
     private ProgressDialog progressDialog;
+    private List<Tags> tag_list;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -52,6 +55,7 @@ public class ProfileFragment extends Fragment {
         progressDialog = ProgressDialog.show(getActivity(), "Loading", "Please wait");
         dialogMaker = new DialogMaker(getActivity());
         handler = new ProfileHandler(this);
+        tagHandler = new TagHandler(this);
         Bundle args = getArguments();
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         if (args != null)
@@ -110,7 +114,7 @@ public class ProfileFragment extends Fragment {
         email.setText(user.get_mailUser());
         name.setText(user.get_pseudoUser());
         String tag_cat = new String();
-        List<Tags> tag_list = user.get_tags();
+        tag_list = user.get_tags();
         for (int i = 0; i < tag_list.size(); ++i)
         {
             tag_cat += tag_list.get(i).get_tagName() + " ";
@@ -171,6 +175,22 @@ public class ProfileFragment extends Fragment {
     public void tagUser()
     {
         String tag = ((EditText)getActivity().findViewById(R.id.tag_field)).getText().toString();
+
+        //check done temporary on serv
+        /*
+        if (tag_list != null) {
+            for (int i = 0; i < tag_list.size(); ++i)
+            {
+                if (tag_list.get(i).get_idAggressor() == ((MainPageActivity)getActivity()).userId &&
+                        tag.equals(tag_list.get(i).get_tagName())) {
+                    tagUserFailure("You can't tag twice !");
+                    return;
+                }
+            }
+        }
+        */
+
+        httpClientUsage.addTag(tag, id, ((MainPageActivity)getActivity()).userId, tagHandler);
     }
 
     /**

@@ -15,6 +15,7 @@ public class Event {
     private String _nameEvent;
     private String _dateEvent;
     private List<User> _users;
+    private List<Tags> _tags;
 
     public Event(){}
 
@@ -38,7 +39,7 @@ public class Event {
     }
 
 
-    public Event(int idEvent, int idOrganizer, Double lat, Double lng, String desc, String name, String date, List<User> users) {
+    public Event(int idEvent, int idOrganizer, Double lat, Double lng, String desc, String name, String date, List<User> users, List<Tags> tags) {
         this._idEvent = idEvent;
         this._idOrganizer = idOrganizer;
         this._descriptionEvent = desc;
@@ -48,9 +49,10 @@ public class Event {
         this._geolocation.put("long", lng);
         this._geolocation.put("lat", lat);
         this._users = users;
+        this._tags = tags;
     }
 
-    public Event(int idEvent, String pseudo, Double lat, Double lng, String desc, String name, String date, List<User> users) {
+    public Event(int idEvent, String pseudo, Double lat, Double lng, String desc, String name, String date, List<User> users, List<Tags> tags) {
         this._idEvent = idEvent;
         this._nOrganizer = pseudo;
         this._descriptionEvent = desc;
@@ -60,6 +62,7 @@ public class Event {
         this._geolocation.put("long", lng);
         this._geolocation.put("lat", lat);
         this._users = users;
+        this._tags = tags;
     }
 
 

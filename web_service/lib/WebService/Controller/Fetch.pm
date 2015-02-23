@@ -46,17 +46,24 @@ sub get_user {
     my $user       = $self->db->resultset('User')->find( { id_user => $id } );
     my @user_event = $self->db->resultset('JunctionUserEvent')
       ->search( { id_user => $user->id_user } )->all;
-    #my @tags = $self->db->resultset('Tag')->search( where => { id_victim => $id } )->all;
-	my $dbh = DBI->connect( 'dbi:mysql:database=wtm:host=localhost',
-							'root', 'Pangea/poil.21' )
-	  || die "Can't connect to db: $DBI::errstr";
-	my $sth = $dbh->prepare('SELECT tag_name, count(tag_name) as counted FROM tags WHERE id_victim = ?');# GROUP BY tag_name ORDER BY counted DESC LIMIT 5');
-	$sth->execute(int($id));
-	my $row;
-	while ($row = $sth->fetchrow_arrayref()) {
-	  $log->debug(Dumper(@$row));
-	}
-	my %ret;
+    my @tags = $self->db->resultset('Tag')->search(
+        select => [ 'tag_name', { count => 'id_victim' } ],
+        as     => [qw/ name tag_count /],
+        where    => { id_victim => $id },
+        group_by => ['tag_name']
+    )->all;
+
+	$log->debug(Dumper(@tags));
+# my $dbh = DBI->connect( 'dbi:mysql:database=wtm:host=localhost',
+# 						'root', 'Pangea/poil.21' )
+#   || die "Can't connect to db: $DBI::errstr";
+# my $sth = $dbh->prepare('SELECT tag_name, count(tag_name) as counted FROM tags WHERE id_victim = ?');# GROUP BY tag_name ORDER BY counted DESC LIMIT 5');
+# $sth->execute(int($id));
+# my $row;
+# while ($row = $sth->fetchrow_arrayref()) {
+#   $log->debug(Dumper(@$row));
+# }
+    my %ret;
     $ret{'user_pseudo'} = $user->pseudo_user;
     $ret{'mail_user'}   = $user->mail_user;
     $ret{'id_user'}     = $user->id_user;
@@ -76,14 +83,15 @@ sub get_user {
         $i++;
     }
     $ret{'events'} = \%events;
+
     # my %tags;
     # foreach my $tag (@tags) {
     #     $tags{ 'id_tag' . $tag->id_tag }{
     #         'id_tag'   => $tag->id_tag,
     #         'tag_name' => $tag->tag_name,
     #     };
-	#   }
-	# $ret{'tags'} = \%tags;
+    #   }
+    # $ret{'tags'} = \%tags;
     return $self->render( text => encode_json( \%ret ) );
 }
 

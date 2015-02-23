@@ -8,7 +8,7 @@ $SIG{INT}  = \&clean_exit;
 $SIG{KILL} = \&clean_exit;
 
 my $dbh = DBI->connect( 'dbi:mysql:database=wtm:host=localhost',
-    'user', 'pass' )
+    'root', 'Pangea/poil.21' )
   || die "Can't connect to db: $DBI::errstr";
 
 sub clean_exit {

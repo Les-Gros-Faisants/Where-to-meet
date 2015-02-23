@@ -9,12 +9,18 @@ public class Tags {
     private int _idVictim;
     private String _tagName;
     private boolean _selected;
+    private int     _occurence;
 
     public Tags(){}
     public Tags(int _idTags, int _idAggressor, int _idVictim, String _tagName) {
         this._idTags = _idTags;
         this._idAggressor = _idAggressor;
         this._idVictim = _idVictim;
+        this._tagName = _tagName;
+    }
+
+    public Tags(String _tagName, int tagOccurence) {
+        this._occurence = tagOccurence;
         this._tagName = _tagName;
     }
 

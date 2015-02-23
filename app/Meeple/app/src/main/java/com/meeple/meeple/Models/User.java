@@ -10,17 +10,40 @@ public class User {
     private String      _pseudoUser;
     private String      _mailUser;
     private List<Event> _events;
+    private List<Tags> _tags;
 
     public User(){}
-    public User(int idUser, String pseudoUser, String mailUser, List<Event> events) {
+    public User(int idUser, String pseudoUser, String mailUser, List<Event> events, List<Tags> _tags) {
         this._idUser = idUser;
         this._pseudoUser = pseudoUser;
         this._mailUser = mailUser;
         this._events = events;
+        this._tags = _tags;
+
     }
     public User(int idUser, String _pseudoUser) {
         this._idUser = idUser;
         this._pseudoUser = _pseudoUser;
+    }
+
+    public List<Tags> get_tags() {
+        return _tags;
+    }
+
+    public void set_tags(List<Tags> _tags) {
+        this._tags = _tags;
+    }
+
+    public void set_mailUser(String _mailUser) {
+        this._mailUser = _mailUser;
+    }
+
+    public void set_pseudoUser(String _pseudoUser) {
+        this._pseudoUser = _pseudoUser;
+    }
+
+    public void set_idUser(int _idUser) {
+        this._idUser = _idUser;
     }
 
     public int get_idUser() {

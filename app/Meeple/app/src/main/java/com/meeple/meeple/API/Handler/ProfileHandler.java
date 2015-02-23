@@ -3,6 +3,7 @@ package com.meeple.meeple.API.Handler;
 import android.app.Fragment;
 import android.util.Log;
 import com.meeple.meeple.Models.Event;
+import com.meeple.meeple.Models.Tags;
 import com.meeple.meeple.Models.User;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.meeple.meeple.Fragments.ProfileFragment;
@@ -50,7 +51,19 @@ public class ProfileHandler extends JsonHttpResponseHandler {
                                 ((JSONObject)test.get(key)).getString("event_date")));
                     }
                 }
-                User user = new User(response.getInt("id_user"), response.getString("user_pseudo"), response.getString("mail_user"), eventList);
+                test = response.getJSONObject("tags");
+                Log.i("got: ", test.toString());
+                keys = test.keys();
+                List<Tags> tagList = new ArrayList<>();
+                while(keys.hasNext()){
+                    String key = (String)keys.next();
+                    if (test.get(key) instanceof JSONObject) {
+                        Log.i("get: ", test.get(key).toString());
+                        tagList.add(new Tags(((JSONObject) test.get(key)).getString("tag_name"),
+                                    ((JSONObject) test.get(key)).getInt("tag_occurence")));
+                    }
+                }
+                User user = new User(response.getInt("id_user"), response.getString("user_pseudo"), response.getString("mail_user"), eventList, tagList);
                 _frag.getInfosSucces(user);
             }
         }

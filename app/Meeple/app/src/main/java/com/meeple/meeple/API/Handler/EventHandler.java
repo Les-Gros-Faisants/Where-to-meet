@@ -2,6 +2,7 @@ package com.meeple.meeple.API.Handler;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.meeple.meeple.Fragments.EventFragment;
+import com.meeple.meeple.Models.Tags;
 import org.apache.http.Header;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,6 +39,19 @@ public class EventHandler extends JsonHttpResponseHandler {
                                 ((JSONObject) usersObject.get(key)).getString("user_name")));
                     }
                 }
+                List<Tags> tags = new ArrayList<>();
+                JSONObject tagObject = response.getJSONObject("tags");
+                keys = tagObject.keys();
+                while (keys.hasNext()) {
+                    String key = (String)keys.next();
+                    if (tagObject.get(key) instanceof JSONObject) {
+                        Log.i("get: ", tagObject.get(key).toString());
+                        tags.add(new Tags(((JSONObject) tagObject.get(key)).getInt("id_tag"),
+                                ((JSONObject) tagObject.get(key)).getInt("id_aggressor"),
+                                ((JSONObject) tagObject.get(key)).getInt("id_victim"),
+                                ((JSONObject) tagObject.get(key)).getString("tag_name")));
+                    }
+                }
 
                 this._frag.getEventSuccess(new Event(response.getInt("id_event"),
                         response.getString("id_organizer"),
@@ -46,7 +60,8 @@ public class EventHandler extends JsonHttpResponseHandler {
                         response.getString("description"),
                         response.getString("event_name"),
                         response.getString("date_event"),
-                        users));
+                        users,
+                        tags));
 
             }
             catch (JSONException e) {

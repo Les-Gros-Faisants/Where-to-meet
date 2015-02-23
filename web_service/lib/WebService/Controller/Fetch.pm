@@ -3,6 +3,7 @@ use Mojo::Base 'Mojolicious::Controller';
 use Mojo::JSON qw( encode_json );
 use Mojo::Log;
 use Math::Trig;
+use Auth;
 
 use Data::Dumper;
 my $log = Mojo::Log->new;
@@ -16,7 +17,7 @@ sub auth_user {
     my $user   = $self->db->resultset('User')->find( { pseudo_user => $id } );
     my %res;
     if ( defined $user ) {
-        $res{'ret'} = $passwd eq $user->passwd_user ? 'OK' : 'KO';
+	    $res{'ret'} = md5_hex($passwd, Auth::get_secret_sauce) eq $user->passwd_user ? 'OK' : 'KO';
         $res{'id'} = $user->id_user;
     }
     else {

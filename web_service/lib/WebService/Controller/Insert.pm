@@ -2,7 +2,8 @@ package WebService::Controller::Insert;
 use Mojo::Base 'Mojolicious::Controller';
 use Mojo::JSON qw( encode_json );
 use Mojo::Log;
-
+use Digest::MD5;
+use Auth;
 use Data::Dumper;
 
 my $log = Mojo::Log->new;
@@ -13,7 +14,7 @@ sub add_user {
     my $user = $self->db->resultset('User');
     my $ret  = $user->update_or_create(
         {
-            passwd_user => $self->req->param('passwd'),
+            passwd_user => md5_hex($self->req->param('passwd'), Auth::get_secret_sauce),
             pseudo_user => $self->req->param('username'),
             mail_user   => $self->req->param('mail'),
         }
@@ -51,7 +52,7 @@ sub update_user_passwd {
     );
     my $ret = $user->update(
         {
-            password_user => $self->req->param->('passwd'),
+            password_user => md5_hex($self->req->param->('passwd'), Auth::get_secret_sauce),
         }
     );
     my %res = ( ret => 'OK' );

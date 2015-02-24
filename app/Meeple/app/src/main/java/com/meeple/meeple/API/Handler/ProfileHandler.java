@@ -1,14 +1,15 @@
 package com.meeple.meeple.API.Handler;
 
-import android.app.Fragment;
 import android.util.Log;
+
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.meeple.meeple.Fragments.ProfileFragment;
+import com.meeple.meeple.Fragments.SettingFragment;
 import com.meeple.meeple.Models.Event;
 import com.meeple.meeple.Models.Tags;
 import com.meeple.meeple.Models.User;
-import com.loopj.android.http.JsonHttpResponseHandler;
-import com.meeple.meeple.Fragments.ProfileFragment;
+
 import org.apache.http.Header;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -20,11 +21,15 @@ import java.util.List;
  * Created by arkeopix on 2/5/15.
  */
 public class ProfileHandler extends JsonHttpResponseHandler {
-    private ProfileFragment _frag;
+    private ProfileFragment _frag = null;
+    private SettingFragment _settingFrag = null;
 
     public ProfileHandler() {}
     public ProfileHandler(ProfileFragment frag) {
         this._frag = frag;
+    }
+    public ProfileHandler(SettingFragment frag) {
+        this._settingFrag = frag;
     }
 
 
@@ -64,18 +69,27 @@ public class ProfileHandler extends JsonHttpResponseHandler {
                     }
                 }
                 User user = new User(response.getInt("id_user"), response.getString("user_pseudo"), response.getString("mail_user"), eventList, tagList);
-                _frag.getInfosSucces(user);
+                if (_frag != null)
+                    _frag.getInfosSucces(user);
+                else
+                    _settingFrag.getInfosSuccess(user);
             }
         }
         catch (JSONException e) {
             Log.e("something went wrong: ", e.getMessage());
-            _frag.getInfosFailure(e.getMessage());
+            if (_frag != null)
+                _frag.getInfosFailure(e.getMessage());
+            else
+                _settingFrag.getInfosFailure(e.getMessage());
         }
     }
 
     @Override
     public void onFailure(int statusCode, Header[] headers, Throwable e, JSONObject response) {
         Log.e("something went wrong", e.getMessage());
-        _frag.getInfosFailure(e.getMessage());
+        if (_frag != null)
+            _frag.getInfosFailure(e.getMessage());
+        else
+            _settingFrag.getInfosFailure(e.getMessage());
     }
 }

@@ -17,6 +17,7 @@ import android.widget.ListView;
 import com.meeple.meeple.Fragments.MainPageFragment;
 import com.meeple.meeple.Fragments.ProfileFragment;
 import com.meeple.meeple.Fragments.EventCreationFragment;
+import com.meeple.meeple.Fragments.SettingFragment;
 import com.meeple.meeple.R;
 import com.meeple.meeple.Utils.DrawerItemClickListener;
 
@@ -90,6 +91,8 @@ public class MainPageActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new SettingFragment()).commit();
+            setTitle("Settings");
             return true;
         }
 

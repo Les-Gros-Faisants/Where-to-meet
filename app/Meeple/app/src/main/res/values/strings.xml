@@ -37,5 +37,6 @@
     <string name="event_timeout_hint">Timeout (minutes)</string>
     <string name="search_button">Search events</string>
     <string name="radius_hint">Radius (km)</string>
+    <string name="save_changes">Save Changes</string>
 
 </resources>

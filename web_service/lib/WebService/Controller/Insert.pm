@@ -31,8 +31,7 @@ sub update_user {
     my $ret  = $user->update_or_create(
         {
             id_user     => $id,
-            passwd_user => $self->req->param('passwd'),
-            pseudo_user => $self->req->param('username'),
+            passwd_user => $self->req->param('passwd') ne 'do not change' ? md5_hex($self->req->param('passwd'), Auth::get_secret_sauce) : $user->passwd_user,
             mail_user   => $self->req->param('mail'),
         }
     );

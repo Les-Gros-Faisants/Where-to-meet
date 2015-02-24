@@ -66,4 +66,14 @@ public class httpClientUsage {
         params.put("id_aggressor", idAggressor);
         httpClient.put(url, params, handler);
     }
+    public static void changeAccount(int id, String passwd, String email, JsonHttpResponseHandler handler) {
+        String url = "users/" + id;
+        Log.i("build url: ", url);
+
+        RequestParams params = new RequestParams();
+        params.put("passwd", passwd != null ? passwd : "do not change");
+        params.put("mail", email);
+        httpClient.put(url, params, handler);
+    }
+
 }

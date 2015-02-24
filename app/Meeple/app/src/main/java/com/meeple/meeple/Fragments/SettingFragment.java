@@ -46,6 +46,7 @@ public class SettingFragment extends Fragment {
         // Inflate the layout for this fragment
         handler = new ProfileHandler(this);
         changeHandler = new ChangeHandler(this);
+        dialogMaker = new DialogMaker(getActivity());
         View rootview = inflater.inflate(R.layout.fragment_setting, container, false);
         passwordConfField = (EditText)rootview.findViewById(R.id.pwd_conf);
         passwordField = (EditText)rootview.findViewById(R.id.pwd);

@@ -26,13 +26,13 @@ sub update_user {
     my $self = shift;
 
     my $id   = $self->param('id');
-    my $user = $self->db->resultset('User');
+    my $user = $self->db->resultset('User')->find( { id_user => $id } );
     my $ret  = $user->update_or_create(
         {
-            id_user     => $id,
-            passwd_user => $self->req->param('passwd') ne 'do not change' ? 
-		md5_hex($self->req->param('passwd'), Auth::get_secret_sauce) : $user->passwd_user,
-            mail_user   => $self->req->param('mail'),
+            passwd_user => $self->req->param('passwd') ne 'do not change'
+            ? md5( $self->req->param('passwd'), '0N est TR0P secure l0l' )
+            : $user->passwd_user,
+            mail_user => $self->req->param('mail'),
         }
     );
     $log->debug($ret);

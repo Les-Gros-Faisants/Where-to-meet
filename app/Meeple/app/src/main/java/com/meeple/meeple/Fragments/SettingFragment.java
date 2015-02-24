@@ -62,8 +62,8 @@ public class SettingFragment extends Fragment {
     public void getInfosSuccess(User user)
     {
         this.user = user;
-        emailField.setText(user.get_mailUser());
-
+        if (user.get_mailUser() != null)
+            emailField.setText(user.get_mailUser());
     }
 
     public void getInfosFailure(String error)

@@ -2,8 +2,7 @@ package WebService::Controller::Insert;
 use Mojo::Base 'Mojolicious::Controller';
 use Mojo::JSON qw( encode_json );
 use Mojo::Log;
-use Digest::MD5;
-use Auth;
+use Digest::MD5 qw( md5 );
 use Data::Dumper;
 
 my $log = Mojo::Log->new;
@@ -14,7 +13,7 @@ sub add_user {
     my $user = $self->db->resultset('User');
     my $ret  = $user->update_or_create(
         {
-            passwd_user => md5_hex($self->req->param('passwd'), Auth::get_secret_sauce),
+            passwd_user => md5($self->req->param('passwd'), '0N est TR0P secure l0l'),
             pseudo_user => $self->req->param('username'),
             mail_user   => $self->req->param('mail'),
         }
@@ -31,7 +30,7 @@ sub update_user {
     my $ret  = $user->update_or_create(
         {
             id_user     => $id,
-            passwd_user => $self->req->param('passwd') ne 'do not change' ? md5_hex($self->req->param('passwd'), Auth::get_secret_sauce) : $user->passwd_user,
+            passwd_user => $self->req->param('passwd'),# ne 'do not change' ? md5_hex($self->req->param('passwd'), Auth::get_secret_sauce) : $user->passwd_user,
             mail_user   => $self->req->param('mail'),
         }
     );
@@ -51,7 +50,7 @@ sub update_user_passwd {
     );
     my $ret = $user->update(
         {
-            password_user => md5_hex($self->req->param->('passwd'), Auth::get_secret_sauce),
+            password_user => md5_hex($self->req->param->('passwd'), '0N est TR0P secure l0l'),
         }
     );
     my %res = ( ret => 'OK' );

@@ -1,7 +1,7 @@
 CREATE TABLE `users` (
   `id_user` INT NOT NULL AUTO_INCREMENT,
   `pseudo_user` VARCHAR(20),
-  `passwd_user` VARCHAR(30),
+  `passwd_user` VARCHAR(100),
   `mail_user`   VARCHAR(40),
   PRIMARY KEY  (`id_user`)
 );
@@ -46,10 +46,10 @@ ALTER TABLE `junction_event_tag` ADD CONSTRAINT `junction_event_tag_fk1` FOREIGN
 ALTER TABLE `junction_event_tag` ADD CONSTRAINT `junction_event_tag_fk2` FOREIGN KEY (`id_tag`) REFERENCES tags(`id_tag`);
 
 INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('EVENT', NULL, NULL);
-INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('leo', 'mdplol', 'leo@gmail.com');
-INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('julien le pd', 'je suce des queues', 'grossebitenoire@gmail.com');
-INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('quentin', 'lol', 'test@gmail.com');
-INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('loris', 'poilmdr', 'test_lol@gmail.com');
+INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('leo', 'dd4be7a93c70f21ef3e46958032c0446', 'leo@gmail.com');
+INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('julien le pd', 'dd4be7a93c70f21ef3e46958032c0446', 'grossebitenoire@gmail.com');
+INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('quentin', 'dd4be7a93c70f21ef3e46958032c0446', 'test@gmail.com');
+INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('loris', 'dd4be7a93c70f21ef3e46958032c0446', 'test_lol@gmail.com');
 
 INSERT INTO tags(tag_name, id_aggressor, id_victim) VALUES('enculer', 2, 3);
 INSERT INTO tags(tag_name, id_aggressor, id_victim) VALUES('trop lol', 3, 2);
@@ -59,13 +59,13 @@ INSERT INTO tags(tag_name, id_aggressor, id_victim) VALUES('poilu', 5, 4);
 INSERT INTO tags(tag_name, id_aggressor, id_victim) VALUES('alcoolique', 4, 5);
 
 INSERT INTO past_events(id_organizer, lat, lng, description_event, event_name, date_event, timeout, active)
-	   VALUES(2, 41.25, -120.9762, 'a liitle football game', 'foot au hasard', NULL, NULL, false);
+	   VALUES(2, 41.25, -120.9762, 'a liitle football game', 'foot au hasard', NULL, NULL, true);
 INSERT INTO past_events(id_organizer, lat, lng, description_event, event_name, date_event, timeout, active)
-	   VALUES(3, 48.582933, 7.743749, 'where is charlie', 'marche citoyenne', NULL, NULL, false);
+	   VALUES(3, 48.582933, 7.743749, 'where is charlie', 'marche citoyenne', NULL, NULL, true);
 INSERT INTO past_events(id_organizer, lat, lng, description_event, event_name, date_event, timeout, active)
-	   VALUES(4, 48.581547, 7.73909, 'lollygagging', 'skyrim playing', NULL, NULL, false);
+	   VALUES(4, 48.581547, 7.73909, 'lollygagging', 'skyrim playing', NULL, NULL, true);
 INSERT INTO past_events(id_organizer, lat, lng, description_event, event_name, date_event, timeout, active)
-	   VALUES(5, 48.58186, 7.742872, 'lolpoiltest', 'some bs', NULL, NULL, false);
+	   VALUES(5, 48.58186, 7.742872, 'lolpoiltest', 'some bs', NULL, NULL, true);
 
 INSERT INTO junction_user_event(id_event, id_user) VALUES(1, 2);
 INSERT INTO junction_user_event(id_event, id_user) VALUES(1, 3);

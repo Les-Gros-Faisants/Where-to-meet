@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import com.meeple.meeple.API.Handler.ChangeHandler;
 import com.meeple.meeple.API.Handler.ProfileHandler;
 import com.meeple.meeple.API.httpClientUsage;
 import com.meeple.meeple.Activity.MainPageActivity;
@@ -26,6 +27,7 @@ import java.security.NoSuchAlgorithmException;
  */
 public class SettingFragment extends Fragment {
     ProfileHandler handler;
+    ChangeHandler changeHandler;
     DialogMaker dialogMaker;
     User user;
     EditText passwordField;
@@ -42,6 +44,7 @@ public class SettingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         handler = new ProfileHandler(this);
+        changeHandler = new ChangeHandler(this);
         View rootview = inflater.inflate(R.layout.fragment_setting, container, false);
         passwordConfField = (EditText)rootview.findViewById(R.id.pwd_conf);
         passwordField = (EditText)rootview.findViewById(R.id.pwd);
@@ -76,6 +79,11 @@ public class SettingFragment extends Fragment {
         String password = passwordField.getText().toString();
         String password_conf = passwordConfField.getText().toString();
         String email = emailField.getText().toString();
+        if (email == null)
+        {
+            saveChangesFailure("You need an email");
+            return;
+        }
         if (password != null) {
             if (!password.equals(password_conf)) {
                 saveChangesFailure("Passwords differ");
@@ -94,11 +102,13 @@ public class SettingFragment extends Fragment {
                 for (byte b : digest) {
                     sb.append(String.format("%02x", b & 0xff));
                 }
-//            httpClientUsage.
+            httpClientUsage.changeAccount(((MainPageActivity)getActivity()).userId, sb.toString(), email, changeHandler);
             } else {
                 saveChangesFailure("Password encryption failure");
             }
         }
+        else
+            httpClientUsage.changeAccount(((MainPageActivity)getActivity()).userId, null, email, changeHandler);
     }
 
     public void saveChangesSuccess()

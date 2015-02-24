@@ -86,7 +86,7 @@ public class SettingFragment extends Fragment {
         String password = passwordField.getText().toString();
         String password_conf = passwordConfField.getText().toString();
         String email = emailField.getText().toString();
-        if (email == null)
+        if (email == null || email.equals(""))
         {
             saveChangesFailure("You need an email");
             return;

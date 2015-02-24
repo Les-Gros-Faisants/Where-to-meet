@@ -43,14 +43,6 @@ public class MainActivity extends ActionBarActivity {
             }
         });
         handler = new LoginHandler(this);
-
-//        httpClientUsage httpClient = new httpClientUsage();
-//        LoginHandler login = new LoginHandler(this);
-//        httpClient.logUser("mdplol", 2, login);
-
-        //starts directly mainpage
-//        Intent intent = new Intent(this, MainPageActivity.class);
-//        startActivity(intent);
     }
 
 

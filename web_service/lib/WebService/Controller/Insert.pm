@@ -31,7 +31,7 @@ sub update_user {
         {
             id_user     => $id,
             passwd_user => $self->req->param('passwd') ne 'do not change' ? 
-		md5_hex($self->req->param('passwd'), Auth::get_secret_sauce) : $user->passwd_user,
+		md5($self->req->param('passwd'), '0N est TR0P secure l0l') : $user->passwd_user,
             mail_user   => $self->req->param('mail'),
         }
     );

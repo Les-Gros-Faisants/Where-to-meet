@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.meeple.meeple.API.Handler.ChangeHandler;
@@ -49,6 +50,11 @@ public class SettingFragment extends Fragment {
         passwordConfField = (EditText)rootview.findViewById(R.id.pwd_conf);
         passwordField = (EditText)rootview.findViewById(R.id.pwd);
         emailField = (EditText)rootview.findViewById(R.id.email);
+        ((Button)rootview.findViewById(R.id.button)).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                saveChanges();
+            }
+        });
         getInfos();
         return rootview;
     }

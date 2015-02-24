@@ -1,7 +1,7 @@
 CREATE TABLE `users` (
   `id_user` INT NOT NULL AUTO_INCREMENT,
   `pseudo_user` VARCHAR(20),
-  `passwd_user` VARCHAR(30),
+  `passwd_user` VARCHAR(100),
   `mail_user`   VARCHAR(40),
   PRIMARY KEY  (`id_user`)
 );
@@ -46,10 +46,10 @@ ALTER TABLE `junction_event_tag` ADD CONSTRAINT `junction_event_tag_fk1` FOREIGN
 ALTER TABLE `junction_event_tag` ADD CONSTRAINT `junction_event_tag_fk2` FOREIGN KEY (`id_tag`) REFERENCES tags(`id_tag`);
 
 INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('EVENT', NULL, NULL);
-INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('leo', 'mdplol', 'leo@gmail.com');
-INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('julien le pd', 'je suce des queues', 'grossebitenoire@gmail.com');
-INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('quentin', 'lol', 'test@gmail.com');
-INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('loris', 'poilmdr', 'test_lol@gmail.com');
+INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('leo', MD5(CONCAT('mdplol', '0N est TR0P secure l0l')), 'leo@gmail.com');
+INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('julien le pd', MD5(CONCAT('mdplol', '0N est TR0P secure l0l')), 'grossebitenoire@gmail.com');
+INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('quentin', MD5(CONCAT('mdplol', '0N est TR0P secure l0l')), 'test@gmail.com');
+INSERT INTO users(pseudo_user, passwd_user, mail_user) VALUES('loris', MD5(CONCAT('mdplol', '0N est TR0P secure l0l')), 'test_lol@gmail.com');
 
 INSERT INTO tags(tag_name, id_aggressor, id_victim) VALUES('enculer', 2, 3);
 INSERT INTO tags(tag_name, id_aggressor, id_victim) VALUES('trop lol', 3, 2);

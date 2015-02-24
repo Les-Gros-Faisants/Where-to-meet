@@ -59,13 +59,13 @@ INSERT INTO tags(tag_name, id_aggressor, id_victim) VALUES('poilu', 5, 4);
 INSERT INTO tags(tag_name, id_aggressor, id_victim) VALUES('alcoolique', 4, 5);
 
 INSERT INTO past_events(id_organizer, lat, lng, description_event, event_name, date_event, timeout, active)
-	   VALUES(2, 41.25, -120.9762, 'a liitle football game', 'foot au hasard', NULL, NULL, false);
+	   VALUES(2, 41.25, -120.9762, 'a liitle football game', 'foot au hasard', NULL, NULL, true);
 INSERT INTO past_events(id_organizer, lat, lng, description_event, event_name, date_event, timeout, active)
-	   VALUES(3, 48.582933, 7.743749, 'where is charlie', 'marche citoyenne', NULL, NULL, false);
+	   VALUES(3, 48.582933, 7.743749, 'where is charlie', 'marche citoyenne', NULL, NULL, true);
 INSERT INTO past_events(id_organizer, lat, lng, description_event, event_name, date_event, timeout, active)
-	   VALUES(4, 48.581547, 7.73909, 'lollygagging', 'skyrim playing', NULL, NULL, false);
+	   VALUES(4, 48.581547, 7.73909, 'lollygagging', 'skyrim playing', NULL, NULL, true);
 INSERT INTO past_events(id_organizer, lat, lng, description_event, event_name, date_event, timeout, active)
-	   VALUES(5, 48.58186, 7.742872, 'lolpoiltest', 'some bs', NULL, NULL, false);
+	   VALUES(5, 48.58186, 7.742872, 'lolpoiltest', 'some bs', NULL, NULL, true);
 
 INSERT INTO junction_user_event(id_event, id_user) VALUES(1, 2);
 INSERT INTO junction_user_event(id_event, id_user) VALUES(1, 3);

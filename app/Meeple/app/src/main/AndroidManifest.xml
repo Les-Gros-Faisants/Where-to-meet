@@ -23,6 +23,7 @@
             android:name=".Activity.MainActivity"
             android:label="@string/meeple" >
             android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,11 +34,13 @@
             android:name=".Activity.MainPageActivity"
             android:label="@string/meeple" >
             android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
         </activity>
         <activity
             android:name=".Activity.SignUpActivity"
             android:label="@string/title_activity_sign_up" >
             android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
         </activity>
         <meta-data
             android:name="com.google.android.gms.version"

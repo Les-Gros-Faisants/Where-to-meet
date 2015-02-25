@@ -22,6 +22,7 @@
         <activity
             android:name=".Activity.MainActivity"
             android:label="@string/meeple" >
+            android:screenOrientation="portrait"
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,10 +32,12 @@
         <activity
             android:name=".Activity.MainPageActivity"
             android:label="@string/meeple" >
+            android:screenOrientation="portrait"
         </activity>
         <activity
             android:name=".Activity.SignUpActivity"
             android:label="@string/title_activity_sign_up" >
+            android:screenOrientation="portrait"
         </activity>
         <meta-data
             android:name="com.google.android.gms.version"
